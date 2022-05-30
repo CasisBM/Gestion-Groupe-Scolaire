@@ -5,9 +5,9 @@ nav{
     height: auto;
 }
 @media screen and (max-width:576px) {
-    #headerMenu>li:hover{
+  /*   #headerMenu>li:hover{
         
-    }
+    } */
 }
 #top_bar{
     
