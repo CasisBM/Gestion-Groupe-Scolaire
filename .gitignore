@@ -1,2 +1,2 @@
-# ignore all .vscode
-*.vscode
+# ignore .vscode folder
+.vscode/
