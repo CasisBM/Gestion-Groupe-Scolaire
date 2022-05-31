@@ -13,16 +13,18 @@
     <div class="wrap">
       <div class="top">
         <header>
-          <ul id="top_bar">
-            <button>Name de l'ecole</button>
-            <button>Accueil</button>
-            <button type="submit" id="btn_prof">Professeurs</button>
-            <button>Promotions</button>
-            <button>Eleves</button>
-            <button>Salles</button>
-            <button></button>
-            <button></button>
-            <li id="last_btn">
+          <nav>
+            <div><button>Name de l'ecole</button></div>
+            <ul id="first_btn">
+                <button>Accueil</button>
+                <button onclick="location.href='google.com'" id="btn_prof">
+                  Professeurs
+                </button>
+                <button>Promotions</button>
+                <button>Eleves</button>
+                <button>Salles</button>
+            </ul>
+            <ul id="last_btn">
               <button>Admin</button>
               <ul>
                 <li><a href="http://test.com" target="_blank">profil</a></li>
@@ -30,19 +32,18 @@
                   <a href="http://test.com" target="_blank">Se déconnecter</a>
                 </li>
               </ul>
-            </li>
-        </ul>
+            </ul>
+          </nav>
         </header>
       </div>
       <div class="main">
-         <li>
-             <h1>link1</h1>
-             <h1>link1</h1>
-             <h1>link1</h1>
-             <h1>link1</h1>
-             <h1>link1</h1>
-         </li>
-        
+        <li>
+          <h1>link1</h1>
+          <h1>link1</h1>
+          <h1>link1</h1>
+          <h1>link1</h1>
+          <h1>link1</h1>
+        </li>
       </div>
     </div>
   </body>
