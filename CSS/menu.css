@@ -26,24 +26,56 @@ button{
     flex-direction:row;
     justify-content:flex-start;  
 }
-.u_bar{
-    /* background-color: blue; */
-     width: 55%; 
-    height: 100px;;
 
+
+/* #top_bar li
+{
+    display: block;
+    width: 100%;
+    margin: 0;
+    position: relative;
+} */
+#top_bar li
+{
+    list-style: none;
+    list-style-type: none;
+    float: left;
+    height: 75px;
+    width: 120px;
+    line-height: 125px;
+    text-align:center;
+
+    color: #fff;
+}
+#top_bar ul li ul
+{
+    display: list-item;
+    margin: 0;
+    position: relative;
+    right: 40px;
+    font-size: 12px;
+    display: none;
+}
+#top_bar ul li a
+{
+    text-decoration: none;
+    color: #ffffff;
+}
+#top_bar ul li:hover
+{
+    background: #686868;
+    color: #000;
+    cursor: pointer;
+}
+#top_bar ul li:hover ul
+{
+    display: list-item;
+}
+#top_bar ul li:hover ul li:hover
+{
+    background: 868686;
+    color: #ff5588;
+    cursor: pointer;
 }
 
-.siteEcole{
-    
-    justify-content: left;
-    background-color: white;
-}
-.ecole{
-    width: 60px;
-    justify-content: end;
-    
-}
-.contact{
-    width: 100px;
-    background-color: white;
-}
+
