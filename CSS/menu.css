@@ -1,32 +1,51 @@
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items:flex-start;
-    height: auto;
- 
+* {
+  margin: 0;
+  padding: 0;
 }
-@media screen and (max-width:576px) {
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+  font-family: "Playfair";
+}
+.wrap {
+  position: relative;
+}
+.top {
+  height: 100px;
+  width: 100%;
+}
+.main {
+  width: 100%;
+  position: absolute;
+  top: 150px;
+  bottom: 0;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: auto;
+}
+@media screen and (max-width: 576px) {
   /*   #headerMenu>li:hover{
         
     } */
 }
-button{
-    height:150px;
-    width:150px;
-    border: 10rem;
+button {
+  height: 110px;
+  width: 150px;
+  border: 10rem;
 }
-#top_bar{
-    
-    width :auto ;
-    height:auto ;
- /*    width: 100vw;
-    height: 100vh; 
-    border: 1px solid   red; */
-    display:flexbox;
-    flex-direction:row;
-    justify-content:flex-start;  
+#top_bar {
+  width: auto;
+  height: auto;
+  display: flexbox;
+  flex-direction: row;
+  justify-content: flex-start;
 }
-
 
 /* #top_bar li
 {
@@ -35,47 +54,47 @@ button{
     margin: 0;
     position: relative;
 } */
-#top_bar li
-{
-    list-style: none;
+#top_bar li {
+  list-style: none;
+  list-style-type: none;
+  display: block;
+  float: left;
+  height: 35px;
+  width: 130px;
+  line-height: 95px;
+  text-align: center;
+  color: #fff;
+}
+#top_bar ul li ul{
+  display: list-item;
+  margin: 0;
+  position: relative;
+  right: 20px;
+  font-size: 10px;
+  display: none;
+}
+#top_bar ul li a {
+  position:relative;
+  left: -50px;
+  text-decoration: none;
+  color: #ffffff;
+}
+#top_bar ul li:hover {
+  display: block;
+  background: #686868;
+  color: #000;
+  cursor: pointer;
+}
+#top_bar ul li:hover ul {
+  display: block;
+}
+#top_bar ul li:hover ul li:hover {
+  background: 868686;
+  color: #ff5588;
+  cursor: pointer;
+}
+.main li{
     list-style-type: none;
-    float: left;
-    height: 75px;
-    width: 120px;
-    line-height: 125px;
-    text-align:center;
+    margin-left: 100px;
 
-    color: #fff;
 }
-#top_bar ul li ul
-{
-    display: list-item;
-    margin: 0;
-    position: relative;
-    right: 40px;
-    font-size: 12px;
-    display: none;
-}
-#top_bar ul li a
-{
-    text-decoration: none;
-    color: #ffffff;
-}
-#top_bar ul li:hover
-{
-    background: #686868;
-    color: #000;
-    cursor: pointer;
-}
-#top_bar ul li:hover ul
-{
-    display: list-item;
-}
-#top_bar ul li:hover ul li:hover
-{
-    background: 868686;
-    color: #ff5588;
-    cursor: pointer;
-}
-
-
