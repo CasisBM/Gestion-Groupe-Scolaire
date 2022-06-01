@@ -21,6 +21,8 @@ nav {
   margin-top: -12px;
   height: 70px;
   width: 100%;
+  -webkit-box-shadow: 3px 4px 5px -1px rgba(0,0,0,0.15); 
+  box-shadow: 3px 4px 10px -1px rgba(0,0,0,0.15);
 }
 .main {
   width: 100%;
@@ -41,7 +43,7 @@ ul {
     } */
 }
 button {
-  height: 50px;
+  height: 64px;
   width: 150px;
   background-color: #fff;
   background-origin: padding-box;
@@ -54,21 +56,6 @@ button:hover{
 #btn_ecole{
   background-color:white;
 }
-/* #top_bar {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: auto;
-    height: auto;
-} */
-
-/* #top_bar li
-{
-    display: block;
-    width: 100%;
-    margin: 0;
-    position: relative;
-} */
 
 #first_btn {
   display: flexbox;
@@ -80,15 +67,14 @@ button:hover{
   text-align: center;
   color: #fff;
 }
-#btn_admin{
-  margin-left: -20px;
-}
-#btn_profil{
+
+#btn_profil,#btn_de{
   border-style: none;
 }
 #last_btn {
-  width: 120px;
-  margin-top: 12px; 
+  width: 130px;  /* 120 */
+  margin-top: 6px; 
+  margin-right: 40px;
 }
 #last_btn ul li {
   list-style-type: none;
@@ -97,9 +83,17 @@ button:hover{
   width: 100px;
   height: 65px;
   text-align: right;
-  
+  margin-left: 40px;
 }
 
+#btn_admin{
+  margin-left: -20px;
+  border: 0.15rem solid grey;
+}
+
+#btn_admin td{
+  width: 60px;
+}
 
 #last_btn ul li ul{
   display: none;
