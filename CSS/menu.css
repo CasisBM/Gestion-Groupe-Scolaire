@@ -18,7 +18,7 @@ nav {
   position: relative;
 }
 .top {
-  margin-top: -9px;
+  margin-top: -12px;
   height: 70px;
   width: 100%;
 }
@@ -46,6 +46,13 @@ button {
   background-color: #fff;
   background-origin: padding-box;
   border: 0.1rem solid grey;
+}
+button:hover{
+  background-color: darkgray;
+  cursor: pointer;
+}
+#btn_ecole{
+  background-color:white;
 }
 /* #top_bar {
     display: flex;
@@ -75,8 +82,8 @@ button {
 }
 #last_btn {
   width: 120px;
-  margin-top: 9px;
-  margin-right: -19px;
+  margin-top: 12px;
+  margin-right: -20px;
 }
 #last_btn ul li {
   list-style-type: none;
