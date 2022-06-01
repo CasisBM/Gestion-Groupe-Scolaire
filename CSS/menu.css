@@ -76,14 +76,19 @@ button:hover{
   float: none;
   position: absolute;
   margin-left: 150px;
-  width: 50%;
+  width: 60%;
   text-align: center;
   color: #fff;
 }
+#btn_admin{
+  margin-left: -20px;
+}
+#btn_profil{
+  border-style: none;
+}
 #last_btn {
   width: 120px;
-  margin-top: 12px;
-  margin-right: -20px;
+  margin-top: 12px; 
 }
 #last_btn ul li {
   list-style-type: none;
