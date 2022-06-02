@@ -10,56 +10,51 @@
   </head>
 
   <body>
-    <div class="wrap">
-      <div class="top">
-        <header>
-          <nav>
-            <div><button id="btn_ecole"><b>Name de l'ecole</b></button></div>
-            <ul id="first_btn">
-              <button>Accueil</button>
-              <button onclick="location.href='http://www.google.com'" id="btn_prof">
-                Professeurs
-              </button>
-              <button>Promotions</button>
-              <button>Eleves</button>
-              <button>Salles</button>
-            </ul>
-            <div id="last_btn">
-              <ul>
-                <li>
-                  <button id="btn_admin"><table>
-                    <tr>
-                      <td >Admin</td>
-                      <td>nom</td>
-                    </tr>
-                    <tr>	
-                      <td></td>
-                      <td>prenom</td>
-                    </tr>
-                    </table></button>
-                  
-                  <ul>
-                    <li>
-                      <button id="btn_profil" onclick="location.href='http://www.google.com'" id="profil">profil</button>
-                    
-                      <button id="btn_de" onclick="location.href='http://www.google.com'" id="déconn">Se déconnecter</button>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </header>
-    
-      </div>
-      <div class="main">
-        <ul>
+    <header>
+      <div id="container">
+        <div id="btn_principal">
+          <button id="btn_ecole">Name de l'ecole</button>
+          <button>Accueil</button>
+          <button onclick="location.href='http://www.google.com'" id="btn_prof">
+            Professeurs
+          </button>
+          <button>Promotions</button>
+          <button>Eleves</button>
+          <button>Salles</button>
+        </div>
+        <div id="btn_last"><ul>
           <li>
-            <h1>link1</h1>
-            
+            <button id="btn_admin">
+              <div>
+                <p>Admin</p>
+                <p>Nom</p>
+                <p>Prenom</p>
+              </div>
+            </button>
+            <ul>
+              <li>
+                <button
+                  id="btn_profil"
+                  onclick="location.href='http://www.google.com'"
+                  id="profil"
+                >
+                  profil
+                </button>
+              </li>
+              <li>
+                <button
+                  id="btn_de"
+                  onclick="location.href='http://www.google.com'"
+                  id="déconn"
+                >
+                  Se déconnecter
+                </button>
+              </li>
+            </ul>
           </li>
         </ul>
+        </div>
       </div>
-    </div>
+    </header>
   </body>
 </html>

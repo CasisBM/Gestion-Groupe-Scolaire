@@ -3,40 +3,22 @@
   padding: 0;
 }
 html,
-body,
-.wrap {
+body {
   width: 100%;
   height: 100%;
   font-family: "Playfair";
 }
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.wrap {
-  position: relative;
-}
-.top {
-  margin-top: -12px;
-  height: 70px;
+
+/* .top {
+  height: 64px;
   width: 100%;
   -webkit-box-shadow: 3px 4px 5px -1px rgba(0,0,0,0.15); 
   box-shadow: 3px 4px 10px -1px rgba(0,0,0,0.15);
-}
-.main {
-  width: 100%;
   position: absolute;
-  top: 150px;
-  bottom: 0;
-}
+} */
 
-ul {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: auto;
-}
+
+
 @media screen and (max-width: 576px) {
   /*   #headerMenu>li:hover{
         
@@ -48,90 +30,52 @@ button {
   background-color: #fff;
   background-origin: padding-box;
   border: 0.1rem solid grey;
+  font-family: "Playfair";
+  font-weight: bold;
 }
 button:hover{
   background-color: darkgray;
   cursor: pointer;
 }
-#btn_ecole{
-  background-color:white;
+#container{
+  display: flex;
+  justify-content: space-between;
+}
+#btn_principal{
+  display: flex;
+
 }
 
-#first_btn {
-  display: flexbox;
-  flex-direction: row;
-  float: none;
-  position: absolute;
-  margin-left: 150px;
-  width: 60%;
-  text-align: center;
-  color: #fff;
-}
 
 #btn_profil,#btn_de{
   border-style: none;
 }
-#last_btn {
-  width: 130px;  /* 120 */
-  margin-top: 6px; 
-  margin-right: 40px;
-}
-#last_btn ul li {
+
+#btn_last ul li{
   list-style-type: none;
   position: relative;
   float: right;
-  width: 100px;
+  width: 110px;
   height: 65px;
-  text-align: right;
-  margin-left: 40px;
+  left: -20px;
+  /* display: none;  */
+
+}
+#btn_last ul li ul{
+display: none;
 }
 
+#btn_last ul li:hover{
+  display: block;
+}
+#btn_last ul li:hover ul{
+  display: block;
+  cursor: pointer;
+}
 #btn_admin{
   margin-left: -20px;
-  border: 0.15rem solid grey;
+  /* border: 0.15rem solid grey;  */
+  
 }
 
-#btn_admin td{
-  width: 60px;
-}
 
-#last_btn ul li ul{
-  display: none;
-  position: absolute;
-  display: flexbox;
-  flex-direction: column;
-  justify-items:flex-start;
-  left: -20px;
-  margin-top: 110;
-  width: 100%;
-}
-/* #last_btn ul li ul{
-
-  background: 868686;
-  color: #ff5588;
-  cursor: pointer;
-  display: block;
-} */
-/* #last_btn ul li ul li>a {
-  list-style: none;
-  list-style-type: none;
-  list-style-position: inside;
-  display: block;
-  width: 100%;
-  font-size: 25px;
-  line-height: 50px;
-} */
-#last_btn ul li:hover {
-  display: block;
-  background: white;
-}
-#last_btn ul li:hover ul {
-  background-color: white;
-  display: block;
-  cursor: hand;
-}
-
-.main li {
-  list-style-type: none;
-  margin-left: 100px;
-}
