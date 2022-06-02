@@ -1,8 +1,8 @@
 @font-face {
-  font-family:"Roboto";
+  font-family: "Roboto";
   src: url("../fonts/Roboto/Roboto-Medium.ttf");
 }
-*{
+* {
   font-family: "Roboto";
 }
 
@@ -15,8 +15,8 @@ table {
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
-  -webkit-box-shadow: 3px 4px 5px -1px rgba(0,0,0,0.15); 
-  box-shadow: 3px 4px 5px -1px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.15);
+  box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.15);
 }
 td,
 th {
@@ -25,6 +25,9 @@ th {
 }
 th {
   border-bottom: 1px solid #dddddd;
+}
+a {
+  color: inherit;
 }
 .fa-pen {
   color: blue;
@@ -69,18 +72,18 @@ th {
 #titreTable {
   background-color: #f6f8fb;
 }
-#buttonTable{
+#buttonTable {
   border: 1px #9b9daa solid;
   border-radius: 8px;
   background-color: #bfd7fc;
   padding: 0.3rem 0.6rem 0.3rem 0.6rem;
 }
-#buttonTable:hover{
+#buttonTable:hover {
   cursor: pointer;
   background-color: #73a8f7;
 }
 
-#footTable{
+#footTable {
   width: 100%;
   display: flex;
   justify-content: space-between;
