@@ -49,6 +49,7 @@ button:hover{
 
 #btn_profil,#btn_de{
   border-style: none;
+  background-color: darkgray;
 }
 
 #btn_last ul li{
