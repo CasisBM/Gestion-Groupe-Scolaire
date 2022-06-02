@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Playfair";
+  src: url("../font/PlayfairDisplay-Regular.ttf");
+}
+* {
+  font-family: "Playfair";
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  letter-spacing: 0.3rem;
+}
