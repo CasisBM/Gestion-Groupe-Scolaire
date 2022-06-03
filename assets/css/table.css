@@ -6,9 +6,9 @@
   font-family: "Roboto";
 }
 
+
 table {
   margin-top: 3rem;
-  font-family: sans-serif;
   border: 1px solid #dddddd;
   box-sizing: content-box;
   border-radius: 6px;
@@ -29,6 +29,10 @@ th {
 a {
   color: inherit;
 }
+button {
+  font-family : inherit;
+  font-size: 1em;
+}
 .fa-pen {
   color: blue;
   margin-right: 15px;
@@ -42,6 +46,7 @@ a {
   width: 100%;
   position: relative;
   display: flex;
+  align-items: center;
 }
 .search-input {
   width: 50%;
@@ -62,6 +67,7 @@ a {
   border-left: none;
   background: none;
   font-size: 15px;
+  padding: 6.1px;
 }
 .container {
   width: 20%;
