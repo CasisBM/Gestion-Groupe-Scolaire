@@ -1,5 +1,3 @@
-
-    <div w3-include-html="header.html"></div>
             <!--/Table Liste Cours-->
             <table>
               <thead>
