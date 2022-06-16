@@ -1,5 +1,5 @@
     <header>
-      <div id="container">
+      <div id="search">
         <div id="btn_principal">
           <button id="btn_ecole">Name de l'ecole</button>
           <button onclick="location.href='index.php?page=accueil'">Accueil</button>
