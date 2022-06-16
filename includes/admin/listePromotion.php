@@ -1,28 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="../assets/js/include.js" defer></script>
-    <link rel="stylesheet" href="../assets/css/normalize.css" />
-    <link rel="stylesheet" href="../assets/css/table.css" />
-  </head>
-  <body>
-    <div w3-include-html="header.html"></div>
+
             <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th id="nomTable" colspan="5">Liste des salles</th>
+                  <th id="nomTable" colspan="5">Liste des promotions</th>
                 </tr>
                 <tr>
                   <th colspan="5">
@@ -36,8 +18,8 @@
                 
                </div>
               <tr id="titreTable">
-                <th>Salles</th>
-                <th>Caracteristique</th>
+                <th>Promotion</th>
+                <th>Programmes d'enseignemants</th>
                 <th>Voir planning</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
@@ -45,10 +27,10 @@
             </thead>
             <tbody>
               <tr>
-                <td>PEUPLIER</td>
-                <td>13 ordinateurs, 13 places assis, micro-onde, bouilloire, tableau</td>
+                <td>Second1</td>
+                <td>Second general</td>
                 <td>
-                  <a href="planningesalle.html">
+                  <a href="planningpromotion.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
@@ -60,10 +42,10 @@
               </tr>
       
               <tr>
-                <td>306</td>
-                <td>30 bureaux et chaises, tableau, 1 ordinateur</i></td>
+                <td>Premiere2</td>
+                <td>Premiere BAC STI2D</i></td>
                 <td>
-                  <a href="planningesalle.html">
+                  <a href="planningpromotion.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
@@ -75,11 +57,10 @@
               </tr>
       
               <tr>
-                <td>CDI</td>
-                <td>45 places assis, des livres,
-                  10 ordinateur</i></td>
+                <td>Terminal3</td>
+                <td>Terminal BAC PRO Agricole</i></td>
                 <td>
-                  <a href="planningesalle.html">
+                  <a href="planningpromotion.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
@@ -101,10 +82,8 @@
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button id="buttonTable" type="button"> Ajouter une salle </button></div>
+                  <button id="buttonTable" type="button"> Ajouter une promotion </button></div>
                 </td>
               </tr>
             </tfoot>
             </table> 
-  </body>
-</html>
