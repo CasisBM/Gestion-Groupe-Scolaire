@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="../assets/js/include.js" defer></script>
-    <link rel="stylesheet" href="../assets/css/normalize.css" />
-    <link rel="stylesheet" href="../assets/css/table.css" />
-  </head>
-  <body>
-    <div w3-include-html="header.html"></div>
+<?php require './includes/admin/header.php'; ?>
     <input type="date" min="2022-01-01" max="2025-01-01">
             <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th id="nomTable" colspan="7">Planning (Nom Salles)</th>
+                  <th id="nomTable" colspan="7">Planning (Nom Professeur)</th>
                 </tr>
                 <tr>
                 </tr>
@@ -33,7 +14,7 @@
                 <th>Matiere</th>
                 <th>Date</th>
                 <th>Horaires</th>
-                <th>Professeurs</th>
+                <th>Salles</th>
                 <th>Promotions</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
@@ -44,8 +25,8 @@
                 <td>Maths</td>
                 <td>11/05/2022</td>
                 <td>17:30 - 19:00</td>
-                <td>Cedric DURON</td>
-                <td>CDI</td>
+                <td>306</td>
+                <td>CM2</td>
                 <td>Ecole 00</td>
                 <td>
                   <i class="fa-solid fa-pen"></i>
@@ -57,8 +38,8 @@
                 <td>Anglais</td>
                 <td>12/05/2022</td>
                 <td>16:30 - 17:30</td>
-                <td>Jean-louis DE LA ROCHE</td>
-                <td>Second</td>
+                <td>PEUPLIER</td>
+                <td>CEPPIC2022</td>
                 <td>Ecole 2</td>
                 <td>
                   <i class="fa-solid fa-pen"></i>
@@ -70,8 +51,8 @@
                 <td>Histoire</td>
                 <td>13/05/2022</td>
                 <td>13:00 - 14:00</td>
-                <td>Emilie Bocase</td>
-                <td>Terminal</td>
+                <td>ERABLE</td>
+                <td>CEPPIC2022</td>
                 <td>Ecole 3</td>
                 <td>
                   <i class="fa-solid fa-pen"></i>
@@ -95,5 +76,4 @@
               </tr>
             </tfoot>
             </table> 
-  </body>
-</html>
+

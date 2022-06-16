@@ -1,6 +1,5 @@
-
-    <div w3-include-html="header.html"></div>
             <!--/Table Liste Cours-->
+            <?php require './includes/admin/header.php'; ?>
             <table>
               <thead>
                 <tr>
