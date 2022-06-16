@@ -8,7 +8,7 @@
                 </tr>
                 <tr>
                   <th colspan="5">
-                    <div class="container">
+                    <div class="search">
                       <div class="search-box">
                          <input type="text" class="search-input" placeholder="Recherche..">
                          <i class="fas fa-search search-button"></i>
