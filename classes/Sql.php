@@ -1,27 +1,28 @@
 <?php class Sql
 {
-    private $serverName = "localhost";
-    private $userName = "root";
-    private $userPassword = "";
-    private $database = "filrouge";
-    private $connexion;
-    
-    public function __construct(string $serverName,$userName,$userPassword,$database)
-    {
-        try {
-            //code...
-            $this->connexion = new PDO("mysql:host=$serverName;dbname=$database", $userName, $userPassword);
-            $this->connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+   private string $serverName = "localhost";
+   private string $userName = "root";
+   private string $userPassword = "";
+   private string $database = "dbetablissement";
+   private object $connection;
 
-        } catch (PDOException $e) {
-            die("Erreur : ".$e->getMessage() );
-        }  
-    }
-
-    public function inserer($requete)
-    {
-        $this->connexion->exec($requete);
-    }
+   public function __construct()
+   {
+       try {
+        $this->connection = new PDO("mysql:host=$this->serverName;dbname=$this->database", $this->userName, $this->userPassword);
+        $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+       } catch (PDOException $e) {
+        die("Erreur : " . $e->getMessage());
+       }
+   }
+   public function inserer($query){
+      
+       $this->connection->exec($query);
+       
+   }
+   public function getSelect($querysql){
+        return $this->connection->query($querysql)->fetchAll();
+   }
 
     public function __destruct()
     {
