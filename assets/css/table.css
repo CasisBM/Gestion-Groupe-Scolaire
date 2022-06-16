@@ -1,22 +1,22 @@
 @font-face {
-  font-family:"Roboto";
+  font-family: "Roboto";
   src: url("../fonts/Roboto/Roboto-Medium.ttf");
 }
-*{
+* {
   font-family: "Roboto";
 }
 
+
 table {
   margin-top: 3rem;
-  font-family: sans-serif;
   border: 1px solid #dddddd;
   box-sizing: content-box;
   border-radius: 6px;
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
-  -webkit-box-shadow: 3px 4px 5px -1px rgba(0,0,0,0.15); 
-  box-shadow: 3px 4px 5px -1px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.15);
+  box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.15);
 }
 td,
 th {
@@ -25,6 +25,13 @@ th {
 }
 th {
   border-bottom: 1px solid #dddddd;
+}
+a {
+  color: inherit;
+}
+button {
+  font-family : inherit;
+  font-size: 1em;
 }
 .fa-pen {
   color: blue;
@@ -39,6 +46,7 @@ th {
   width: 100%;
   position: relative;
   display: flex;
+  align-items: center;
 }
 .search-input {
   width: 50%;
@@ -59,6 +67,7 @@ th {
   border-left: none;
   background: none;
   font-size: 15px;
+  padding: 6.1px;
 }
 .container {
   width: 20%;
@@ -69,18 +78,18 @@ th {
 #titreTable {
   background-color: #f6f8fb;
 }
-#buttonTable{
+#buttonTable {
   border: 1px #9b9daa solid;
   border-radius: 8px;
   background-color: #bfd7fc;
   padding: 0.3rem 0.6rem 0.3rem 0.6rem;
 }
-#buttonTable:hover{
+#buttonTable:hover {
   cursor: pointer;
   background-color: #73a8f7;
 }
 
-#footTable{
+#footTable {
   width: 100%;
   display: flex;
   justify-content: space-between;
