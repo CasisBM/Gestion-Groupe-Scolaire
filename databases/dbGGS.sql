@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `dbEtablissement`.`PROMOTIONS` (
   `id_etablissement` INT NOT NULL,
   `année` INT(4) NOT NULL,
   PRIMARY KEY (`id_promotion`),
-  INDEX `fk_PROMOTIONS_ETABLISSEMENTS1_idx` (`id_etablissement` ASC) VISIBLE,
+  INDEX `fk_PROMOTIONS_ETABLISSEMENTS1_idx` (`id_etablissement` ASC) ,
   CONSTRAINT `fk_PROMOTIONS_ETABLISSEMENTS1`
     FOREIGN KEY (`id_etablissement`)
     REFERENCES `dbEtablissement`.`ETABLISSEMENTS` (`id_etablissement`)
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `dbEtablissement`.`ELEVES` (
   `date_naissance` DATE NULL,
   `email` VARCHAR(255) NULL,
   `telephone` VARCHAR(10) NULL,
-  INDEX `fk_ELEVES_PROMOTIONS1_idx` (`id_promotion` ASC) VISIBLE,
+  INDEX `fk_ELEVES_PROMOTIONS1_idx` (`id_promotion` ASC) ,
   PRIMARY KEY (`id_eleve`, `id_promotion`),
   CONSTRAINT `fk_ELEVES_PROMOTIONS1`
     FOREIGN KEY (`id_promotion`)
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `dbEtablissement`.`SALLES` (
   `nom_salle` VARCHAR(255) NOT NULL,
   `caracteristique` VARCHAR(255) NULL,
   PRIMARY KEY (`id_salle`, `id_etablissement`),
-  INDEX `fk_SALLES_ETABLISSEMENTS1_idx` (`id_etablissement` ASC) VISIBLE,
+  INDEX `fk_SALLES_ETABLISSEMENTS1_idx` (`id_etablissement` ASC) ,
   CONSTRAINT `fk_SALLES_ETABLISSEMENTS1`
     FOREIGN KEY (`id_etablissement`)
     REFERENCES `dbEtablissement`.`ETABLISSEMENTS` (`id_etablissement`)
@@ -119,8 +119,8 @@ CREATE TABLE IF NOT EXISTS `dbEtablissement`.`ENSEIGNANTS_has_MATIERES` (
   `id_enseignant` INT NOT NULL,
   `id_matiere` INT NOT NULL,
   PRIMARY KEY (`id_enseignant`, `id_matiere`),
-  INDEX `fk_ENSEIGNANTS_has_MATIERES_MATIERES1_idx` (`id_matiere` ASC) VISIBLE,
-  INDEX `fk_ENSEIGNANTS_has_MATIERES_ENSEIGNANTS1_idx` (`id_enseignant` ASC) VISIBLE,
+  INDEX `fk_ENSEIGNANTS_has_MATIERES_MATIERES1_idx` (`id_matiere` ASC) ,
+  INDEX `fk_ENSEIGNANTS_has_MATIERES_ENSEIGNANTS1_idx` (`id_enseignant` ASC) ,
   CONSTRAINT `fk_ENSEIGNANTS_has_MATIERES_ENSEIGNANTS1`
     FOREIGN KEY (`id_enseignant`)
     REFERENCES `dbEtablissement`.`ENSEIGNANTS` (`id_enseignant`)
@@ -146,10 +146,10 @@ CREATE TABLE IF NOT EXISTS `dbEtablissement`.`PLANNING` (
   `heure_fin` TIME NOT NULL,
   `id_enseignant` INT NULL,
   `id_matiere` INT NULL,
-  INDEX `fk_PLANNING_PROMOTIONS1_idx` (`id_promotion` ASC) VISIBLE,
+  INDEX `fk_PLANNING_PROMOTIONS1_idx` (`id_promotion` ASC) ,
   PRIMARY KEY (`id_planning`),
-  INDEX `fk_PLANNING_SALLES1_idx` (`id_salle` ASC) VISIBLE,
-  INDEX `fk_PLANNING_ENSEIGNANTS_has_MATIERES1_idx` (`id_enseignant` ASC, `id_matiere` ASC) VISIBLE,
+  INDEX `fk_PLANNING_SALLES1_idx` (`id_salle` ASC) ,
+  INDEX `fk_PLANNING_ENSEIGNANTS_has_MATIERES1_idx` (`id_enseignant` ASC, `id_matiere` ASC) ,
   CONSTRAINT `fk_PLANNING_PROMOTIONS1`
     FOREIGN KEY (`id_promotion`)
     REFERENCES `dbEtablissement`.`PROMOTIONS` (`id_promotion`)
@@ -188,10 +188,10 @@ CREATE TABLE IF NOT EXISTS `dbEtablissement`.`ETABLISSEMENTS_has_UTILISATEUR` (
   `ADMINISTRATEUR_id_administrateur` INT NOT NULL,
   `ELEVES_id_promotion` INT NOT NULL,
   PRIMARY KEY (`id_etablissement`),
-  INDEX `fk_ETABLISSEMENTS_has_UTILISATEUR_ETABLISSEMENTS1_idx` (`id_etablissement` ASC) VISIBLE,
-  INDEX `fk_ETABLISSEMENTS_has_UTILISATEUR_ENSEIGNANTS1_idx` (`ENSEIGNANTS_id_enseignant` ASC) VISIBLE,
-  INDEX `fk_ETABLISSEMENTS_has_UTILISATEUR_ADMINISTRATEUR1_idx` (`ADMINISTRATEUR_id_administrateur` ASC) VISIBLE,
-  INDEX `fk_ETABLISSEMENTS_has_UTILISATEUR_ELEVES1_idx` (`ELEVES_id_promotion` ASC) VISIBLE,
+  INDEX `fk_ETABLISSEMENTS_has_UTILISATEUR_ETABLISSEMENTS1_idx` (`id_etablissement` ASC) ,
+  INDEX `fk_ETABLISSEMENTS_has_UTILISATEUR_ENSEIGNANTS1_idx` (`ENSEIGNANTS_id_enseignant` ASC) ,
+  INDEX `fk_ETABLISSEMENTS_has_UTILISATEUR_ADMINISTRATEUR1_idx` (`ADMINISTRATEUR_id_administrateur` ASC) ,
+  INDEX `fk_ETABLISSEMENTS_has_UTILISATEUR_ELEVES1_idx` (`ELEVES_id_promotion` ASC) ,
   CONSTRAINT `fk_ETABLISSEMENTS_has_UTILISATEUR_ETABLISSEMENTS1`
     FOREIGN KEY (`id_etablissement`)
     REFERENCES `dbEtablissement`.`ETABLISSEMENTS` (`id_etablissement`)
