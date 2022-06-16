@@ -1,4 +1,5 @@
 
+            <?php require './includes/admin/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
