@@ -18,7 +18,7 @@
         }  
     }
 
-    public function editTable($requete)
+    public function inserer($requete)
     {
         try {
             $this->connexion->exec($requete);
@@ -31,7 +31,7 @@
         }    
     }
 
-    public function showTable($requete)
+    public function lister($requete)
     {
         return $this->connexion->query($requete)->fetchAll();
     }
