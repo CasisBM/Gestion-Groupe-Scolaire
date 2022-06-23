@@ -1,5 +1,16 @@
+<?php
+spl_autoload_register(function($className){
+  
+   require '../../classes/'.$className.'.php';
 
-<?php require './includes/admin/header.php'; ?>
+});
+$sqlQuery = new Sql();
+$tblQuery = array();
+
+$tblQuery = $sqlQuery->getSelect("select * from enseignants");
+
+?>
+<?php require 'header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
@@ -26,8 +37,9 @@
               </tr>
             </thead>
             <tbody>
+            <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
-                <td>Cedric DURON</td>
+                <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
                 <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
                   <a href="planningprof.html">
@@ -36,37 +48,11 @@
                 </td>
                 <td>Ecole 1</td>
                 <td>
-                  <i class="fa-solid fa-trash"></i>
+                  <i class="fa-solid fa-trash" href=\"index.php?page=supp&id="></i>
                 </td>
               </tr>
-      
-              <tr>
-                <td>Jean-louis DE LA ROCHE</td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
-                <td>
-                  <a href="planningprof.html">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
-                </td>
-                <td>Ecole 2</td>
-                <td>
-                  <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
-      
-              <tr>
-                <td>Emilie BOCASE</td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
-                <td>
-                  <a href="planningprof.html">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
-                </td>
-                <td>Ecole 3</td>
-                <td>
-                  <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
+              <?php } ?>
+             
             </tbody>
             <tfoot>
               <tr >
