@@ -1,6 +1,6 @@
 <?php 
 
-class Utilisateur implements interfaceUtilisateur
+class Utilisateur
 {
     private string $nom;
     private string $prenom;
@@ -64,7 +64,7 @@ class Utilisateur implements interfaceUtilisateur
         
         $passwordHash = password_hash($this->password, PASSWORD_DEFAULT);
         $requete = "INSERT INTO utilisateurs (nom,prenom,mail,password) VALUES ('$this->nom','$this->prenom','$this->mail','$passwordHash' );";
-        $this->db->editTable($requete);
+        $this->db->inserer($requete);
 
     }
 
@@ -80,7 +80,7 @@ class Utilisateur implements interfaceUtilisateur
     {
 
         $requeteLogin = "SELECT password FROM utilisateurs WHERE mail='$this->mail'";
-        $resultatLogin = $this->db->showTable($requeteLogin);
+        $resultatLogin = $this->db->lister($requeteLogin);
 
         if (count($resultatLogin) > 0) {
             // Traitement pour vérifier le mot de passe
