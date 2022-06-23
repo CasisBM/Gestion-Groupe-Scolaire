@@ -3,7 +3,7 @@
     private $serverName = "localhost";
     private $userName = "root";
     private $userPassword = "";
-    private $database = "filrouge";
+    private $database = "dbetablissement";
     private $connexion;
     
     public function __construct()
