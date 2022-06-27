@@ -43,3 +43,57 @@ Stack trace:
 #4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(5): inclusionIncFile('ajouterProf')
 #5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@contact.com)' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO com...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Admin.php(56): Sql->inserer('INSERT INTO com...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterProf.inc.php(53): Admin->ajouterProf('noel.f', 'fred', 'NOEL', 'Frederic', 'fred@contact.co...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(20): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(18): inclusionIncFile('ajouterProf')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dbetablissement`.`enseignants`, CONSTRAINT `fk_ENSEIGNANTS_COMPTES1` FOREIGN KEY (`id_compte`) REFERENCES `comptes` (`id_compte`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO ens...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Admin.php(64): Sql->inserer('INSERT INTO ens...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterProf.inc.php(53): Admin->ajouterProf('noel.f', 'fred', 'NOEL', 'Frederic', 'fred@contact.co...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(20): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(18): inclusionIncFile('ajouterProf')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@noel.com)' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO com...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Admin.php(56): Sql->inserer('INSERT INTO com...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterProf.inc.php(53): Admin->ajouterProf('noel.f', 'fred', 'NOEL', 'Frederic', 'contact@noel.co...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(20): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(18): inclusionIncFile('ajouterProf')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dbetablissement`.`enseignants`, CONSTRAINT `fk_ENSEIGNANTS_COMPTES1` FOREIGN KEY (`id_compte`) REFERENCES `comptes` (`id_compte`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO ens...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Admin.php(65): Sql->inserer('INSERT INTO ens...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterProf.inc.php(53): Admin->ajouterProf('noel.f', 'fred', 'NOEL', 'Frederic', 'contact@noel.co...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(20): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(18): inclusionIncFile('ajouterProf')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'envoi_mail' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO com...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Admin.php(56): Sql->inserer('INSERT INTO com...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterProf.inc.php(53): Admin->ajouterProf('noel.f', 'fred', 'NOEL', 'Frederic', 'contact@noel.co...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(20): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(18): inclusionIncFile('ajouterProf')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dbetablissement`.`enseignants`, CONSTRAINT `fk_ENSEIGNANTS_COMPTES1` FOREIGN KEY (`id_compte`) REFERENCES `comptes` (`id_compte`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO ens...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Admin.php(65): Sql->inserer('INSERT INTO ens...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterProf.inc.php(53): Admin->ajouterProf('noel.f', 'fred', 'NOEL', 'Frederic', 'contact@noel.co...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(20): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(18): inclusionIncFile('ajouterProf')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#6 {main}
