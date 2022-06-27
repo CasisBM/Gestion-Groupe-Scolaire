@@ -55,13 +55,28 @@ class Admin
         $requete = "SELECT id_enseignant FROM enseignants WHERE email = '$mail';";
         dump($requete);
         $id = $this->db->lister($requete)[0]['id_enseignant'];
-        $date = date("Y-m-d H:i:s");
-        $requete = "INSERT INTO comptes(creation_compte,envoi_mail,token,id_enseignant,email_verification) VALUES ('$date','$passwordHash','$nom','$prenom','$mail');";
 
-        
-        
+        $date = date("Y-m-d H:i:s");
         $token = bin2hex(random_bytes(50)); // generate unique token
 
+        $requete = "INSERT INTO comptes(creation_compte,envoi_mail,token,id_enseignant,email_verification) VALUES ('$date','$date','$token','$id','0');";
+        dump($requete);
+        $this->db->inserer($requete);
+
+        $url = $_SERVER['HTTP_ORIGIN'] . dirname($_SERVER['REQUEST_URI']) . "/verification.php?email=.$mail.&token=.$token.";
+        dump($url);
+        $toEmail = $mail;
+        $fromEmail = 'admin@contact.com';
+        $sujetEmail = '<a href="'.$url.'">Verify your account</a>';
+        $messageEmail = 'Vous êtes bien connecté';
+
+        sendMail($toEmail,$fromEmail,$sujetEmail,$messageEmail);
+
+    }
+
+    public function verifUtilisateur()
+    {
+        
     }
 
      public function modifierUtilisateur()
