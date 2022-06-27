@@ -1,32 +1,45 @@
 <?php class Sql
 {
-   private string $serverName = "localhost";
-   private string $userName = "root";
-   private string $userPassword = "";
-   private string $database = "dbetablissement";
-   private object $connexion;
+    private $serverName = "localhost";
+    private $userName = "root";
+    private $userPassword = "";
+    private $database = "dbetablissement";
+    private $connexion;
+    
+    public function __construct()
+    {
+        try {
+            //code...
+            $this->connexion = new PDO("mysql:host=$this->serverName;dbname=$this->database", $this->userName, $this->userPassword);
+            $this->connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-   public function __construct()
-   {
-       try {
-        $this->connexion = new PDO("mysql:host=$this->serverName;dbname=$this->database", $this->userName, $this->userPassword);
-        $this->connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-       } catch (PDOException $e) {
-        die("Erreur : " . $e->getMessage());
-       }
-   }
-   public function inserer($query){
-      
-       $this->connexion->exec($query);
-       
-   }
-   public function getSelect($querysql){
-        return $this->connexion->query($querysql)->fetchAll();
-   }
+        } catch (PDOException $e) {
+            die("Erreur : ".$e->getMessage() );
+        }  
+    }
+
+    public function inserer($requete)
+    {
+        try {
+            $this->connexion->exec($requete);
+        }
+        catch(Exception $e) {
+            $myfile = fopen("errorSql.txt", "a") or die("Unable to open file!");
+            $txt = $e."\n";
+            fwrite($myfile, $txt);
+            fclose($myfile);
+        }    
+    }
+
+    public function lister($requete)
+    {
+        return $this->connexion->query($requete)->fetchAll();
+    }
 
     public function __destruct()
     {
         $this->connexion = null;
     }
 
+    
 }
