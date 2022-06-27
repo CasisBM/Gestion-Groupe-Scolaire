@@ -10,7 +10,7 @@ $tblQuery = array();
 $tblQuery = $sqlQuery->lister("select * from salles");
 
 ?>
-<?php require '../header.php'; ?>
+<?php require './includes/header.php'; ?>
        <!--/Table Liste Professeur-->
             <table>
               <thead>
@@ -66,7 +66,7 @@ $tblQuery = $sqlQuery->lister("select * from salles");
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button id="buttonTable" type="button" onclick="location.href='../../index.php?page=frmSalle'"> Ajouter une salle </button></div>
+                  <button id="buttonTable" type="button" onclick="location.href='index.php?page=ajouteSalle'"> Ajouter une salle </button></div>
                 </td>
               </tr>
             </tfoot>

@@ -1,15 +1,18 @@
 
 <?php
 function inclusionIncFile($defaultPage){
-    $files = glob('./includes/*.inc.php');
-    $filesAdmin = glob('./includes/admin/*.php');
+    $files = glob('./includes/*.php');
+    $filesAdmin = glob('./includes/admin/*.inc.php');
     $page = $_GET['page'] ?? $defaultPage;
     $pageTest = './includes/' . $page . '.php';
     $pageTestAdmin = './includes/admin/'. $page . '.inc.php';
-    
+
+    //var_dump($page);
+
+
     if (in_array($pageTest,$files))
     {
-        require "./includes/$page.inc.php";
+        require "./includes/$page.php";
     }
     else if(in_array($pageTestAdmin,$filesAdmin))
     {      

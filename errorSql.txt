@@ -43,3 +43,227 @@ Stack trace:
 #4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(5): inclusionIncFile('ajouterProf')
 #5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$i','shengzhuo')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$i','shengzhuo')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$i','shengzhuo')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$i','shengzhuo')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$i','shengzhuo')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$i','shengzhuo')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$i','shengzhuo')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'3-directeur3','shengzhuo')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$tblQuery[$i][&#039;id_etablissement&#039;]','shengzhuo7')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$tblQuery[$i][&#039;id_etablissement&#039;]','shengzhuo7')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$tblQuery[$i][&#039;id_etablissement&#039;]','shengzhuo7')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$tblQuery[$i][&#039;id_etablissement&#039;]','shengzhuo5')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$tblQuery[$i][&#039;id_etablissement&#039;]','shengzhuo5')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$tblQuery[$i][&#039;id_etablissement&#039;]','shengzhuo5')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$tblQuery[$i][&#039;id_etablissement&#039;]','shengzhuo5')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$tblQuery[$i][&#039;id_etablissement&#039;]','shengzhuo5')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$tblQuery[$i][&#039;id_etablissement&#039;]','shengzhuo5')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$tblQuery[$i][&#039;id_etablissement&#039;]','shengzhuo5')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$tblQuery[$i][&#039;id_etablissement&#039;]','shengzhuo5')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$mml','shengzhuo7')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$mml','shengzhuo7')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$mml','shengzhuo7')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$mml','shengzhuo7')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'$mml','shengzhuo8')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'','shengzhuo8')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'1','shengzhuo8')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'1','shengzhuo8')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES(NULL,'1','shengzhuo8')' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\admin\ajouteSalle.inc.php(44): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(19): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(6): inclusionIncFile('ajouterProf')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}

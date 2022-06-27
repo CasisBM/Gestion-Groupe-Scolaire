@@ -4,13 +4,13 @@
       <div id="search">
         <div id="btn_principal">
           <button id="btn_ecole">Name de l'ecole</button>
-          <button onclick="location.href='../../index.php?page=accueil'">Accueil</button>
-          <button onclick="location.href='../../index.php?page=listeProfesseur'" id="btn_prof">
+          <button onclick="location.href='../index.php?page=accueil'">Accueil</button>
+          <button onclick="location.href='../index.php?page=listeProfesseur'" id="btn_prof">
             Professeurs
           </button>
-          <button onclick="location.href='../../index.php?page=listePromotion'">Promotions</button>
-          <button onclick="location.href='../../index.php?page=listeEleve'">Eleves</button>
-          <button onclick="location.href='../../index.php?page=listeSalle'">Salles</button>
+          <button onclick="location.href='../index.php?page=listePromotion'">Promotions</button>
+          <button onclick="location.href='../index.php?page=listeEleve'">Eleves</button>
+          <button onclick="location.href='../index.php?page=listeSalle'">Salles</button>
         </div>
         <div id="btn_last"><ul>
           <li>

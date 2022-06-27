@@ -7,34 +7,31 @@ spl_autoload_register(function($className){
 $sqlQuery = new Sql();
 $tblQuery = array();
 
-$tblQuery = $sqlQuery->lister("select * from etablissement");
+$tblQuery = $sqlQuery->lister("select * from etablissements");
 
 ?>
-<form action="index.php?page=ajouteSalle" method="post">
+<form action="../../index.php?page=ajouteSalle" method="post">
     <div>
         <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" value="<?=$users[0]['nom']?>" />
+        <input type="text" id="nom" name="nom"  />
     </div>
     <div>
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" name="prenom" value="<?=$users[0]['prenom'] ?>" />
+        <label for="caracteristique">caracteristique :</label>
+        <input type="text" id="caracteristique" name="caracteristique"  />
     </div>
     <div>
-        <label for="mail">e-mail :</label>
-        <input type="text" id="mail" name="mail" value="<?=$users[0]['mail'] ?>" />
+        <label for="id_etablissement">id_etablissement  :</label>
+        <select name="id_etablissement" id="id_etablissement" >
+        <?php for($i=0; $i <count($tblQuery) ; $i++) { 
+            ?>
+            <option><?=$tblQuery[$i]['id_etablissement'] ?>-<?=$tblQuery[$i]['nom_etablissement']?></option>
+       <?php  } ?>
+        </select>
     </div>
-    <div>
-        <label for="password">Mot de passe :</label>
-        <input type="password" id="password" name="password" />
-    </div>
-    <div>
-        <label for="password1">Mot de passe (vérification) :</label>
-        <input type="password" id="password1" name="password1" />
-    </div>
+    
     <div>
         <input type="reset" value="Effacer" />
-        <input type="submit" value="Update" />
+        <input type="submit" value="Ajoute" />
     </div>
-    <input type="hidden" name="id" id="id" value=<?=$users[0]['id_utilisateur']?>>
     <input type="hidden" name="frmSalle" />
 </form>
