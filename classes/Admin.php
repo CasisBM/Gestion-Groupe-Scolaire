@@ -49,8 +49,8 @@ class Admin
     public function ajouterProf(string $identifiant, string $password, string $nom , string $prenom,string $mail)
     {
 
-        $passwordHash = password_hash($this->password, PASSWORD_DEFAULT);
-        $requete = "INSERT INTO utilisateurs (identifiant,password,nom,prenom,mail,) VALUES ('$identifiant','$passwordHash','$nom','$prenom','$mail');";
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+        $requete = "INSERT INTO enseignants (identifiant,password,nom,prenom,email) VALUES ('$identifiant','$passwordHash','$nom','$prenom','$mail');";
         $this->db->inserer($requete);
 
     }

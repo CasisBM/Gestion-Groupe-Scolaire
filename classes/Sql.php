@@ -21,6 +21,7 @@
     public function inserer($requete)
     {
         try {
+            dump($requete);
             $this->connexion->exec($requete);
         }
         catch(Exception $e) {

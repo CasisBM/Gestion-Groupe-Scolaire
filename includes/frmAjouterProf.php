@@ -1,4 +1,4 @@
-<h1>Inscription</h1>
+<h1>Ajouter un professeur</h1>
 <form action="index.php?page=ajouterProf" method="post">
     <div>
         <label for="identifiant">Identifiant :</label>

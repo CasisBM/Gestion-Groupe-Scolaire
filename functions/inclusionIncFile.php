@@ -17,17 +17,12 @@ function inclusionIncFile($defaultPage){
     }
     else if(file_exists("./includes/$defaultPage.inc.php"))
     {
-        echo "13";
         require "./includes/$defaultPage.inc.php";
     }
     else 
     {
-        echo "14";
         require "./includes/admin/$defaultPage.inc.php";
     } 
- 
-    
-
 }
 
     ?>
