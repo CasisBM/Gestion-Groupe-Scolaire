@@ -1,10 +1,9 @@
-
 <?php require './includes/admin/header.php'; ?>
-            <!--/Table Liste Professeur-->
+       <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th id="nomTable" colspan="5">Liste des professeurs</th>
+                  <th id="nomTable" colspan="5">Liste des salles</th>
                 </tr>
                 <tr>
                   <th colspan="5">
@@ -18,8 +17,8 @@
                 
                </div>
               <tr id="titreTable">
-                <th>Professeurs</th>
-                <th>Voir profil</th>                
+                <th>Salles</th>
+                <th>Caracteristique</th>
                 <th>Voir planning</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
@@ -27,43 +26,47 @@
             </thead>
             <tbody>
               <tr>
-                <td>Cedric DURON</td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
+                <td>PEUPLIER</td>
+                <td>13 ordinateurs, 13 places assis, micro-onde, bouilloire, tableau</td>
                 <td>
-                  <a href="planningprof.html">
+                  <a href="planningesalle.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
                 <td>Ecole 1</td>
                 <td>
+                  <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
                 </td>
               </tr>
       
               <tr>
-                <td>Jean-louis DE LA ROCHE</td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
+                <td>306</td>
+                <td>30 bureaux et chaises, tableau, 1 ordinateur</i></td>
                 <td>
-                  <a href="planningprof.html">
+                  <a href="planningesalle.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
                 <td>Ecole 2</td>
                 <td>
+                  <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
                 </td>
               </tr>
       
               <tr>
-                <td>Emilie BOCASE</td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
+                <td>CDI</td>
+                <td>45 places assis, des livres,
+                  10 ordinateur</i></td>
                 <td>
-                  <a href="planningprof.html">
+                  <a href="planningesalle.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
                 <td>Ecole 3</td>
                 <td>
+                  <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
                 </td>
               </tr>
@@ -79,7 +82,7 @@
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button id="buttonTable" type="button"> Ajouter un professeur </button></div>
+                  <button id="buttonTable" type="button"> Ajouter une salle </button></div>
                 </td>
               </tr>
             </tfoot>

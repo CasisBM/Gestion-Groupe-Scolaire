@@ -39,7 +39,7 @@ button:hover{
   background-color: darkgray;
   cursor: pointer;
 }
-#container{
+#search{
   display: flex;
   justify-content: space-between;
 }
