@@ -7,7 +7,7 @@ spl_autoload_register(function($className){
 $sqlQuery = new Sql();
 $tblQuery = array();
 
-$tblQuery = $sqlQuery->getSelect("select * from enseignants");
+$tblQuery = $sqlQuery->lister("select * from enseignants");
 
 ?>
 <?php require 'header.php'; ?>

@@ -7,11 +7,11 @@ spl_autoload_register(function($className){
 $sqlQuery = new Sql();
 $tblQuery = array();
 
-$tblQuery = $sqlQuery->getSelect("select * from promotions");
+$tblQuery = $sqlQuery->lister("select * from promotions");
 
 ?>
 
-<?php require './includes/admin/header.php'; ?>
+<?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
