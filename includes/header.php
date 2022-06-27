@@ -25,7 +25,7 @@
               <li>
                 <button
                   id="btn_profil"
-                  onclick="location.href='../../index.php?page=profile'"
+                  onclick="location.href='../index.php?page=profile'"
                   id="profil"
                 >
                   profil
