@@ -1,3 +1,16 @@
+<?php
+spl_autoload_register(function($className){
+  
+   require '../../classes/'.$className.'.php';
+
+});
+$sqlQuery = new Sql();
+$tblQuery = array();
+
+$tblQuery = $sqlQuery->getSelect("select * from eleves,promotions where eleves.id_promotion=promotions.id_promotion");
+
+?>
+            
 
             <?php require './includes/admin/header.php'; ?>
             <!--/Table Liste Professeur-->
@@ -27,8 +40,9 @@
               </tr>
             </thead>
             <tbody>
+            <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
-                <td>Nicolas LAMIE</td>
+                <td><?=$tblQuery[$i]['nom'] ?></td>
                 <td>Second</td>
                 <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
@@ -41,37 +55,7 @@
                   <i class="fa-solid fa-trash"></i>
                 </td>
               </tr>
-      
-              <tr>
-                <td>Louis CAILLOUX</td>
-                <td>Premiere</td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
-                <td>
-                  <a href="planningeleve.html">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                   </a>
-                   
-                </td>
-                <td>Ecole 2</td>
-                <td>
-                  <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
-      
-              <tr>
-                <td>Marie BOGOSS</td>
-                <td>Terminal</td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
-                <td>
-                  <a href="planningeleve.html">
-                  <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
-                </td>
-                <td>Ecole 3</td>
-                <td>
-                    <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
+              <?php } ?>             
             </tbody>
             <tfoot>
               <tr >

@@ -1,3 +1,15 @@
+<?php
+spl_autoload_register(function($className){
+  
+   require '../../classes/'.$className.'.php';
+
+});
+$sqlQuery = new Sql();
+$tblQuery = array();
+
+$tblQuery = $sqlQuery->getSelect("select * from salles");
+
+?>
 <?php require './includes/admin/header.php'; ?>
        <!--/Table Liste Professeur-->
             <table>
@@ -25,51 +37,23 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>PEUPLIER</td>
-                <td>13 ordinateurs, 13 places assis, micro-onde, bouilloire, tableau</td>
+            <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
+                
+                <td><?=$tblQuery[$i]['nom_salle'] ?></td>
+                <td><?=$tblQuery[$i]['caracteristique'] ?></td>
                 <td>
-                  <a href="planningesalle.html">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
+                <a href="planningesalle.html">
+                <i class="fa-solid fa-calendar-days fa-2x"></i>
+                </a>
                 </td>
                 <td>Ecole 1</td>
                 <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
+                <i class="fa-solid fa-pen"></i>
+                <i class="fa-solid fa-trash"></i>
                 </td>
-              </tr>
+                </tr>
+             <?php } ?>
       
-              <tr>
-                <td>306</td>
-                <td>30 bureaux et chaises, tableau, 1 ordinateur</i></td>
-                <td>
-                  <a href="planningesalle.html">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
-                </td>
-                <td>Ecole 2</td>
-                <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
-      
-              <tr>
-                <td>CDI</td>
-                <td>45 places assis, des livres,
-                  10 ordinateur</i></td>
-                <td>
-                  <a href="planningesalle.html">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
-                </td>
-                <td>Ecole 3</td>
-                <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
             </tbody>
             <tfoot>
               <tr >

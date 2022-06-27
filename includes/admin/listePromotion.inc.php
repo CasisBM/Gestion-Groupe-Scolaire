@@ -1,14 +1,26 @@
+<?php
+spl_autoload_register(function($className){
+  
+   require '../../classes/'.$className.'.php';
+
+});
+$sqlQuery = new Sql();
+$tblQuery = array();
+
+$tblQuery = $sqlQuery->getSelect("select * from promotions");
+
+?>
 
 <?php require './includes/admin/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th id="nomTable" colspan="5">Liste des professeurs</th>
+                  <th id="nomTable" colspan="5">Liste des promotions</th>
                 </tr>
                 <tr>
                   <th colspan="5">
-                    <div class="search">
+                    <div class="container">
                       <div class="search-box">
                          <input type="text" class="search-input" placeholder="Recherche..">
                          <i class="fas fa-search search-button"></i>
@@ -18,55 +30,30 @@
                 
                </div>
               <tr id="titreTable">
-                <th>Professeurs</th>
-                <th>Voir profil</th>                
+                <th>Promotion</th>
+                <th>Programmes d'enseignemants</th>
                 <th>Voir planning</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
+            <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
-                <td>Cedric DURON</td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
+                <td><?=$tblQuery[$i]['nom_promotion'] ?></td>
+                <td>Second general</td>
                 <td>
-                  <a href="planningprof.html">
+                  <a href="planningpromotion.php">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
                 <td>Ecole 1</td>
                 <td>
+                  <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
                 </td>
               </tr>
-      
-              <tr>
-                <td>Jean-louis DE LA ROCHE</td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
-                <td>
-                  <a href="planningprof.html">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
-                </td>
-                <td>Ecole 2</td>
-                <td>
-                  <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
-      
-              <tr>
-                <td>Emilie BOCASE</td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
-                <td>
-                  <a href="planningprof.html">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
-                </td>
-                <td>Ecole 3</td>
-                <td>
-                  <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
+              <?php } ?>
             </tbody>
             <tfoot>
               <tr >
@@ -79,7 +66,7 @@
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button id="buttonTable" type="button"> Ajouter un professeur </button></div>
+                  <button id="buttonTable" type="button"> Ajouter une promotion </button></div>
                 </td>
               </tr>
             </tfoot>
