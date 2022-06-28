@@ -49,15 +49,24 @@ if(isset($_POST["frmajoutereleves"]))
         include './includes/frmajoutereleves.php';
     }
     else{
-        $admin = new Admin();
-        $admin-> ajoutereleves($identifiant,$password,$nom,$prenom,$mail);
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+            $requete = "INSERT INTO utilisateurs (id_utilisateur, nom, prenom, mail, password)
+            VALUES (NULL, '$nom', '$prenom', '$mail', '$password');";
+
+            $queryInsert = new Sql();
+            $queryInsert->inserer($requete);
+
+            header('Location:./index.php?page=login');
+
+       
     }
 
 }
 else{
     //echo "Je ne viens pas du formulaire";
     $identifiant = $nom = $prenom = $mail = "";
-    include './includes/frmajoutereleves.php';
+   include './frmajoutereleves.php';
    
 }
 ?>
