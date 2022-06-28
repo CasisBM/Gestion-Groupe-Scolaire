@@ -10,4 +10,5 @@ $requete = "DELETE FROM salles WHERE id_salle = '$idUser' ";
 $requeteSupp = new Sql();
 $requeteSupp->inserer($requete);
 require "listeSalle.inc.php";
+
 //header('Location:..//index.php?page=listSalle');
