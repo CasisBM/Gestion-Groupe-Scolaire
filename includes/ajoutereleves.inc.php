@@ -49,10 +49,12 @@ if(isset($_POST["frmajoutereleves"]))
         include './includes/frmajoutereleves.php';
     }
     else{
+        
+        
         $password = password_hash($password, PASSWORD_DEFAULT);
 
-            $requete = "INSERT INTO utilisateurs (id_utilisateur, nom, prenom, mail, password)
-            VALUES (NULL, '$nom', '$prenom', '$mail', '$password');";
+            $requete = "INSERT INTO eleves (id_eleves, nom, prenom, mail, mot_de_passe)
+            VALUES (NULL, '$nom', '$prenom', '$mail', '$mot_de_passe');";
 
             $queryInsert = new Sql();
             $queryInsert->inserer($requete);
@@ -65,7 +67,7 @@ if(isset($_POST["frmajoutereleves"]))
 }
 else{
     //echo "Je ne viens pas du formulaire";
-    $identifiant = $nom = $prenom = $mail = "";
+    $nom = $prenom =$email =$email ="";
    include './frmajoutereleves.php';
    
 }
