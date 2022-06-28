@@ -46,6 +46,15 @@ class Admin
 
     }
 
+    
+    public function ajouterEtablissement(string $nom)
+    {
+        // Creation d'une ligne etablissements
+        $requete = "INSERT INTO etablissements (nom_etablissement) VALUES ('$nom');";
+        $this->db->inserer($requete);
+
+    }
+
     public function ajouterProf(string $identifiant, string $password, string $nom , string $prenom,string $mail)
     {
         // Generation unique token et date

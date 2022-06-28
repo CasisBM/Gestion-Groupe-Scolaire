@@ -4,15 +4,19 @@
             <table>
               <thead>
                 <tr>
-                  <th id="nomTable" colspan="6">Planning (Nom Promotion)</th>
-                </tr>          
+                  <th class="nomTable" colspan="7">Planning (Nom Professeur)</th>
+                </tr>
+                <tr>
+                </tr>
+                
                </div>
-              <tr id="titreTable">
+              <tr class="titreTable">
                 <th>Matiere</th>
                 <th>Date</th>
                 <th>Horaires</th>
                 <th>Salles</th>
-                <th>Professeur</th>
+                <th>Promotions</th>
+                <th>Ecoles</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -22,7 +26,8 @@
                 <td>11/05/2022</td>
                 <td>17:30 - 19:00</td>
                 <td>306</td>
-                <td>Cedric DURON </td>
+                <td>CM2</td>
+                <td>Ecole 00</td>
                 <td>
                   <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
@@ -34,7 +39,8 @@
                 <td>12/05/2022</td>
                 <td>16:30 - 17:30</td>
                 <td>PEUPLIER</td>
-                <td>Jean-louis DE LA ROCHE</td>
+                <td>CEPPIC2022</td>
+                <td>Ecole 2</td>
                 <td>
                   <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
@@ -46,7 +52,8 @@
                 <td>13/05/2022</td>
                 <td>13:00 - 14:00</td>
                 <td>ERABLE</td>
-                <td>Emilie Bocase</td>
+                <td>CEPPIC2022</td>
+                <td>Ecole 3</td>
                 <td>
                   <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
@@ -55,8 +62,8 @@
             </tbody>
             <tfoot>
               <tr >
-                <td  colspan="6">
-                  <div id="footTable">
+                <td  colspan="7">
+                  <div class="footTable">
                     <div
                     data-pagination=""
                     data-num-pages="numPages()"
@@ -64,7 +71,7 @@
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button id="buttonTable" type="button"> Ajouter un cours </button></div>
+                  <button class="buttonTable" type="button"> Ajouter un cours </button></div>
                 </td>
               </tr>
             </tfoot>

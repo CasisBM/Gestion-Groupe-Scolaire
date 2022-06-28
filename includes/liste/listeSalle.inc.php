@@ -7,33 +7,30 @@ spl_autoload_register(function($className){
 $sqlQuery = new Sql();
 $tblQuery = array();
 
-$tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_promotion=promotions.id_promotion");
+$tblQuery = $sqlQuery->lister("select * from salles");
 
 ?>
-            
-
-            <?php require './includes/admin/header.php'; ?>
-            <!--/Table Liste Professeur-->
+<?php require './includes/header.php'; ?>
+       <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th id="nomTable" colspan="6">Liste des eleves</th>
+                  <th class="nomTable" colspan="5">Liste des salles</th>
                 </tr>
                 <tr>
-                  <th colspan="6">
+                  <th colspan="5">
                     <div class="search">
                       <div class="search-box">
                          <input type="text" class="search-input" placeholder="Recherche..">
-                           <i class="fas fa-search search-button"></i>
+                         <i class="fas fa-search search-button"></i>
                       </div>
                   </th>
                 </tr>
                 
                </div>
-              <tr id="titreTable">
-                <th>Eleves</th>
-                <th>Promotions</th>
-                <th>Voir profil</th>
+              <tr class="titreTable">
+                <th>Salles</th>
+                <th>Caracteristique</th>
                 <th>Voir planning</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
@@ -41,26 +38,27 @@ $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_p
             </thead>
             <tbody>
             <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
-              <tr>
-                <td><?=$tblQuery[$i]['nom'] ?></td>
-                <td>Second</td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
+                
+                <td><?=$tblQuery[$i]['nom_salle'] ?></td>
+                <td><?=$tblQuery[$i]['caracteristique'] ?></td>
                 <td>
-                  <a href="planningeleve.html">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
+                <a href="planningesalle.html">
+                <i class="fa-solid fa-calendar-days fa-2x"></i>
+                </a>
                 </td>
                 <td>Ecole 1</td>
                 <td>
-                  <i class="fa-solid fa-trash"></i>
+                <i class="fa-solid fa-pen"></i>
+                <i class="fa-solid fa-trash"></i>
                 </td>
-              </tr>
-              <?php } ?>             
+                </tr>
+             <?php } ?>
+      
             </tbody>
             <tfoot>
               <tr >
-                <td  colspan="6">
-                  <div id="footTable">
+                <td  colspan="5">
+                  <div class="footTable">
                     <div
                     data-pagination=""
                     data-num-pages="numPages()"
@@ -68,7 +66,7 @@ $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_p
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button id="buttonTable" type="button"> Ajouter un eleve </button></div>
+                  <button class="buttonTable" type="button" onclick="location.href='index.php?page=ajouteSalle'"> Ajouter une salle </button></div>
                 </td>
               </tr>
             </tfoot>
