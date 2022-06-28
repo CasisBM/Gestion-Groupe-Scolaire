@@ -5,11 +5,16 @@ function inclusionIncFile($defaultPage){
     $filesAdmin = glob('./includes/admin/*.php');
     $page = $_GET['page'] ?? $defaultPage;
     $pageTest = './includes/' . $page . '.php';
+    $pageTest1 = './includes/' . $page . '.inc.php';
     $pageTestAdmin = './includes/admin/'. $page . '.inc.php';
+   
    
     
     if (in_array($pageTest,$files))
     {
+        require "./includes/$page.inc.php";
+    }
+    else if (in_array($pageTest1,$files)) {
         require "./includes/$page.inc.php";
     }
     else if(in_array($pageTestAdmin,$filesAdmin))

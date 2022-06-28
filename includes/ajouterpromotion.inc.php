@@ -1,73 +1,56 @@
+<h1>ajouter promotion</h1>
+
 <?php
-spl_autoload_register(function($className){
+   
+if (isset($_POST['frmajouterpromotion'])){
+
   
-   require '../../classes/'.$className.'.php';
+$nom_promotion =htmlentities(trim($_POST['nom_promotion']));
+$id_etablissement =strstr(htmlentities(trim($_POST['id_etablissement'])),'-',true);
+$annee_promotion = htmlentities(trim($_POST['annee_promotion']));
 
-});
-$sqlQuery = new Sql();
-$tblQuery = array();
+$erreurs = array();
 
-$tblQuery = $sqlQuery->getSelect("select * from promotion");
 
-?>
 
-<?php require './includes/admin/header.php'; ?>
-            <!--/Table Liste Professeur-->
-            <table>
-              <thead>
-                <tr>
-                  <th id="nomTable" colspan="5">Liste des promotions</th>
-                </tr>
-                <tr>
-                  <th colspan="5">
-                    <div class="container">
-                      <div class="search-box">
-                         <input type="text" class="search-input" placeholder="Recherche..">
-                         <i class="fas fa-search search-button"></i>
-                      </div>
-                  </th>
-                </tr>
-                
-               </div>
-              <tr id="titreTable">
-                <th>Promotion</th>
-                <th>Programmes d'enseignemants</th>
-                <th>Voir planning</th>
-                <th>Ecoles</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-            <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
-              <tr>
-                <td><?=$tblQuery[$i]['nom_promotion'] ?></td>
-                <td>Second general</td>
-                <td>
-                  <a href="planningpromotion.php">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
-                </td>
-                <td>Ecole 1</td>
-                <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
-              <?php } ?>
-            </tbody>
-            <tfoot>
-              <tr >
-                <td  colspan="5">
-                  <div id="footTable">
-                    <div
-                    data-pagination=""
-                    data-num-pages="numPages()"
-                    data-current-page="currentPage"
-                    data-max-size="maxSize"
-                    data-boundary-links="true"
-                  > </div>
-                  <button id="buttonTable" type="button"> Ajouter une promotion </button></div>
-                </td>
-              </tr>
-            </tfoot>
-            </table> 
+if(mb_strlen($nom_promotion)===0)
+array_push($erreurs ,'il manque votre nom de promotion');
+if (mb_strlen($id_etablissement)===0)
+array_push($erreurs ,'il manque votre id etablissement');
+
+elseif (mb_strlen($annee_promotion)===0)
+array_push($erreurs, "Votre annee de annee_promotion");
+
+if(count($erreurs)){
+$messageErreur = "<ul>";
+
+for($i=0;$i<count($erreurs) ;$i++) {
+    $messageErreur .="<l>";
+    $messageErreur .=$erreurs[$i];
+    $messageErreur .= "</li>";
+}
+    echo $messageErreur;
+    include './includes/frmajouterpromotion.php';
+
+  }
+
+  else {
+     
+        
+          $requete ="INSERT INTO promotions (id_promotion ,nom_promotion,id_etablissement,annee) values (null, '$nom_promotion','$id_etablissement', '$annee_promotion');";
+        // var_dump($requete);
+         $queryInsert = new Sql();
+          $queryInsert->inserer($requete);
+        //  header('location:./index.php?page=login');
+  
+         
+  }
+  }
+  
+  
+  
+  else {
+      $nom = $id_promotion = $nom_promotion = $id_etablissemnt= $annee_promotion="";
+      include './frmajouterpromotion.php';
+      //include './includes/frmajouterpromotion.php';
+  }
