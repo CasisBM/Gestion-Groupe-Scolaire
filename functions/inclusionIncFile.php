@@ -2,7 +2,7 @@
 <?php
 // Exemple de $defaultPage : liste/listeEleve, login, planning/planningEleve
 function inclusionIncFile($defaultPage){
-    $files = glob('./includes/*/*.inc.php');
+    $files = array_merge(glob('./includes/*/*.inc.php'),glob('./includes/*.inc.php'));;
     $page = $_GET['page'] ?? $defaultPage;
     $pageTest = './includes/' . $page .'.inc.php';
 
