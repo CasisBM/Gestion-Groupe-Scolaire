@@ -1,16 +1,32 @@
-
-<main>
-
 <?php
 
-    if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['token']) && !empty($_GET['token'])){
-            $admin = new Admin();
-            $admin->verifUtilisateur($_GET['email'],$_GET['token']);
-            exit();
+?>
+<main>
+
+    <?php
+
+/*     if (isset($_GET['page']))
+        $page = $_GET['page'];
+
+    else
+        $page = "N'existe pas";
+
+    echo $page; */
+
+/*     $page = isset($_GET['page']) ? $_GET['page'] : "accueil";
+    $fichier = './includes/'.$page.'.php';
+    require $fichier; */
+/*     $files = glob('./includes/*.inc.php');
+    $page = isset($_GET['page']) ? $_GET['page'] : "accueil";
+    $fichier = './includes/'.$page.'.php';
+
+    dump(glob('./includes/*.inc.php'));
+    if (in_array($page,$files)) {
+        # code...
+        require $page;
     }
-    
-    inclusionIncFile('ajouterProf');
+    else
+    require './includes/login.php' */
+    inclusionIncFile('login');
     ?>
-
 </main>
-
