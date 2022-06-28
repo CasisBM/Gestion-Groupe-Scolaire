@@ -10,7 +10,7 @@ $tblQuery = $sqlQuery->lister("select * from salles");
 
 ?>
 <?php require './includes/header.php'; ?>
-<!--/Table Liste Professeur-->
+<!--/Table Liste Salle-->
 <table>
   <thead>
     <tr>
