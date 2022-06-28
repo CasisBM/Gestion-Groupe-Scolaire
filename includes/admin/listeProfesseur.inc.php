@@ -9,6 +9,7 @@ $tblQuery = array();
 
 $tblQuery = $sqlQuery->lister("select * from enseignants");
 
+
 ?>
 <?php require 'header.php'; ?>
             <!--/Table Liste Professeur-->

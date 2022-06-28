@@ -7,7 +7,9 @@ spl_autoload_register(function($className){
 $sqlQuery = new Sql();
 $tblQuery = array();
 
+
 $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_promotion=promotions.id_promotion");
+
 
 ?>
             

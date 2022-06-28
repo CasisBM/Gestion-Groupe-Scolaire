@@ -1,5 +1,5 @@
             <!--/Table Liste Cours-->
-            <?php require '../header.php'; ?>
+            <?php require 'header.php'; ?>
             <table>
               <thead>
                 <tr>
