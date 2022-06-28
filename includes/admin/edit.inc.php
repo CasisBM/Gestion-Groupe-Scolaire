@@ -16,7 +16,7 @@ $tblQuery = $querySelect->lister("select * from etablissements");
 
 ?>
 <?php require './includes/header.php'; ?>
-<!--/Table Liste Professeur-->
+
 <table>
     <thead>
         <tr>
