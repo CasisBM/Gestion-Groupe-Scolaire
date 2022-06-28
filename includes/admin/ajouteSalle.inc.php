@@ -1,4 +1,3 @@
-<h1>ajoute salles</h1>
 <?php
 
 //var_dump(isset($_POST['frmUpdate']));
@@ -36,10 +35,10 @@ if (isset($_POST['frmSalle'])) {
     } else {
     
         $requete = "INSERT INTO salles (id_salle,id_etablissement,nom_salle,caracteristique) VALUES(NULL,'$id_etablissement','$nom','$caracteristique');";
-    
-        $sqlInserer = new Sql();
-        $sqlInserer->inserer($requete);  
-        
+    //var_dump($requete);
+         $sqlInserer = new Sql();
+         $sqlInserer->inserer($requete);  
+         require "listeSalle.inc.php";
     }
 
 

@@ -42,14 +42,15 @@ $tblQuery = $sqlQuery->lister("select * from salles");
                 <td><?=$tblQuery[$i]['nom_salle'] ?></td>
                 <td><?=$tblQuery[$i]['caracteristique'] ?></td>
                 <td>
-                <a href="planningesalle.html">
+                <a href="index.php?page=planningesalle">
                 <i class="fa-solid fa-calendar-days fa-2x"></i>
                 </a>
                 </td>
                 <td>Ecole 1</td>
                 <td>
                 <i class="fa-solid fa-pen"></i>
-                <i class="fa-solid fa-trash"></i>
+                
+                <a href="index.php?page=supp&id=<?= $tblQuery[$i]['id_salle'] ?>" class="btn btn-supp" onclick="return confirm('Etes vous certain de supprimer  cette salle ?')"><i class="fa-solid fa-trash"></i></a>
                 </td>
                 </tr>
              <?php } ?>

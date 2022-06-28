@@ -10,7 +10,8 @@ $tblQuery = array();
 $tblQuery = $sqlQuery->lister("select * from etablissements");
 
 ?>
-<form action="../../index.php?page=ajouteSalle" method="post">
+<?php require './includes/header.php'; ?>
+<form action="index.php?page=ajouteSalle" method="post">
     <div>
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom"  />
