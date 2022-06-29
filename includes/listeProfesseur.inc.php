@@ -42,6 +42,7 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
                 </td>
                 <td>Ecole 1</td>
                 <td>
+                  <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash" href="index.php?page=supp&class="></i>
                 </td>
               </tr>
@@ -59,7 +60,7 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button class="buttonTable" type="button"> Ajouter un professeur </button></div>
+                  <button class="buttonTable" onclick="location.href='index.php?page=ajouterProf'" type="button"> Ajouter un professeur </button></div>
                 </td>
               </tr>
             </tfoot>

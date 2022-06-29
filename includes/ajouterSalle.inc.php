@@ -3,7 +3,7 @@
 
 //var_dump(isset($_POST['frmUpdate']));
 
-if (isset($_POST['frmSalle'])) {
+if (isset($_POST['frmAjouterSalle'])) {
    // $message = "Je viens du formulaire";
 
     $nom = htmlentities(trim($_POST['nom']));
@@ -48,7 +48,7 @@ if (isset($_POST['frmSalle'])) {
     
 
     
-     include './includes/frmSalle.php';
+     include './includes/frmAjouterSalle.php';
     //echo $message;
 }
 
