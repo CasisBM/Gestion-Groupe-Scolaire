@@ -1,17 +1,18 @@
 <?php
-spl_autoload_register(function($className){
-  
-   require '../../classes/'.$className.'.php';
 
-});
 $sqlQuery = new Sql();
 $tblQuery = array();
+$requete = "select s.nom_salle,s.caracteristique,e.nom_etablissement from salles s join etablissements e on s.id_etablissement = e.id_etablissement";
 
-$tblQuery = $sqlQuery->lister("select * from salles");
+if(!empty($_SESSION['etablissement']))
+{
+  $requete .= " where s.id_etablissement = ".$_SESSION['etablissement'];
+}
+
+$tblQuery = $sqlQuery->lister($requete);
 
 ?>
 <?php require './includes/header.php'; ?>
-       <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
@@ -46,7 +47,7 @@ $tblQuery = $sqlQuery->lister("select * from salles");
                 <i class="fa-solid fa-calendar-days fa-2x"></i>
                 </a>
                 </td>
-                <td>Ecole 1</td>
+                <td><?=$tblQuery[$i]['nom_etablissement'] ?></td>
                 <td>
                 <i class="fa-solid fa-pen"></i>
                 <i class="fa-solid fa-trash"></i>

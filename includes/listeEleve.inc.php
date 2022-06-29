@@ -1,37 +1,34 @@
 <?php
-spl_autoload_register(function($className){
-  
-   require '../../classes/'.$className.'.php';
-
-});
 $sqlQuery = new Sql();
 $tblQuery = array();
 
-$tblQuery = $sqlQuery->lister("select * from promotions");
+$tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_promotion=promotions.id_promotion");
 
 ?>
+            
 
-<?php require './includes/header.php'; ?>
+            <?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th class="nomTable" colspan="5">Liste des promotions</th>
+                  <th class="nomTable" colspan="6">Liste des eleves</th>
                 </tr>
                 <tr>
-                  <th colspan="5">
-                    <div class="container">
+                  <th colspan="6">
+                    <div class="search">
                       <div class="search-box">
                          <input type="text" class="search-input" placeholder="Recherche..">
-                         <i class="fas fa-search search-button"></i>
+                           <i class="fas fa-search search-button"></i>
                       </div>
                   </th>
                 </tr>
                 
                </div>
               <tr class="titreTable">
-                <th>Promotion</th>
-                <th>Programmes d'enseignemants</th>
+                <th>Eleves</th>
+                <th>Promotions</th>
+                <th>Voir profil</th>
                 <th>Voir planning</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
@@ -40,24 +37,24 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
             <tbody>
             <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
-                <td><?=$tblQuery[$i]['nom_promotion'] ?></td>
-                <td>Second general</td>
+                <td><?=$tblQuery[$i]['nom'] ?></td>
+                <td>Second</td>
+                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
-                  <a href="planningpromotion.php">
+                  <a href="planningeleve.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
                 <td>Ecole 1</td>
                 <td>
-                  <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
                 </td>
               </tr>
-              <?php } ?>
+              <?php } ?>             
             </tbody>
             <tfoot>
               <tr >
-                <td  colspan="5">
+                <td  colspan="6">
                   <div class="footTable">
                     <div
                     data-pagination=""
@@ -66,7 +63,7 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button class="buttonTable" type="button"> Ajouter une promotion </button></div>
+                  <button class="buttonTable" type="button"> Ajouter un eleve </button></div>
                 </td>
               </tr>
             </tfoot>

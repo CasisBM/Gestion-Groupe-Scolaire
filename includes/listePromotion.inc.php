@@ -1,25 +1,20 @@
 <?php
-spl_autoload_register(function($className){
-  
-   require '../../classes/'.$className.'.php';
 
-});
 $sqlQuery = new Sql();
-$tblQuery = array();
-
-$tblQuery = $sqlQuery->lister("select * from enseignants");
+$tblQuery = $sqlQuery->lister("select * from promotions");
 
 ?>
-<?php require 'header.php'; ?>
+
+<?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th class="nomTable" colspan="5">Liste des professeurs</th>
+                  <th class="nomTable" colspan="5">Liste des promotions</th>
                 </tr>
                 <tr>
                   <th colspan="5">
-                    <div class="search">
+                    <div class="container">
                       <div class="search-box">
                          <input type="text" class="search-input" placeholder="Recherche..">
                          <i class="fas fa-search search-button"></i>
@@ -29,8 +24,8 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
                 
                </div>
               <tr class="titreTable">
-                <th>Professeurs</th>
-                <th>Voir profil</th>                
+                <th>Promotion</th>
+                <th>Programmes d'enseignemants</th>
                 <th>Voir planning</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
@@ -39,20 +34,20 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
             <tbody>
             <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
-                <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
+                <td><?=$tblQuery[$i]['nom_promotion'] ?></td>
+                <td>Second general</td>
                 <td>
-                  <a href="planningprof.html">
+                  <a href="planningpromotion.php">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
                 <td>Ecole 1</td>
                 <td>
-                  <i class="fa-solid fa-trash" href=\"index.php?page=supp&class="></i>
+                  <i class="fa-solid fa-pen"></i>
+                  <i class="fa-solid fa-trash"></i>
                 </td>
               </tr>
               <?php } ?>
-             
             </tbody>
             <tfoot>
               <tr >
@@ -65,7 +60,7 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button class="buttonTable" type="button"> Ajouter un professeur </button></div>
+                  <button class="buttonTable" type="button"> Ajouter une promotion </button></div>
                 </td>
               </tr>
             </tfoot>

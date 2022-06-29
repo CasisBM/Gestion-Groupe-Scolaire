@@ -5,6 +5,10 @@
         <input type="text" name="nom" id="nom" value="<?= $nom; ?>" />
     </div>
     <div>
+        <label for="nom">Ville de l'établissement :</label>
+        <input type="text" name="ville" id="ville" value="<?= $ville; ?>" />
+    </div>
+    <div>
         <input type="reset" value="Effacer" />
         <input type="submit" value="Envoyer" />
     </div>

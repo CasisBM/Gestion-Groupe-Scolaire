@@ -32,7 +32,7 @@ if (isset($_POST['frmSalle'])) {
         }
         $messageErreur .= "</ul>";
         echo $messageErreur;
-        include './includes/admin/frmSalle.php';
+        include './includes/frmSalle.php';
     } else {
     
         $requete = "INSERT INTO salles (id_salle,id_etablissement,nom_salle,caracteristique) VALUES(NULL,'$id_etablissement','$nom','$caracteristique');";
@@ -48,7 +48,7 @@ if (isset($_POST['frmSalle'])) {
     
 
     
-     include './includes/admin/frmSalle.php';
+     include './includes/frmSalle.php';
     //echo $message;
 }
 

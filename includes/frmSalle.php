@@ -1,16 +1,11 @@
 <?php
-spl_autoload_register(function($className){
-  
-   require '../../classes/'.$className.'.php';
-
-});
 $sqlQuery = new Sql();
 $tblQuery = array();
 
 $tblQuery = $sqlQuery->lister("select * from etablissements");
 
 ?>
-<form action="../../index.php?page=ajouteSalle" method="post">
+<form action="index.php?page=ajouteSalle" method="post">
     <div>
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom"  />
@@ -31,7 +26,7 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
     
     <div>
         <input type="reset" value="Effacer" />
-        <input type="submit" value="Ajoute" />
+        <input type="submit" value="Ajouter" />
     </div>
     <input type="hidden" name="frmSalle" />
 </form>
