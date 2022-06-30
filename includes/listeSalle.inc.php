@@ -51,8 +51,8 @@ $tblQuery = $sqlQuery->lister($requete);
       </td>
       <td><?=$tblQuery[$i]['nom_etablissement'] ?></td>
       <td>
-        <a href="index.php?page=edit&id=<?= $tblQuery[$i]['id_salle'] ?>" class="btn btn-supp"><i class="fa-solid fa-pen"></i></a>
-        <a href="index.php?page=supp&id=<?= $tblQuery[$i]['id_salle'] ?>" class="btn btn-supp" onclick="return confirm('Etes vous certain de supprimer  cette salle ?')"><i class="fa-solid fa-trash"></i></a>
+        <a href="index.php?page=editSalle&id=<?= $tblQuery[$i]['id_salle'] ?>" class="btn btn-supp"><i class="fa-solid fa-pen"></i></a>
+        <a href="index.php?page=supp&pg=salle&id=<?= $tblQuery[$i]['id_salle'] ?>" class="btn btn-supp" onclick="return confirm('Etes vous certain de supprimer  cette salle ?')"><i class="fa-solid fa-trash"></i></a>
       </td>
       </tr>
     <?php } ?>
