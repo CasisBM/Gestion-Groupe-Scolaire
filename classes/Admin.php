@@ -48,10 +48,51 @@ class Admin
 
     public function ajouterProf(string $identifiant, string $password, string $nom , string $prenom,string $mail)
     {
+        // Generation unique token et date
+        $date = date("Y-m-d H:i:s");
+        $token = bin2hex(random_bytes(50)); 
 
-        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-        $requete = "INSERT INTO enseignants (identifiant,password,nom,prenom,email) VALUES ('$identifiant','$passwordHash','$nom','$prenom','$mail');";
+        // Creation d'une ligne compte pour gerer token et validation email
+        $requete = "INSERT INTO comptes(creation_compte,envoi_email,token,email_verification,email) VALUES ('$date','$date','$token','0','$mail');";
         $this->db->inserer($requete);
+
+        // Creation d'une ligne professeurs
+        $requete = "SELECT id_compte FROM comptes WHERE email = '$mail';";
+        $idCompte = $this->db->lister($requete);
+        $idCompte= $idCompte[0]['id_compte'];
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+        $requete = "INSERT INTO enseignants (identifiant,password,nom,prenom,email,id_compte) VALUES ('$identifiant','$passwordHash','$nom','$prenom','$mail','$idCompte');";
+        $this->db->inserer($requete);
+
+        //Envoi email contenant le token + email pour la verification
+        $url = $_SERVER['HTTP_ORIGIN'] . dirname($_SERVER['REQUEST_URI']) . "/index.php?email=$mail&token=$token";
+        $toEmail = $mail;
+        $fromEmail = 'admin@contact.com';
+        $messageEmail = "$url Clicker pour verifier l'email";
+        $sujetEmail = 'Verify Your Email Address';
+        $headers = "From: $fromEmail\n"; 
+        $headers .= "MIME-Version: 1.0\n"; 
+        $headers .= "Content-type: text/html; charset=iso-8859-1\n"; 
+
+        sendMail($toEmail,$fromEmail,$sujetEmail,$messageEmail,$headers);
+
+    }
+
+    public function verifUtilisateur(string $mail, string $token)
+    {
+        $requete = "SELECT envoi_email FROM comptes WHERE token = '$token' AND email = '$mail';";
+        $dateNow = date("Y-m-d H:i:s");
+        $resultat = $this->db->lister($requete);
+        $dateToken =  $resultat[0]['envoi_email'];
+        if(dateDifference($dateNow,$dateToken) === 0){
+            $requete = "UPDATE comptes SET email_verification='1' WHERE token = '$token' AND email = '$mail'";
+            $this->db->inserer($requete);
+            echo "Votre email est validé";
+        }
+        else
+        {
+            echo "PLus de 24h sont passé, le lien n'est plus validé";
+        }
 
     }
 
