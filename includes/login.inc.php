@@ -26,11 +26,7 @@ if(isset($_POST["frmLogin"]))
     }
     else
     {
-<<<<<<< HEAD
         header('Location: index.php?page=choixEtablissement');
-=======
-        header('Location: index.php?page=accueil');
->>>>>>> ff4e22e0fcf97650694520cb3ea9c72631696a6e
     }
 
 }
