@@ -1,3 +1,4 @@
+
 <h1>Ajouter un établissement</h1>
 <form action="index.php?page=ajouterEtablissement" method="post">
     <div>
@@ -14,3 +15,4 @@
     </div>
     <input type="hidden" name="frmAjouterEtablissement" />
 </form>
+

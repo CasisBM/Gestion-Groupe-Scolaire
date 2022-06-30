@@ -1,7 +1,7 @@
 <?php
 
 $sqlQuery = new Sql();
-$requete = "select en.prenom,en.nom, en.nom_salle,en.caracteristique,et.nom_etablissement from enseignants en join etablissements et on en.id_etablissement = e.id_etablissement";
+$requete = "select id_enseignant,prenom,nom from enseignants ";
 
 if(!empty($_SESSION['etablissement']))
 {
@@ -46,14 +46,17 @@ $tblQuery = $sqlQuery->lister($requete);
                 <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
                 <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
-                  <a href="planningprof.html">
+                  <a href="">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
-                <td><?=$tblQuery[$i]['nom_etablissement'] ?></td>
+                <td>
+                <a href="index.php?page=listeEtablissement&idProf=<?=$tblQuery[$i]['id_enseignant'] ?>">
+                    <i class="fa-solid fa-school-flag fa-2x"></i>
+                  </a></td>
                 <td>
                   <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash" href="index.php?page=supp&class="></i>
+                  <i class="fa-solid fa-trash"></i>
                 </td>
               </tr>
               <?php } ?>
@@ -70,7 +73,7 @@ $tblQuery = $sqlQuery->lister($requete);
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button class="buttonTable" onclick="location.href='index.php?page=ajouterEleve'" type="button"> Ajouter un eleve </button></div>
+                  <button class="buttonTable" onclick="location.href='index.php?page=ajouterProf'" type="button"> Ajouter un professeur </button></div>
                 </td>
               </tr>
             </tfoot>

@@ -45,13 +45,18 @@ class Admin
         //invoqué lors du clonage d'objet
 
     }
-
-    
-    public function ajouterEtablissement(string $nom, string $ville)
+    public function ajouterEtablissementHasProf(string $idEtablissement, string $idProf)
     {
-        // Creation d'une ligne etablissements
-        $requete = "INSERT INTO etablissements (nom_etablissement,ville) VALUES ('$nom','$ville');";
+        $requete = "INSERT INTO ETABLISSEMENTS_has_UTILISATEUR(id_etablissement,id_enseignant) VALUES ('$idEtablissement','$idProf');";
         $this->db->inserer($requete);
+    }
+    
+    public function ajouterEtablissement(string $nom, string $ville, string $idProf=null)
+    {
+
+        // Creation d'une ligne etablissements
+            $requete = "INSERT INTO etablissements (nom_etablissement,ville) VALUES ('$nom','$ville');";
+            $this->db->inserer($requete);
     }
 
     public function ajouterProf(string $identifiant, string $password, string $nom , string $prenom,string $mail)
