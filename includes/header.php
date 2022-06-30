@@ -6,7 +6,7 @@
           <button onclick="location.href='index.php?page=listeProfesseur'" id="btn_prof">
             Professeurs
           </button>
-          <button onclick="location.href='index.php?page=listePromotion'">Promotions</button>
+          <button onclick="location.href='../index.php?page=listePromotion'">Promotions</button>
           <button onclick="location.href='index.php?page=listeEleve'">Eleves</button>
           <button onclick="location.href='index.php?page=listeSalle'">Salles</button>
         </div>

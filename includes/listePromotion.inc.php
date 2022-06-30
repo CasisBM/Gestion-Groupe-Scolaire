@@ -1,11 +1,15 @@
 <?php
+spl_autoload_register(function ($class) {
+  require '../classes/' . $class . '.php';
+});
+
 
 $sqlQuery = new Sql();
 $tblQuery = $sqlQuery->lister("select * from promotions");
 
 ?>
 
-<?php require './includes/header.php'; ?>
+<?php require '../includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
@@ -37,7 +41,7 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
                 <td><?=$tblQuery[$i]['nom_promotion'] ?></td>
                 <td>Second general</td>
                 <td>
-                  <a href="planningpromotion.php">
+                  <a href="./includes/frmplanningpromotion.php">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>

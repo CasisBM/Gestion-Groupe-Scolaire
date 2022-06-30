@@ -1,0 +1,29 @@
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.profil' doesn't exist in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select * from p...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profil.php(11): Sql->lister('select * from p...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profil.inc.php(57): include('C:\\xampp\\htdocs...')
+#3 {main}
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.profil' doesn't exist in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select * from p...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profil.php(11): Sql->lister('select * from p...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profil.inc.php(57): include('C:\\xampp\\htdocs...')
+#3 {main}
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.profil' doesn't exist in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select * from p...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profil.php(11): Sql->lister('select * from p...')
+#2 {main}
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.profil' doesn't exist in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select * from p...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profil.php(11): Sql->lister('select * from p...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profil.inc.php(57): include('C:\\xampp\\htdocs...')
+#3 {main}
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.profil' doesn't exist in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select * from p...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profil.php(11): Sql->lister('select * from p...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profil.inc.php(57): include('C:\\xampp\\htdocs...')
+#3 {main}
