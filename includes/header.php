@@ -1,10 +1,8 @@
-<link rel="stylesheet" href="../assets/css/header.css">  
-<link rel="stylesheet" href="../assets/css/table.css">  
     <header>
       <div id="search">
         <div id="btn_principal">
           <button id="btn_ecole">Name de l'ecole</button>
-          <button onclick="location.href='index.php?page=accueil'">Accueil</button>
+          <button onclick="location.href='index.php?page=choixEtablissement'">Accueil</button>
           <button onclick="location.href='index.php?page=listeProfesseur'" id="btn_prof">
             Professeurs
           </button>

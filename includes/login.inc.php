@@ -32,8 +32,7 @@ if(isset($_POST["frmLogin"]))
     }
     else
     {
-        echo "4";
-        header('Location: index.php?page=accueil');
+        header('Location: index.php?page=choixEtablissement');
     }
 
 }

@@ -1,39 +1,19 @@
 
 <?php
+// Exemple de $defaultPage : liste/listeEleve, login, planning/planningEleve
 function inclusionIncFile($defaultPage){
-    $files = glob('./includes/*.inc.php');
-    $filesAdmin = glob('./includes/admin/*.php');
+    $files = array_merge(glob('./includes/*/*.inc.php'),glob('./includes/*.inc.php'));;
     $page = $_GET['page'] ?? $defaultPage;
-    $pageTest = './includes/' . $page . '.php';
-    $pageTest1 = './includes/' . $page . '.inc.php';
-    $pageTestAdmin = './includes/admin/'. $page . '.inc.php';
-   
-   
-    
+    $pageTest = './includes/' . $page .'.inc.php';
+
     if (in_array($pageTest,$files))
     {
         require "./includes/$page.inc.php";
     }
-    else if (in_array($pageTest1,$files)) {
-        require "./includes/$page.inc.php";
-    }
-    else if(in_array($pageTestAdmin,$filesAdmin))
-    {      
-        require "./includes/admin/$page.inc.php";
-    }
-    else if(file_exists("./includes/$defaultPage.inc.php"))
-    {
-        echo "13";
-        require "./includes/$defaultPage.inc.php";
-    }
     else 
     {
-        echo "14";
-        require "./includes/admin/$defaultPage.inc.php";
+        require "./includes/$defaultPage.inc.php";
     } 
- 
-    
-
 }
 
     ?>

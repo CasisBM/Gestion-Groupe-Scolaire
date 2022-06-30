@@ -1,9 +1,4 @@
  <?php 
- spl_autoload_register(function($className){
-
-  require '../classes/'.$className.'.php';
-
-});
 $sqlQuery = new Sql();
 $tblQuery = array();
 
@@ -33,5 +28,5 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
         <input type="reset" value="Effacer" />
         <input type="submit" value="Ajouter promotion" />
     </div>
-    <input type="hidden" name="frmajouterpromotion" />
+    <input type="hidden" name="frmAjouterPromotion" />
 </form>

@@ -72,27 +72,27 @@ button {
 .search {
   width: 20%;
 }
-#nomTable {
+.nomTable {
   text-align: left;
 }
-#titreTable {
+.titreTable {
   background-color: #f6f8fb;
 }
-#buttonTable {
+.buttonTable {
   border: 1px #9b9daa solid;
   border-radius: 8px;
   background-color: #bfd7fc;
   padding: 0.3rem 0.6rem 0.3rem 0.6rem;
 }
-#buttonTable:hover {
+.buttonTable:hover {
   cursor: pointer;
   background-color: #73a8f7;
 }
 
-#footTable {
+.footTable {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 input::placeholder {
