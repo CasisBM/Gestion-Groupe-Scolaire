@@ -1,9 +1,4 @@
 <?php
-spl_autoload_register(function($className){
-  
-   require '../../classes/'.$className.'.php';
-
-});
 $sqlQuery = new Sql();
 $tblQuery = array();
 
@@ -19,7 +14,7 @@ $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_p
             <table>
               <thead>
                 <tr>
-                  <th id="nomTable" colspan="6">Liste des eleves</th>
+                  <th class="nomTable" colspan="6">Liste des eleves</th>
                 </tr>
                 <tr>
                   <th colspan="6">
@@ -32,7 +27,7 @@ $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_p
                 </tr>
                 
                </div>
-              <tr id="titreTable">
+              <tr class="titreTable">
                 <th>Eleves</th>
                 <th>Promotions</th>
                 <th>Voir profil</th>
@@ -62,7 +57,7 @@ $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_p
             <tfoot>
               <tr >
                 <td  colspan="6">
-                  <div id="footTable">
+                  <div class="footTable">
                     <div
                     data-pagination=""
                     data-num-pages="numPages()"
@@ -70,7 +65,7 @@ $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_p
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button id="buttonTable" type="button"> Ajouter un eleve </button></div>
+                  <button class="buttonTable" type="button"> Ajouter un eleve </button></div>
                 </td>
               </tr>
             </tfoot>

@@ -2,7 +2,7 @@
 
 <?php
    
-if (isset($_POST['frmajouterpromotion'])){
+if (isset($_POST['frmAjouterPromotion'])){
 
   
 $nom_promotion =htmlentities(trim($_POST['nom_promotion']));
@@ -30,20 +30,16 @@ for($i=0;$i<count($erreurs) ;$i++) {
     $messageErreur .= "</li>";
 }
     echo $messageErreur;
-    include './includes/frmajouterpromotion.php';
+    include './includes/frmAjouterPromotion.php';
 
   }
 
-  else {
-     
-        
-          $requete ="INSERT INTO promotions (id_promotion ,nom_promotion,id_etablissement,annee) values (null, '$nom_promotion','$id_etablissement', '$annee_promotion');";
+  else { 
+        $requete ="INSERT INTO promotions (id_promotion ,nom_promotion,id_etablissement,annee) values (null, '$nom_promotion','$id_etablissement', '$annee_promotion');";
         // var_dump($requete);
-         $queryInsert = new Sql();
-          $queryInsert->inserer($requete);
-        //  header('location:./index.php?page=login');
-  
-         
+        $queryInsert = new Sql();
+        $queryInsert->inserer($requete);
+     
   }
   }
   

@@ -1,17 +1,18 @@
+
 <?php
 
 //var_dump(isset($_POST['frmUpdate']));
 
-if (isset($_POST['frmSalle'])) {
+if (isset($_POST['frmUpdate'])) {
    // $message = "Je viens du formulaire";
 
     $nom = htmlentities(trim($_POST['nom']));
     $caracteristique = htmlentities(trim($_POST['caracteristique']));
-    
     $id_etablissement = strstr(htmlentities(trim($_POST['id_etablissement'])), '-', TRUE);
+    $id = htmlentities(trim($_POST['id']));
 
-   //var_dump($_POST['nom']);
-   //var_dump($id_etablissement);
+//   var_dump($_POST['nom']);
+//   var_dump($_POST['id']);
 
     $erreurs = array();
 
@@ -31,23 +32,25 @@ if (isset($_POST['frmSalle'])) {
         }
         $messageErreur .= "</ul>";
         echo $messageErreur;
-        include './includes/admin/frmSalle.php';
+        include '.listeSalle.inc.php';
     } else {
-    
-        $requete = "INSERT INTO salles (id_salle,id_etablissement,nom_salle,caracteristique) VALUES(NULL,'$id_etablissement','$nom','$caracteristique');";
-    //var_dump($requete);
-         $sqlInserer = new Sql();
-         $sqlInserer->inserer($requete);  
-         require "listeSalle.inc.php";
+
+        $requete = "UPDATE salles set nom_salle='$nom', caracteristique ='$caracteristique', id_etablissement='$id_etablissement'
+            where id_salle = '$id';";
+           
+        
+        $sqlUpdate = new Sql();
+        $sqlUpdate->lister($requete); 
+        include 'listeSalle.inc.php';
     }
 
 
 } else {
 
-    
+    //var_dump(($_POST['frmUpdate']));
 
-    
-     include './includes/admin/frmSalle.php';
+    // $nom = $prenom = $mail = "";
+     include 'listeSalle.inc.php';
     //echo $message;
 }
 

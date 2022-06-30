@@ -1,3 +1,4 @@
+
 <?php 
 if(isset($_POST["frmAjouterProf"]))
 {
@@ -51,6 +52,9 @@ if(isset($_POST["frmAjouterProf"]))
     else{
         $admin = new Admin();
         $admin-> ajouterProf($identifiant,$password,$nom,$prenom,$mail);
+
+        $url = "index.php?page=listeProfesseur";
+        echo redirection($url);
     }
 
 }

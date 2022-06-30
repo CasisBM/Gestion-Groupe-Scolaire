@@ -4,13 +4,13 @@
             <table>
               <thead>
                 <tr>
-                  <th id="nomTable" colspan="7">Planning (Nom Salles)</th>
+                  <th class="nomTable" colspan="7">Planning (Nom Salles)</th>
                 </tr>
                 <tr>
                 </tr>
                 
                </div>
-              <tr id="titreTable">
+              <tr class="titreTable">
                 <th>Matiere</th>
                 <th>Date</th>
                 <th>Horaires</th>
@@ -63,7 +63,7 @@
             <tfoot>
               <tr >
                 <td  colspan="7">
-                  <div id="footTable">
+                  <div class="footTable">
                     <div
                     data-pagination=""
                     data-num-pages="numPages()"
@@ -71,7 +71,7 @@
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button id="buttonTable" type="button"> Ajouter un cours </button></div>
+                  <button class="buttonTable" type="button"> Ajouter un cours </button></div>
                 </td>
               </tr>
             </tfoot>

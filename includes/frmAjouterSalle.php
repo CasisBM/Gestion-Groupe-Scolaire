@@ -1,8 +1,4 @@
 <?php
-spl_autoload_register(function ($className) {
-
-    require '../../classes/' . $className . '.php';
-});
 $sqlQuery = new Sql();
 $tblQuery = array();
 
@@ -36,7 +32,7 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
     </thead>
     <tbody>
 
-        <form action="index.php?page=ajouteSalle" method="post"">
+        <form action="index.php?page=ajouterSalle" method="post"">
             <td><input type=" text" id="nom" name="nom" />
         </td>
         <td><input type="text" id="caracteristique" name="caracteristique" /></td>

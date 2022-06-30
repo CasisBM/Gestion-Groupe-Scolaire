@@ -1,22 +1,16 @@
 <?php
-spl_autoload_register(function($className){
-  
-   require '../../classes/'.$className.'.php';
 
-});
 $sqlQuery = new Sql();
-$tblQuery = array();
-
 $tblQuery = $sqlQuery->lister("select * from promotions");
 
 ?>
 
-<?php require './includes/admin/header.php'; ?>
+<?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th id="nomTable" colspan="5">Liste des promotions</th>
+                  <th class="nomTable" colspan="5">Liste des promotions</th>
                 </tr>
                 <tr>
                   <th colspan="5">
@@ -29,7 +23,7 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
                 </tr>
                 
                </div>
-              <tr id="titreTable">
+              <tr class="titreTable">
                 <th>Promotion</th>
                 <th>Programmes d'enseignemants</th>
                 <th>Voir planning</th>
@@ -58,7 +52,7 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
             <tfoot>
               <tr >
                 <td  colspan="5">
-                  <div id="footTable">
+                  <div class="footTable">
                     <div
                     data-pagination=""
                     data-num-pages="numPages()"
@@ -66,7 +60,7 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button id="buttonTable" type="button"> Ajouter une promotion </button></div>
+                  <button class="buttonTable" type="button" onclick="location.href='index.php?page=ajouterPromotion'"> Ajouter une promotion </button></div>
                 </td>
               </tr>
             </tfoot>

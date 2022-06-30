@@ -79,7 +79,7 @@
 
             <!--/Table Derniers Cours Ajouté-->
       
-      <table>
+<!--       <table>
         <thead>
           <tr>
             <th id="nomTable" colspan="6"> Derniers ajout de cours</th>
@@ -155,4 +155,4 @@
             </td>
         </tr>
       </tfoot>
-      </table> 
+      </table>  -->

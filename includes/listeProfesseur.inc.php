@@ -1,22 +1,16 @@
 <?php
-spl_autoload_register(function($className){
-  
-   require '../../classes/'.$className.'.php';
 
-});
 $sqlQuery = new Sql();
-$tblQuery = array();
-
 $tblQuery = $sqlQuery->lister("select * from enseignants");
 
 
 ?>
-<?php require 'header.php'; ?>
+<?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th id="nomTable" colspan="5">Liste des professeurs</th>
+                  <th class="nomTable" colspan="5">Liste des professeurs</th>
                 </tr>
                 <tr>
                   <th colspan="5">
@@ -29,7 +23,7 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
                 </tr>
                 
                </div>
-              <tr id="titreTable">
+              <tr class="titreTable">
                 <th>Professeurs</th>
                 <th>Voir profil</th>                
                 <th>Voir planning</th>
@@ -49,7 +43,8 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
                 </td>
                 <td>Ecole 1</td>
                 <td>
-                  <i class="fa-solid fa-trash" href=\"index.php?page=supp&id="></i>
+                  <i class="fa-solid fa-pen"></i>
+                  <i class="fa-solid fa-trash" href="index.php?page=supp&class="></i>
                 </td>
               </tr>
               <?php } ?>
@@ -58,7 +53,7 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
             <tfoot>
               <tr >
                 <td  colspan="5">
-                  <div id="footTable">
+                  <div class="footTable">
                     <div
                     data-pagination=""
                     data-num-pages="numPages()"
@@ -66,7 +61,7 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button id="buttonTable" type="button"> Ajouter un professeur </button></div>
+                  <button class="buttonTable" onclick="location.href='index.php?page=ajouterProf'" type="button"> Ajouter un professeur </button></div>
                 </td>
               </tr>
             </tfoot>
