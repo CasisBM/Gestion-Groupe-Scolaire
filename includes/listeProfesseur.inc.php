@@ -3,6 +3,7 @@
 $sqlQuery = new Sql();
 $tblQuery = $sqlQuery->lister("select * from enseignants");
 
+
 ?>
 <?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
