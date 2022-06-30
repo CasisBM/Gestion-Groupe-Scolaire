@@ -11,7 +11,7 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
 
 ?>
 
-<?php require './includes/header.php'; ?>
+<?php require './includes/admin/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>

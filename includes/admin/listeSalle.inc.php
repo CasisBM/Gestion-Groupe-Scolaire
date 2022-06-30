@@ -9,6 +9,7 @@ $tblQuery = array();
 $tblQuery = $sqlQuery->lister("select * from salles");
 
 ?>
+
 <?php require './includes/header.php'; ?>
 <!--/Table Liste Salle-->
 <table>
