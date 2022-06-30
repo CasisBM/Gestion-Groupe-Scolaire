@@ -65,7 +65,7 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
                     </div>
         </tr>
 
-        <input type="hidden" name="frmSalle" />
+        <input type="hidden" name="frmAjouterSalle" />
         </form>
         <!-- <button id="buttonTable" type="button" onclick="location.href='index.php?page=ajouteSalle'"> Ajouter une salle </button> -->
         </div>

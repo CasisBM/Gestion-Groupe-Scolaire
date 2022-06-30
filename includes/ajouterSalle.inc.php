@@ -31,14 +31,14 @@ if (isset($_POST['frmAjouterSalle'])) {
         }
         $messageErreur .= "</ul>";
         echo $messageErreur;
-        include './includes/frmSalle.php';
+        include './includes/frmAjouterSalle.php';
     } else {
     
         $requete = "INSERT INTO salles (id_salle,id_etablissement,nom_salle,caracteristique) VALUES(NULL,'$id_etablissement','$nom','$caracteristique');";
     //var_dump($requete);
          $sqlInserer = new Sql();
          $sqlInserer->inserer($requete);  
-         require "listeSalle.inc.php";
+         redirection("index.php?page=listeSalle");
     }
 
 
