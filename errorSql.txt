@@ -38,3 +38,75 @@ Stack trace:
 #3 C:\xampp\htdocs\gestion_groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
 #4 C:\xampp\htdocs\gestion_groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
 #5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_eleves' in 'field list' in C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO ele...')
+#1 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\ajoutereleves.inc.php(57): Sql->inserer('INSERT INTO ele...')
+#2 C:\xampp\htdocs\Gestion_Groupe_scolaire\functions\inclusionIncFile.php(18): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion_Groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_eleves' in 'field list' in C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO ele...')
+#1 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\ajoutereleves.inc.php(57): Sql->inserer('INSERT INTO ele...')
+#2 C:\xampp\htdocs\Gestion_Groupe_scolaire\functions\inclusionIncFile.php(18): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion_Groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id_eleves' in 'field list' in C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO ele...')
+#1 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\ajoutereleves.inc.php(57): Sql->inserer('INSERT INTO ele...')
+#2 C:\xampp\htdocs\Gestion_Groupe_scolaire\functions\inclusionIncFile.php(18): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion_Groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''oumarsane10@gmail.com100)' at line 1 in C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO ele...')
+#1 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\ajoutereleves.inc.php(57): Sql->inserer('INSERT INTO ele...')
+#2 C:\xampp\htdocs\Gestion_Groupe_scolaire\functions\inclusionIncFile.php(18): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion_Groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''oumarsane10@gmail.com100)' at line 1 in C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO ele...')
+#1 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\ajoutereleves.inc.php(57): Sql->inserer('INSERT INTO ele...')
+#2 C:\xampp\htdocs\Gestion_Groupe_scolaire\functions\inclusionIncFile.php(18): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion_Groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dbetablissement`.`eleves`, CONSTRAINT `fk_ELEVES_PROMOTIONS1` FOREIGN KEY (`id_promotion`) REFERENCES `promotions` (`id_promotion`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO ele...')
+#1 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\ajoutereleves.inc.php(57): Sql->inserer('INSERT INTO ele...')
+#2 C:\xampp\htdocs\Gestion_Groupe_scolaire\functions\inclusionIncFile.php(18): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion_Groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dbetablissement`.`eleves`, CONSTRAINT `fk_ELEVES_PROMOTIONS1` FOREIGN KEY (`id_promotion`) REFERENCES `promotions` (`id_promotion`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO ele...')
+#1 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\ajoutereleves.inc.php(57): Sql->inserer('INSERT INTO ele...')
+#2 C:\xampp\htdocs\Gestion_Groupe_scolaire\functions\inclusionIncFile.php(18): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion_Groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dbetablissement`.`eleves`, CONSTRAINT `fk_ELEVES_PROMOTIONS1` FOREIGN KEY (`id_promotion`) REFERENCES `promotions` (`id_promotion`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO ele...')
+#1 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\ajoutereleves.inc.php(69): Sql->inserer('INSERT INTO ele...')
+#2 C:\xampp\htdocs\Gestion_Groupe_scolaire\functions\inclusionIncFile.php(18): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion_Groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dbetablissement`.`eleves`, CONSTRAINT `fk_ELEVES_PROMOTIONS1` FOREIGN KEY (`id_promotion`) REFERENCES `promotions` (`id_promotion`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php:25
+Stack trace:
+#0 C:\xampp\htdocs\Gestion_Groupe_scolaire\classes\Sql.php(25): PDO->exec('INSERT INTO ele...')
+#1 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\ajoutereleves.inc.php(69): Sql->inserer('INSERT INTO ele...')
+#2 C:\xampp\htdocs\Gestion_Groupe_scolaire\functions\inclusionIncFile.php(18): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion_Groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion_Groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
+#5 {main}
