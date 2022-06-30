@@ -5,7 +5,7 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
 
 ?>
 
-<?php require './includes/admin/header.php'; ?>
+<?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
@@ -60,7 +60,7 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button class="buttonTable" type="button"> Ajouter une promotion </button></div>
+                  <button class="buttonTable" type="button" onclick="location.href='index.php?page=ajouterPromotion'"> Ajouter une promotion </button></div>
                 </td>
               </tr>
             </tfoot>

@@ -63,7 +63,7 @@ $tblQuery = $sqlQuery->lister($requete);
       <td colspan="5">
         <div id="footTable">
           <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize" data-boundary-links="true"> </div>
-          <button id="buttonTable" type="button" onclick="location.href='index.php?page=ajouteSalle'"> Ajouter une salle </button>
+          <button id="buttonTable" type="button" onclick="location.href='index.php?page=ajouterSalle'"> Ajouter une salle </button>
         </div>
       </td>
     </tr>
