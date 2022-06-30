@@ -1,290 +1,64 @@
-<<<<<<< HEAD
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= '1'' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dbetablissement`.`eleves`, CONSTRAINT `fk_ELEVES_PROMOTIONS1` FOREIGN KEY (`id_promotion`) REFERENCES `promotions` (`id_promotion`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:24
 Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select * from s...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(12): Sql->lister('select * from s...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(24): PDO->exec('DELETE FROM pro...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\supp.inc.php(21): Sql->inserer('DELETE FROM pro...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 1' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dbetablissement`.`eleves`, CONSTRAINT `fk_ELEVES_PROMOTIONS1` FOREIGN KEY (`id_promotion`) REFERENCES `promotions` (`id_promotion`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:24
 Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select * from s...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(12): Sql->lister('select * from s...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(24): PDO->exec('DELETE FROM pro...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\supp.inc.php(21): Sql->inserer('DELETE FROM pro...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 1' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dbetablissement`.`eleves`, CONSTRAINT `fk_ELEVES_PROMOTIONS1` FOREIGN KEY (`id_promotion`) REFERENCES `promotions` (`id_promotion`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:24
 Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select * from s...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(12): Sql->lister('select * from s...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(24): PDO->exec('DELETE FROM pro...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\supp.inc.php(21): Sql->inserer('DELETE FROM pro...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 1' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dbetablissement`.`eleves`, CONSTRAINT `fk_ELEVES_PROMOTIONS1` FOREIGN KEY (`id_promotion`) REFERENCES `promotions` (`id_promotion`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:24
 Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select * from s...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(12): Sql->lister('select * from s...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(24): PDO->exec('DELETE FROM pro...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\supp.inc.php(21): Sql->inserer('DELETE FROM pro...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and etablissements where id_etablissement = 2' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dbetablissement`.`eleves`, CONSTRAINT `fk_ELEVES_PROMOTIONS1` FOREIGN KEY (`id_promotion`) REFERENCES `promotions` (`id_promotion`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:24
 Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select nom_sall...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(11): Sql->lister('select nom_sall...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(24): PDO->exec('DELETE FROM pro...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\supp.inc.php(21): Sql->inserer('DELETE FROM pro...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and etablissements where id_etablissement = 2' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`dbetablissement`.`eleves`, CONSTRAINT `fk_ELEVES_PROMOTIONS1` FOREIGN KEY (`id_promotion`) REFERENCES `promotions` (`id_promotion`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:24
 Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select nom_sall...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(12): Sql->lister('select nom_sall...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(24): PDO->exec('DELETE FROM pro...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\supp.inc.php(21): Sql->inserer('DELETE FROM pro...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'and etablissements where id_etablissement = 2' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.enseignant' doesn't exist in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
 Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select nom_sall...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(12): Sql->lister('select nom_sall...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('UPDATE enseigna...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\updateProf.inc.php(49): Sql->lister('UPDATE enseigna...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #5 {main}
-PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id_etablissement' in where clause is ambiguous in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.enseignant' doesn't exist in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
 Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select nom_sall...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(12): Sql->lister('select nom_sall...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id_etablissement' in where clause is ambiguous in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select nom_sall...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(12): Sql->lister('select nom_sall...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id_etablissement' in where clause is ambiguous in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select nom_sall...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(12): Sql->lister('select nom_sall...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id_etablissement' in where clause is ambiguous in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select nom_sall...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(12): Sql->lister('select nom_sall...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id_etablissement' in where clause is ambiguous in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select salles.n...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(12): Sql->lister('select salles.n...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id_etablissement' in where clause is ambiguous in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select nom_sall...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\liste\listeSalle.inc.php(12): Sql->lister('select nom_sall...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column '1s.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.id_etablissements' in 'where clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'on s.id_etablissement = e.id_etablissement where s.id_etablissement = 1' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'on s.id_etablissement = e.id_etablissement where s.id_etablissement = 1' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'on s.id_etablissement = e.id_etablissement where s.id_etablissement = 1' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'on s.id_etablissement = e.id_etablissement where s.id_etablissement = 1' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'on s.id_etablissement = e.id_etablissement where s.id_etablissement = 1' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
-Stack trace:
-#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select s.nom_sa...')
-#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeSalle.inc.php(12): Sql->lister('select s.nom_sa...')
-#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(11): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
-=======
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-promotion,) values (null, 'SWQd','2', 'jkjhk')' at line 1 in C:\xampp\htdocs\gestion_groupe_scolaire\classes\Sql.php:24
-Stack trace:
-#0 C:\xampp\htdocs\gestion_groupe_scolaire\classes\Sql.php(24): PDO->exec('INSERT INTO uti...')
-#1 C:\xampp\htdocs\gestion_groupe_scolaire\includes\ajouterpromotion.inc.php(48): Sql->inserer('INSERT INTO uti...')
-#2 C:\xampp\htdocs\gestion_groupe_scolaire\functions\inclusionIncFile.php(17): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion_groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion_groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-promotion,) values (null, 'SWQd100','2', 'jkjhk100')' at line 1 in C:\xampp\htdocs\gestion_groupe_scolaire\classes\Sql.php:24
-Stack trace:
-#0 C:\xampp\htdocs\gestion_groupe_scolaire\classes\Sql.php(24): PDO->exec('INSERT INTO uti...')
-#1 C:\xampp\htdocs\gestion_groupe_scolaire\includes\ajouterpromotion.inc.php(48): Sql->inserer('INSERT INTO uti...')
-#2 C:\xampp\htdocs\gestion_groupe_scolaire\functions\inclusionIncFile.php(17): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion_groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion_groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-promotion,) values (null, 'cheikh sane','1', '2020')' at line 1 in C:\xampp\htdocs\gestion_groupe_scolaire\classes\Sql.php:24
-Stack trace:
-#0 C:\xampp\htdocs\gestion_groupe_scolaire\classes\Sql.php(24): PDO->exec('INSERT INTO uti...')
-#1 C:\xampp\htdocs\gestion_groupe_scolaire\includes\ajouterpromotion.inc.php(48): Sql->inserer('INSERT INTO uti...')
-#2 C:\xampp\htdocs\gestion_groupe_scolaire\functions\inclusionIncFile.php(17): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion_groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion_groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-promotion,) values (null, 'cheikh sane','1', '2020')' at line 1 in C:\xampp\htdocs\gestion_groupe_scolaire\classes\Sql.php:24
-Stack trace:
-#0 C:\xampp\htdocs\gestion_groupe_scolaire\classes\Sql.php(24): PDO->exec('INSERT INTO pro...')
-#1 C:\xampp\htdocs\gestion_groupe_scolaire\includes\ajouterpromotion.inc.php(43): Sql->inserer('INSERT INTO pro...')
-#2 C:\xampp\htdocs\gestion_groupe_scolaire\functions\inclusionIncFile.php(18): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion_groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion_groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
-#5 {main}
-PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-promotion,) values (null, 'cheikh sane','1', '2020')' at line 1 in C:\xampp\htdocs\gestion_groupe_scolaire\classes\Sql.php:24
-Stack trace:
-#0 C:\xampp\htdocs\gestion_groupe_scolaire\classes\Sql.php(24): PDO->exec('INSERT INTO pro...')
-#1 C:\xampp\htdocs\gestion_groupe_scolaire\includes\ajouterpromotion.inc.php(43): Sql->inserer('INSERT INTO pro...')
-#2 C:\xampp\htdocs\gestion_groupe_scolaire\functions\inclusionIncFile.php(18): require('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\gestion_groupe_scolaire\includes\main.php(30): inclusionIncFile('login')
-#4 C:\xampp\htdocs\gestion_groupe_scolaire\index.php(10): require_once('C:\\xampp\\htdocs...')
->>>>>>> develop
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('UPDATE enseigna...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\updateProf.inc.php(49): Sql->lister('UPDATE enseigna...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #5 {main}

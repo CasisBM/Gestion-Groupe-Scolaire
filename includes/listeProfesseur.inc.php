@@ -43,8 +43,8 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
                 </td>
                 <td>Ecole 1</td>
                 <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash" href="index.php?page=supp&class="></i>
+                <a href="index.php?page=editProf&id=<?= $tblQuery[$i]['id_enseignant'] ?>" class="btn btn-supp"><i class="fa-solid fa-pen"></i></a>
+                <a href="index.php?page=supp&pg=prof&id=<?= $tblQuery[$i]['id_enseignant'] ?>" class="btn btn-supp" onclick="return confirm('Vous ne pouvez pas supprimer cette proff (appler administrateur) !')"><i class="fa-solid fa-trash"></i></a> 
                 </td>
               </tr>
               <?php } ?>

@@ -43,8 +43,8 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
                 </td>
                 <td>Ecole 1</td>
                 <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
+                <a href="index.php?page=editPromo&id=<?= $tblQuery[$i]['id_promotion'] ?>" class="btn btn-supp"><i class="fa-solid fa-pen"></i></a>
+                <a href="index.php?page=supp&pg=promo&id=<?= $tblQuery[$i]['id_promotion'] ?>" class="btn btn-supp" onclick="return confirm('Vous ne pouvez pas supprimer cette promotion (eleves utilise ça) ?')"><i class="fa-solid fa-trash"></i></a> 
                 </td>
               </tr>
               <?php } ?>
