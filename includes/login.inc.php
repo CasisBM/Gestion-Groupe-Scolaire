@@ -1,16 +1,11 @@
 <?php 
 
-//header('Location: index.php?page=accueil')
-
-echo "1";
-var_dump($_POST);
-
+//header('Location: index.php?page=accueil');
 if(isset($_POST["frmLogin"]))
 {
     $password = htmlentities($_POST['password']);
 
     $erreurs = array();
-    echo "2";
 
     if(mb_strlen($password) === 0)
     array_push($erreurs, "Il manque votre mot de passe");
@@ -28,11 +23,14 @@ if(isset($_POST["frmLogin"]))
 
         echo $messageErreur;
         include './includes/frmLogin.php';
-        echo "3";
     }
     else
     {
+<<<<<<< HEAD
         header('Location: index.php?page=choixEtablissement');
+=======
+        header('Location: index.php?page=accueil');
+>>>>>>> ff4e22e0fcf97650694520cb3ea9c72631696a6e
     }
 
 }
