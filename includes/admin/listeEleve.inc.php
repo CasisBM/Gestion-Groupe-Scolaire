@@ -12,7 +12,7 @@ $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_p
 ?>
             
 
-            <?php require './includes/admin/header.php'; ?>
+            <?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>

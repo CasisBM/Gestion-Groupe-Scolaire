@@ -41,7 +41,7 @@ $tblQuery = $querySelect->lister("select * from etablissements");
     </thead>
     <tbody>
        
-<form action="index.php?page=update" method="post"">
+<form action="index.php?page=updateSalle" method="post"">
             <td><input type="text" id="nom" name="nom" value="<?= $salle[0]['nom_salle'] ?>" /></td>
             <td><input type="text" id="caracteristique" name="caracteristique" value="<?= $salle[0]['caracteristique'] ?>" /></td>
             <td>
