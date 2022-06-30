@@ -1,7 +1,7 @@
 <?php
 
 $sqlQuery = new Sql();
-$requete = "select en.id_salle, en.nom_salle,en.caracteristique,et.nom_etablissement from enseignants en join etablissements et on en.id_etablissement = e.id_etablissement";
+$requete = "select en.prenom,en.nom, en.nom_salle,en.caracteristique,et.nom_etablissement from enseignants en join etablissements et on en.id_etablissement = e.id_etablissement";
 
 if(!empty($_SESSION['etablissement']))
 {
