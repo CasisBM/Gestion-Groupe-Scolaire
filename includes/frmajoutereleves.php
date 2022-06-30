@@ -5,11 +5,11 @@
   require '../classes/'.$className.'.php';
 
 });
-$sqlQuery = new sql();
+$sqlQuery = new Sql();
 $tblQuery = array();
 $tblQuery = $sqlQuery->lister("select * from etablissements");
  ?>
-<form action="index.php?page=ajouterProf" method="post">
+<form action="../index.php?page=ajoutereleves" method="post">
    
     
     <div>
@@ -25,10 +25,19 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
         <input type="text" name="mail" id="mail" value="<?= $mail; ?>" />
     </div>
     <div>
-        <label for="password">Mot de passe :</label>
-        <input type="password" name="password" id="password" />
+        <label for="promotion">promotion :</label>
+        <input type="text" name="promotion" id="promotion" />
     </div>
     <div>
+        <label for="identifiant">identifiant :</label>
+        <input type="text" name="identifiant" id="identifiant" />
+    </div>
+    <div>
+        <label for="compte">compte :</label>
+        <input type="text" name="compte" id="compte" />
+    </div>
+    <div>
+     
         <label for="id_etablissement">id_etablissement  :</label>
         <select name="id_etablissement" id="id_etablissement" >
         <?php for($i=0; $i <count($tblQuery) ; $i++) { 

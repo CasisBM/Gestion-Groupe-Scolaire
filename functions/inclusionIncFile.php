@@ -8,9 +8,9 @@ function inclusionIncFile($defaultPage){
     $pageTest1 = './includes/' . $page . '.inc.php';
     $pageTestAdmin = './includes/admin/'. $page . '.inc.php';
    
-   
+ //  var_dump($page);
     
-    if (in_array($pageTest,$files))
+     if (in_array($pageTest,$files))
     {
         require "./includes/$page.inc.php";
     }
