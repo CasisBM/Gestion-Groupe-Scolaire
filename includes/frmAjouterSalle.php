@@ -32,7 +32,7 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
     </thead>
     <tbody>
 
-        <form action="index.php?page=ajouterSalle" method="post"">
+        <form action="index.php?page=ajouterSalle" method="post">
             <td><input type=" text" id="nom" name="nom" />
         </td>
         <td><input type="text" id="caracteristique" name="caracteristique" /></td>
@@ -65,7 +65,7 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
                     </div>
         </tr>
 
-        <input type="hidden" name="frmSalle" />
+        <input type="hidden" name="frmAjouterSalle" />
         </form>
         <!-- <button id="buttonTable" type="button" onclick="location.href='index.php?page=ajouteSalle'"> Ajouter une salle </button> -->
         </div>

@@ -1,19 +1,16 @@
 <?php
-
 $sqlQuery = new Sql();
-$requete = "select el.prenom, el.nom, et.nom_etablissement, p.nom_promotion from eleves el join promotions p on el.id_promotion = p.id_promotion
-            join etablissements et on et.id_etablissement = p.id_etablissement";
-$tblQuery = $sqlQuery->lister($requete);
+$tblQuery = array();
 
-if(!empty($_SESSION['etablissement']))
-{
-  $requete .= " where p.id_etablissement = ".$_SESSION['etablissement'];
-}
+
+$tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_promotion=promotions.id_promotion");
 
 
 ?>
-<?php require './includes/header.php'; ?>
-            <!--/Table Liste Eleves-->
+            
+
+            <?php require './includes/header.php'; ?>
+            <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
@@ -24,14 +21,14 @@ if(!empty($_SESSION['etablissement']))
                     <div class="search">
                       <div class="search-box">
                          <input type="text" class="search-input" placeholder="Recherche..">
-                         <i class="fas fa-search search-button"></i>
+                           <i class="fas fa-search search-button"></i>
                       </div>
                   </th>
                 </tr>
                 
                </div>
               <tr class="titreTable">
-                <th>Prenom NOM</th>
+                <th>Eleves</th>
                 <th>Promotions</th>
                 <th>Voir profil</th>
                 <th>Voir planning</th>
@@ -42,22 +39,20 @@ if(!empty($_SESSION['etablissement']))
             <tbody>
             <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
-                <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
-                <td><?=$tblQuery[$i]['nom_promotion']?></td>
+                <td><?=$tblQuery[$i]['nom'] ?></td>
+                <td>Second</td>
                 <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
-                  <a href="planningprof.html">
+                  <a href="planningeleve.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
-                <td><?=$tblQuery[$i]['nom_etablissement'] ?></td>
+                <td>Ecole 1</td>
                 <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash" href="index.php?page=supp&class="></i>
+                  <i class="fa-solid fa-trash"></i>
                 </td>
               </tr>
-              <?php } ?>
-             
+              <?php } ?>             
             </tbody>
             <tfoot>
               <tr >
@@ -70,7 +65,7 @@ if(!empty($_SESSION['etablissement']))
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button class="buttonTable" onclick="location.href='index.php?page=ajouterEleve'" type="button"> Ajouter un eleve </button></div>
+                  <button class="buttonTable" type="button"> Ajouter un eleve </button></div>
                 </td>
               </tr>
             </tfoot>
