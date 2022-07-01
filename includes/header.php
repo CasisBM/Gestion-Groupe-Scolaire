@@ -1,7 +1,21 @@
+    
+  <?php
+    if(isset($_SESSION['etablissement']) && !empty($_SESSION['etablissement']))
+    {
+      $sqlQuery = new Sql();
+      $tblQuery = $sqlQuery->lister("SELECT nom_etablissement FROM etablissements WHERE id_etablissement = '".$_SESSION['etablissement']."'");
+      $nomEtablissement = $tblQuery[0]['nom_etablissement'];
+    }
+    else
+    {
+      $nomEtablissement = "Nom de l'etablisssement";
+    }
+
+  ?>
     <header>
       <div id="search">
         <div id="btn_principal">
-          <button id="btn_ecole">Name de l'ecole</button>
+          <button id="btn_ecole"><?=$nomEtablissement?></button>
           <button onclick="location.href='index.php?page=choixEtablissement'">Accueil</button>
           <button onclick="location.href='index.php?page=listeProfesseur'" id="btn_prof">
             Professeurs
