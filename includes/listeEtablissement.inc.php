@@ -5,9 +5,9 @@ if(isset($_GET['idProf']) && !empty($_GET['idProf']))
 {
 
 $sqlQuery = new Sql();
-$requete = "select en.id_enseignant,en.prenom,en.nom,et.nom_etablissement from enseignants en join ETABLISSEMENTS_has_UTILISATEUR ehu on 
-            ehu.id_enseignant = en.id_enseignant join etablissements et on ehu.id_etablissement = et.id_etablissement 
-            where  en.id_enseignant = '".$_GET['idProf']."'";
+$requete = "select et.nom_etablissement, et.ville from ETABLISSEMENTS_has_UTILISATEUR ehu 
+            join etablissements et on ehu.id_etablissement = et.id_etablissement 
+            where  ehu.id_enseignant = '".$_GET['idProf']."'";
 
 if(!empty($_SESSION['etablissement']))
 {
@@ -15,8 +15,8 @@ if(!empty($_SESSION['etablissement']))
 }
 
 $tblQuery = $sqlQuery->lister($requete);
-dump($requete);
-dump($tblQuery);
+$requete = "select prenom,nom from enseignants where id_enseignant = '".$_GET['idProf']."'";
+$tblQueryPrenomNom = $sqlQuery->lister($requete);
 }
 else
 {
@@ -27,10 +27,10 @@ else
 <table>
     <thead>
     <tr>
-        <th class="nomTable" colspan="4">Liste des établissements de <?=$tblQuery[0]['prenom'].' '.$tblQuery[0]['nom'] ?></th>
+        <th class="nomTable" colspan="3">Liste des établissements de <?=$tblQueryPrenomNom[0]['prenom'].' '.$tblQueryPrenomNom[0]['nom'] ?></th>
     </tr>
     <tr>
-        <th colspan="4">
+        <th colspan="3">
         <div class="search">
             <div class="search-box">
             <input type="text" class="search-input" placeholder="Recherche..">
@@ -43,7 +43,6 @@ else
     <tr class="titreTable">
         <th>Etablissements</th>
         <th>Villes</th>
-        <th>Accès</th>
         <th>Actions</th>
     </tr>
     </thead>
@@ -56,12 +55,6 @@ else
         <td><?= $tblQuery[$i]['nom_etablissement'] ?></td>
         <td><?= $tblQuery[$i]['ville'] ?></td>
         <td>
-            <a href="index.php?page=choixEtablissement&etablissement=<?= $tblQuery[$i]['id_etablissement'] ?>">
-            <i class="fa-solid fa-square-plus fa-2x">
-            </i>
-            </a>
-        </td>
-        <td>
             <i class="fa-solid fa-pen"></i>
             <i class="fa-solid fa-trash"></i>
         </td>
@@ -72,7 +65,7 @@ else
     </tbody>
     <tfoot>
     <tr>
-        <td colspan="4">
+        <td colspan="3">
         <div class="footTable">
             <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize" data-boundary-links="true"> </div>
             <button class="buttonTable" type="button" onclick="location.href='index.php?page=ajouterEtablissementProf&idProf=<?=$_GET['idProf']?>'"> Ajouter un établissement </button>

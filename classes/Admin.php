@@ -45,10 +45,19 @@ class Admin
         //invoqué lors du clonage d'objet
 
     }
-    public function ajouterEtablissementHasProf(string $idEtablissement, string $idProf)
+    public function ajouterEtablissementHasProf(string $idEtablissement, string $idProf):bool
     {
-        $requete = "INSERT INTO ETABLISSEMENTS_has_UTILISATEUR(id_etablissement,id_enseignant) VALUES ('$idEtablissement','$idProf');";
-        $this->db->inserer($requete);
+        $requete = "SELECT id_etablissement,id_enseignant FROM ETABLISSEMENTS_has_UTILISATEUR WHERE id_etablissement = '$idEtablissement' AND id_enseignant = '$idProf';";
+        $condition = $this->db->lister($requete);
+
+        if(empty($condition))
+        {
+            $requete = "INSERT INTO ETABLISSEMENTS_has_UTILISATEUR(id_etablissement,id_enseignant) VALUES ('$idEtablissement','$idProf');";
+            $this->db->inserer($requete);
+            return true;
+        }
+        return false;
+        
     }
     
     public function ajouterEtablissement(string $nom, string $ville, string $idProf=null)
