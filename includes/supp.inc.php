@@ -7,7 +7,7 @@ $idUser = $_GET['id'];
 $page = $_GET['pg'];
 
 $requeteSupp = new Sql();
-
+//var_dump($idUser);
 switch($page)
 {
      case 'salle':
@@ -17,9 +17,15 @@ switch($page)
         break;
      case 'promo':
         $requete = "DELETE FROM promotions WHERE id_promotion = '$idUser' ";
-        $requeteSupp->inserer($requete);
+       
+        $requeteSupp->inserer($requete);  //on ne peux pas delete promotion si les autre table utiliser ce prom
         require "listePromotion.inc.php";
         break;
+     case 'prof':
+      $requete = "DELETE FROM enseignants WHERE id_enseignant = '$idUser' ";
+      //$requeteSupp->inserer($requete);  //on ne peux pas delete prof si les autre table utiliser ce prof
+      require "listeProfesseur.inc.php";
+         break;
 
 }
 

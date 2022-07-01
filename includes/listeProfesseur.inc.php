@@ -1,26 +1,20 @@
 <?php
-spl_autoload_register(function($className){
-  
-   require '../../classes/'.$className.'.php';
 
-});
 $sqlQuery = new Sql();
-$tblQuery = array();
+$tblQuery = $sqlQuery->lister("select * from enseignants");
 
-$tblQuery = $sqlQuery->lister("select * from promotions");
 
 ?>
-
-<?php require './includes/admin/header.php'; ?>
+<?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th id="nomTable" colspan="5">Liste des promotions</th>
+                  <th class="nomTable" colspan="5">Liste des professeurs</th>
                 </tr>
                 <tr>
                   <th colspan="5">
-                    <div class="container">
+                    <div class="search">
                       <div class="search-box">
                          <input type="text" class="search-input" placeholder="Recherche..">
                          <i class="fas fa-search search-button"></i>
@@ -29,9 +23,9 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
                 </tr>
                 
                </div>
-              <tr id="titreTable">
-                <th>Promotion</th>
-                <th>Programmes d'enseignemants</th>
+              <tr class="titreTable">
+                <th>Professeurs</th>
+                <th>Voir profil</th>                
                 <th>Voir planning</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
@@ -40,25 +34,26 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
             <tbody>
             <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
-                <td><?=$tblQuery[$i]['nom_promotion'] ?></td>
-                <td>Second general</td>
+                <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
+                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
-                  <a href="planningpromotion.php">
+                  <a href="planningprof.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
                 <td>Ecole 1</td>
                 <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
+                <a href="index.php?page=editProf&id=<?= $tblQuery[$i]['id_enseignant'] ?>" class="btn btn-supp"><i class="fa-solid fa-pen"></i></a>
+                <a href="index.php?page=supp&pg=prof&id=<?= $tblQuery[$i]['id_enseignant'] ?>" class="btn btn-supp" onclick="return confirm('Vous ne pouvez pas supprimer cette proff (appler administrateur) !')"><i class="fa-solid fa-trash"></i></a> 
                 </td>
               </tr>
               <?php } ?>
+             
             </tbody>
             <tfoot>
               <tr >
                 <td  colspan="5">
-                  <div id="footTable">
+                  <div class="footTable">
                     <div
                     data-pagination=""
                     data-num-pages="numPages()"
@@ -66,7 +61,7 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button id="buttonTable" type="button"> Ajouter une promotion </button></div>
+                  <button class="buttonTable" onclick="location.href='index.php?page=ajouterProf'" type="button"> Ajouter un professeur </button></div>
                 </td>
               </tr>
             </tfoot>
