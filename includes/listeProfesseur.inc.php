@@ -55,8 +55,8 @@ $tblQuery = $sqlQuery->lister($requete);
                     <i class="fa-solid fa-school-flag fa-2x"></i>
                   </a></td>
                 <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
+                <a href="index.php?page=editProf&id=<?= $tblQuery[$i]['id_enseignant'] ?>" class="btn btn-supp"><i class="fa-solid fa-pen"></i></a>
+                <a href="index.php?page=supp&pg=prof&id=<?= $tblQuery[$i]['id_enseignant'] ?>" class="btn btn-supp" onclick="return confirm('Vous ne pouvez pas supprimer cette proff (appler administrateur) !')"><i class="fa-solid fa-trash"></i></a> 
                 </td>
               </tr>
               <?php } ?>

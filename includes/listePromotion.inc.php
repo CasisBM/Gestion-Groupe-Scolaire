@@ -42,8 +42,8 @@ $tblQuery = $sqlQuery->lister("select p.nom_promotion,et.nom_etablissement  from
                 </td>
                 <td><?=$tblQuery[$i]['nom_etablissement'] ?></td>
                 <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
+                <a href="index.php?page=editPromo&id=<?= $tblQuery[$i]['id_promotion'] ?>" class="btn btn-supp"><i class="fa-solid fa-pen"></i></a>
+                <a href="index.php?page=supp&pg=promo&id=<?= $tblQuery[$i]['id_promotion'] ?>" class="btn btn-supp" onclick="return confirm('Vous ne pouvez pas supprimer cette promotion (eleves utilise ça) ?')"><i class="fa-solid fa-trash"></i></a> 
                 </td>
               </tr>
               <?php } ?>
