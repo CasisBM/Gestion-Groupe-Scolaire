@@ -1,7 +1,8 @@
 <?php
 
 $sqlQuery = new Sql();
-$tblQuery = $sqlQuery->lister("select * from promotions");
+$tblQuery = $sqlQuery->lister("select p.nom_promotion,et.nom_etablissement  from promotions p 
+                              join etablissements et on p.id_etablissement = et.id_etablissement");
 
 ?>
 
@@ -13,7 +14,7 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
                   <th class="nomTable" colspan="5">Liste des promotions</th>
                 </tr>
                 <tr>
-                  <th colspan="5">
+                  <th colspan="4">
                     <div class="container">
                       <div class="search-box">
                          <input type="text" class="search-input" placeholder="Recherche..">
@@ -25,7 +26,6 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
                </div>
               <tr class="titreTable">
                 <th>Promotion</th>
-                <th>Programmes d'enseignemants</th>
                 <th>Voir planning</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
@@ -35,13 +35,12 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
             <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
                 <td><?=$tblQuery[$i]['nom_promotion'] ?></td>
-                <td>Second general</td>
                 <td>
                   <a href="planningpromotion.php">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
-                <td>Ecole 1</td>
+                <td><?=$tblQuery[$i]['nom_etablissement'] ?></td>
                 <td>
                   <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
@@ -51,7 +50,7 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
             </tbody>
             <tfoot>
               <tr >
-                <td  colspan="5">
+                <td  colspan="4">
                   <div class="footTable">
                     <div
                     data-pagination=""
