@@ -1,3 +1,8 @@
+    
+    
+    
+    
+    
     <header>
       <div id="search">
         <div id="btn_principal">
@@ -23,7 +28,7 @@
               <li>
                 <button
                   id="btn_profil"
-                  onclick="location.href='index.php?page=profile'"
+                  onclick="location.href='index.php?page=Profile'"
                   id="profil"
                 >
                   profil

@@ -61,6 +61,6 @@ if(isset($_POST["frmAjouterProf"]))
 else{
     //echo "Je ne viens pas du formulaire";
     $identifiant = $nom = $prenom = $mail = "";
-    include './includes/frmAjouterProf.php';
+    include '../includes/frmAjouterProf.php';
 }
 ?>

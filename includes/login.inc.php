@@ -22,11 +22,11 @@ if(isset($_POST["frmLogin"]))
         $messageErreur .= "</ul>";
 
         echo $messageErreur;
-        include './includes/frmLogin.php';
+        //include './includes/frmLogin.php';
     }
     else
     {
-        header('Location: index.php?page=choixEtablissement');
+        header('Location: index.php?page=profil');
     }
 
 }

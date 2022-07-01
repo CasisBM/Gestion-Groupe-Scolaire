@@ -1,16 +1,5 @@
 
-
-<?php 
-spl_autoload_register(function ($class) {
-  require '../classes/' . $class . '.php';
-});
-
-$sqlQuery = new Sql();
-$tblQuery = array();
-
-$tblQuery = $sqlQuery->lister("select * from profil");
-?>
-  <form action="#">
+<form action="index.php?page=profil" method="post">
     <div id="profil">
       <label>Prenom</label>
       <input type="text" placeholder="Entrer Prenom" name="username" required >

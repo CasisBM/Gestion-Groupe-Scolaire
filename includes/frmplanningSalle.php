@@ -4,16 +4,16 @@ spl_autoload_register(function ($class) {
 });
 
 $sqlQuery = new Sql();
-$tblQuery = $sqlQuery->lister("select * from planning prof");
+$tblQuery = $sqlQuery->lister("select * from planning salle");
 
 
 ?>
 <?php require 'header.php'; ?>
-            <!--/Table plannig prof-->
+            <!--/Table plannig salle-->
             <table>
               <thead>
                 <tr>
-                  <th class="nomTable" colspan="5">planning prof</th>
+                  <th class="nomTable" colspan="5">planning salle</th>
                 </tr>
                 <tr>
                   <th colspan="5">
@@ -78,7 +78,7 @@ $tblQuery = $sqlQuery->lister("select * from planning prof");
                 <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
                 <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
-                  <a href="planningprof.html">
+                  <a href="planningsalle.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>

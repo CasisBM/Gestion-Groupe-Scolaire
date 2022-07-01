@@ -9,11 +9,11 @@ $tblQuery = $sqlQuery->lister("select * from planning promotion");
 
 ?>
 <?php require 'header.php'; ?>
-            <!--/Table plannig eleve-->
+            <!--/Table plannig promotion-->
             <table>
               <thead>
                 <tr>
-                  <th class="nomTable" colspan="5">planning eleve</th>
+                  <th class="nomTable" colspan="5">planning promotion</th>
                 </tr>
                 <tr>
                   <th colspan="5">
@@ -78,7 +78,7 @@ $tblQuery = $sqlQuery->lister("select * from planning promotion");
                 <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
                 <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
-                  <a href="planningprof.html">
+                  <a href="planningpromotion.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>

@@ -1,6 +1,6 @@
 <?php
 spl_autoload_register(function ($class) {
-  require '../classes/' . $class . '.php';
+  require './classes/' . $class . '.php';
 });
 
 
@@ -8,8 +8,21 @@ $sqlQuery = new Sql();
 $tblQuery = $sqlQuery->lister("select * from enseignants");
 
 
+
+/* if(!empty($_SESSION['etablissement']))
+{
+  $requete .= " where en.id_etablissement = ".$_SESSION['etablissement'];
+}
+ */
+
+
+
+
+//$tblQuery = $sqlQuery->lister("select * from enseignants");
+
+
 ?>
-<?php require '../includes/header.php'; ?>
+<?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
@@ -28,7 +41,7 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
                 
                </div>
               <tr class="titreTable">
-                <th>Professeurs</th>
+                <th>Prenom NOM</th>
                 <th>Voir profil</th>                
                 <th>Voir planning</th>
                 <th>Ecoles</th>
@@ -36,19 +49,21 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
               </tr>
             </thead>
             <tbody>
-            <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
+            <?php for ($i=0; $i<count($tblQuery) ; $i++) { ?>
               <tr>
                 <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
+                <td><a href="index.php?page=profiles&id=<?= $tblQuery[$i]['id_enseignant'] ?>"><i class="fa-solid fa-circle-user fa-2x"></i></a></td>
+                <td><a href="index.php?page=planningprofesseurs&id=<?= $tblQuery[$i]['id_enseignant'] ?>"><i class="fa-solid fa-circle-user fa-2x"></i></a></td>
                 <td>
-                  <a href="planningprof.html">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
+                  <i class="fa-solid fa-calendar-days fa-2x"></i>
                 </td>
-                <td>Ecole 1</td>
                 <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash" href="index.php?page=supp&class="></i>
+                <a href="index.php?page=listeEtablissement&idProf=<?=$tblQuery[$i]['id_enseignant'] ?>">
+                    <i class="fa-solid fa-school-flag fa-2x"></i>
+                  </a></td>
+                <td>
+                <a href="index.php?page=editProf&id=<?= $tblQuery[$i]['id_enseignant'] ?>" class="btn btn-supp"><i class="fa-solid fa-pen"></i></a>
+                <a href="index.php?page=supp&pg=prof&id=<?= $tblQuery[$i]['id_enseignant'] ?>" class="btn btn-supp" onclick="return confirm('Vous ne pouvez pas supprimer cette proff (appler administrateur) !')"><i class="fa-solid fa-trash"></i></a> 
                 </td>
               </tr>
               <?php } ?>
@@ -56,7 +71,7 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
             </tbody>
             <tfoot>
               <tr >
-                <td  colspan="5">
+                <td  colspan="6">
                   <div class="footTable">
                     <div
                     data-pagination=""
@@ -69,4 +84,4 @@ $tblQuery = $sqlQuery->lister("select * from enseignants");
                 </td>
               </tr>
             </tfoot>
-            </table> 
+            </table>  

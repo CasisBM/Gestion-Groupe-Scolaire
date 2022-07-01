@@ -78,7 +78,7 @@ $tblQuery = $sqlQuery->lister("select * from planning eleve");
                 <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
                 <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
-                  <a href="planningprof.html">
+                  <a href="planningeleve.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>

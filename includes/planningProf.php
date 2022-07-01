@@ -1,48 +1,32 @@
-<?php
-spl_autoload_register(function ($class) {
-    require '../classes/' . $class . '.php';
-});
-
-$sqlQuery = new Sql();
-$tblQuery = $sqlQuery->lister("select * from planning prof");
-
-
-?>
-<?php require 'header.php'; ?>
-            <!--/Table plannig prof-->
+<?php require './includes/admin/header.php'; ?>
+    <input type="date" min="2022-01-01" max="2025-01-01">
+            <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th class="nomTable" colspan="5">planning prof</th>
+                  <th class="nomTable" colspan="7">Planning (Nom Professeur)</th>
                 </tr>
                 <tr>
-                  <th colspan="5">
-                    <div class="search">
-                      <div class="search-box">
-                         <input type="text" class="search-input" placeholder="Recherche..">
-                         <i class="fas fa-search search-button"></i>
-                      </div>
-                  </th>
                 </tr>
                 
                </div>
               <tr class="titreTable">
                 <th>Matiere</th>
-                <th>Date</th>                
-                <th>Heure</th>
-                <th>Salle</th>
-                <th>Professeur</th>
-                <th>Ecole</th>
+                <th>Date</th>
+                <th>Horaires</th>
+                <th>Salles</th>
+                <th>Promotions</th>
+                <th>Ecoles</th>
                 <th>Actions</th>
               </tr>
-              </thead>
+            </thead>
             <tbody>
               <tr>
                 <td>Maths</td>
                 <td>11/05/2022</td>
                 <td>17:30 - 19:00</td>
                 <td>306</td>
-                <td>Cedric DURON</td>
+                <td>CM2</td>
                 <td>Ecole 00</td>
                 <td>
                   <i class="fa-solid fa-pen"></i>
@@ -55,7 +39,7 @@ $tblQuery = $sqlQuery->lister("select * from planning prof");
                 <td>12/05/2022</td>
                 <td>16:30 - 17:30</td>
                 <td>PEUPLIER</td>
-                <td>Jean-louis DE LA ROCHE</td>
+                <td>CEPPIC2022</td>
                 <td>Ecole 2</td>
                 <td>
                   <i class="fa-solid fa-pen"></i>
@@ -68,32 +52,17 @@ $tblQuery = $sqlQuery->lister("select * from planning prof");
                 <td>13/05/2022</td>
                 <td>13:00 - 14:00</td>
                 <td>ERABLE</td>
-                <td>Emilie Bocase</td>
+                <td>CEPPIC2022</td>
                 <td>Ecole 3</td>
                 <td>
-            </thead>
-            <tbody>
-            <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
-              <tr>
-                <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
-                <td>
-                  <a href="planningprof.html">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
-                </td>
-                <td>Ecole 1</td>
-                <td>
                   <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash" href="index.php?page=supp&class="></i>
+                  <i class="fa-solid fa-trash"></i>
                 </td>
               </tr>
-              <?php } ?>
-             
             </tbody>
             <tfoot>
               <tr >
-                <td  colspan="5">
+                <td  colspan="7">
                   <div class="footTable">
                     <div
                     data-pagination=""
@@ -102,8 +71,9 @@ $tblQuery = $sqlQuery->lister("select * from planning prof");
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button class="buttonTable"type="button"> Ajouter planning </button></div>
+                  <button class="buttonTable" type="button"> Ajouter un cours </button></div>
                 </td>
               </tr>
             </tfoot>
             </table> 
+

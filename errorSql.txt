@@ -306,3 +306,267 @@ Stack trace:
 #4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
 #5 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(11): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_etablissement' in 'where clause' in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('select id_ensei...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\listeProfesseur.inc.php(21): Sql->lister('select id_ensei...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
