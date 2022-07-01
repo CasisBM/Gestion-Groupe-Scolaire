@@ -17,8 +17,8 @@
         <div id="btn_principal">
           <button id="btn_ecole"><?=$nomEtablissement?></button>
           <button onclick="location.href='index.php?page=choixEtablissement'">Accueil</button>
-          <button onclick="location.href='index.php?page=listeProfesseur'" id="btn_prof">
-            Professeurs
+          <button onclick="location.href='index.php?page=listeEnseignant'" id="btn_prof">
+            Enseignant
           </button>
           <button onclick="location.href='index.php?page=listePromotion'">Promotions</button>
           <button onclick="location.href='index.php?page=listeEleve'">Eleves</button>

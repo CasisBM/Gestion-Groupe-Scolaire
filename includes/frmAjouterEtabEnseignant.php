@@ -6,7 +6,7 @@ $tblQuery = array();
 $tblQuery = $sqlQuery->lister("select * from etablissements");
 ?>
 <h1>Ajouter un établissement</h1>
-<form action="index.php?page=ajouterEtablissementProf&idProf=<?=$_GET['idProf']?>" method="post">
+<form action="index.php?page=ajouterEtabEnseignant&idProf=<?=$_GET['idProf']?>" method="post">
     <div>
     <label for="id_etablissement">Nom de l'etablissement :</label>
         <select name="id_etablissement" id="id_etablissement">
@@ -20,5 +20,5 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
         <input type="reset" value="Effacer" />
         <input type="submit" value="Envoyer" />
     </div>
-    <input type="hidden" name="frmAjouterEtablissementProf" />
+    <input type="hidden" name="frmAjouterEtabEnseignant" />
 </form>

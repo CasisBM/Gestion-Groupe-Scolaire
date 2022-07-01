@@ -11,7 +11,7 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
 <table>
     <thead>
         <tr>
-            <th id="nomTable" colspan="5">Edit salle</th>
+            <th id="nomTable" colspan="5">Ajouter salle</th>
         </tr>
         <tr>
             <th colspan="5">

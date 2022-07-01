@@ -1,10 +1,10 @@
 <?php 
 
-if(isset($_POST["frmAjouterEtablissementProf"]))
+if(isset($_POST["frmAjouterEtabEnseignant"]))
 {
     $idEtablissement = $_POST['id_etablissement'];
     $admin = new Admin();
-    $admin-> ajouterEtablissementHasProf($idEtablissement,$_GET['idProf']);
+    $admin-> ajouterEtablissementHasEnseignant($idEtablissement,$_GET['idProf']);
     redirection('index.php?page=listeEtablissement&idProf='.$_GET['idProf']);
 
 }

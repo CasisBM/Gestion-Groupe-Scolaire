@@ -1,36 +1,40 @@
 <?php
+
 $sqlQuery = new Sql();
-$tblQuery = array();
+$requete = "select id_enseignant,prenom,nom from enseignants ";
 
+if(!empty($_SESSION['etablissement']))
+{
+  $requete .= " where en.id_etablissement = ".$_SESSION['etablissement'];
+}
 
-$tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_promotion=promotions.id_promotion");
+$tblQuery = $sqlQuery->lister($requete);
+
+//$tblQuery = $sqlQuery->lister("select * from enseignants");
 
 
 ?>
-            
-
-            <?php require './includes/header.php'; ?>
+<?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th class="nomTable" colspan="6">Liste des eleves</th>
+                  <th class="nomTable" colspan="5">Liste des enseignants</th>
                 </tr>
                 <tr>
-                  <th colspan="6">
+                  <th colspan="5">
                     <div class="search">
                       <div class="search-box">
                          <input type="text" class="search-input" placeholder="Recherche..">
-                           <i class="fas fa-search search-button"></i>
+                         <i class="fas fa-search search-button"></i>
                       </div>
                   </th>
                 </tr>
                 
                </div>
               <tr class="titreTable">
-                <th>Eleves</th>
-                <th>Promotions</th>
-                <th>Voir profil</th>
+                <th>Prenom NOM</th>
+                <th>Voir profil</th>                
                 <th>Voir planning</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
@@ -39,20 +43,24 @@ $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_p
             <tbody>
             <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
-                <td><?=$tblQuery[$i]['nom'] ?></td>
-                <td>Second</td>
+                <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
                 <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
-                  <a href="planningeleve.html">
+                  <a href="">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
-                <td>Ecole 1</td>
                 <td>
-                  <i class="fa-solid fa-trash"></i>
+                <a href="index.php?page=listeEtablissement&idProf=<?=$tblQuery[$i]['id_enseignant'] ?>">
+                    <i class="fa-solid fa-school-flag fa-2x"></i>
+                  </a></td>
+                <td>
+                <a href="index.php?page=updateEnseignant&idEnseignant=<?= $tblQuery[$i]['id_enseignant'] ?>"><i class="fa-solid fa-pen"></i></a>
+                <a href="index.php?page=supprimer&table=enseignants&id=<?= $tblQuery[$i]['id_enseignant'] ?>" onclick="return confirm('Voulez vous vraiment supprimer ce prof?')"><i class="fa-solid fa-trash"></i></a> 
                 </td>
               </tr>
-              <?php } ?>             
+              <?php } ?>
+             
             </tbody>
             <tfoot>
               <tr >
@@ -65,7 +73,7 @@ $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_p
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button class="buttonTable" type="button"> Ajouter un eleve </button></div>
+                  <button class="buttonTable" onclick="location.href='index.php?page=ajouterEnseignant'" type="button"> Ajouter un enseignant </button></div>
                 </td>
               </tr>
             </tfoot>

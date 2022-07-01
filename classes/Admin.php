@@ -45,7 +45,7 @@ class Admin
         //invoqué lors du clonage d'objet
 
     }
-    public function ajouterEtablissementHasProf(string $idEtablissement, string $idProf):bool
+    public function ajouterEtablissementHasEnseignant(string $idEtablissement, string $idProf):bool
     {
         $requete = "SELECT id_etablissement,id_enseignant FROM ETABLISSEMENTS_has_UTILISATEUR WHERE id_etablissement = '$idEtablissement' AND id_enseignant = '$idProf';";
         $condition = $this->db->lister($requete);
@@ -68,7 +68,7 @@ class Admin
             $this->db->inserer($requete);
     }
 
-    public function ajouterProf(string $identifiant, string $password, string $nom , string $prenom,string $mail)
+    public function ajouterEnseignant(string $identifiant, string $password, string $nom , string $prenom,string $mail)
     {
         // Generation unique token et date
         $date = date("Y-m-d H:i:s");

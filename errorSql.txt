@@ -1,0 +1,25 @@
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'année' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('UPDATE promotio...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\updatePromotion.inc.php(43): Sql->lister('UPDATE promotio...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'année' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('UPDATE promotio...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\updatePromotion.inc.php(43): Sql->lister('UPDATE promotio...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('SELECT * FROM e...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmUpdateEnseignant.php(10): Sql->lister('SELECT * FROM e...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\updateEnseignant.inc.php(56): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}

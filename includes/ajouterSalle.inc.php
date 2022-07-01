@@ -30,7 +30,8 @@ if (isset($_POST['frmAjouterSalle'])) {
     } else {
     
         $requete = "INSERT INTO salles (id_salle,id_etablissement,nom_salle,caracteristique) VALUES(NULL,'$id_etablissement','$nom','$caracteristique');";
-        $sqlInserer->inserer($requete);  
+        $queryInsert = new Sql();
+        $queryInsert->inserer($requete);  
         redirection("index.php?page=listeSalle");
     }
 

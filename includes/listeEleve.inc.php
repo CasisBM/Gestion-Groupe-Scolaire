@@ -1,7 +1,7 @@
 <?php
 
 $sqlQuery = new Sql();
-$requete = "select el.prenom, el.nom, et.nom_etablissement, p.nom_promotion from eleves el join promotions p on el.id_promotion = p.id_promotion
+$requete = "select el.id_eleve, el.prenom, el.nom, et.nom_etablissement, p.nom_promotion from eleves el join promotions p on el.id_promotion = p.id_promotion
             join etablissements et on et.id_etablissement = p.id_etablissement";
 $tblQuery = $sqlQuery->lister($requete);
 
@@ -52,8 +52,8 @@ if(!empty($_SESSION['etablissement']))
                 </td>
                 <td><?=$tblQuery[$i]['nom_etablissement'] ?></td>
                 <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash" href="index.php?page=supp&class="></i>
+                  <a href="index.php?page=updateEleve&idEleve=<?= $tblQuery[$i]['id_eleve'] ?>"><i class="fa-solid fa-pen"></i></a>
+                  <a href="index.php?page=supprimer&table=eleves&id=<?= $tblQuery[$i]['id_eleve'] ?>" onclick="return confirm('Etes vous certain de supprimer cette salle ?')"><i class="fa-solid fa-trash"></i></a>
                 </td>
               </tr>
               <?php } ?>

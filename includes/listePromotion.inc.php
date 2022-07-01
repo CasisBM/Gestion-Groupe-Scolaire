@@ -1,7 +1,7 @@
 <?php
 
 $sqlQuery = new Sql();
-$tblQuery = $sqlQuery->lister("select p.nom_promotion,et.nom_etablissement  from promotions p 
+$tblQuery = $sqlQuery->lister("select p.id_promotion, p.nom_promotion,et.nom_etablissement  from promotions p 
                               join etablissements et on p.id_etablissement = et.id_etablissement");
 
 ?>
@@ -42,8 +42,8 @@ $tblQuery = $sqlQuery->lister("select p.nom_promotion,et.nom_etablissement  from
                 </td>
                 <td><?=$tblQuery[$i]['nom_etablissement'] ?></td>
                 <td>
-                <a href="index.php?page=editPromo&id=<?= $tblQuery[$i]['id_promotion'] ?>" class="btn btn-supp"><i class="fa-solid fa-pen"></i></a>
-                <a href="index.php?page=supp&pg=promo&id=<?= $tblQuery[$i]['id_promotion'] ?>" class="btn btn-supp" onclick="return confirm('Vous ne pouvez pas supprimer cette promotion (eleves utilise ça) ?')"><i class="fa-solid fa-trash"></i></a> 
+                <a href="index.php?page=updatePromotion&idPromotion=<?= $tblQuery[$i]['id_promotion'] ?>" ><i class="fa-solid fa-pen"></i></a>
+                <a href="index.php?page=supprimer&table=promotions&id=<?= $tblQuery[$i]['id_promotion'] ?>"  onclick="return confirm('Voulez vous vraiment supprimer cette promotion ?')"><i class="fa-solid fa-trash"></i></a> 
                 </td>
               </tr>
               <?php } ?>
