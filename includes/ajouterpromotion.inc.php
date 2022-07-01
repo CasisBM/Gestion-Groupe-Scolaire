@@ -1,7 +1,6 @@
 <h1>ajouter promotion</h1>
 
 <?php
-   
 if (isset($_POST['frmAjouterPromotion'])){
 
   

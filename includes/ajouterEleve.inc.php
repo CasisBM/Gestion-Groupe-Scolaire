@@ -1,13 +1,15 @@
 
 <?php 
+
 if(isset($_POST["frmAjouterEleve"]))
 {
-    //echo "Je viens du formulaire";
     $identifiant = htmlentities(trim($_POST['identifiant']));
     $nom = htmlentities(trim($_POST['nom']));
     $prenom = htmlentities(trim($_POST['prenom']));
     $mail = htmlentities(trim($_POST['mail']));
     $password = htmlentities(trim($_POST['password']));
+    $id_promotion = htmlentities(trim($_POST['id_promotion']));
+    
 
     $erreurs = array();
 
@@ -51,15 +53,13 @@ if(isset($_POST["frmAjouterEleve"]))
     }
     else{
         $admin = new Admin();
-        $admin-> ajouterEleve($identifiant,$password,$nom,$prenom,$mail);
-
+        $admin-> ajouterEleve($identifiant,$password,$nom,$prenom,$mail,$id_promotion);
         $url = "index.php?page=listeEleve";
         echo redirection($url);
     }
 
 }
 else{
-    //echo "Je ne viens pas du formulaire";
     $identifiant = $nom = $prenom = $mail = "";
     include './includes/frmAjouterEleve.php';
 }

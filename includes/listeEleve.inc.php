@@ -3,9 +3,7 @@
 $sqlQuery = new Sql();
 $requete = "select el.prenom, el.nom, et.nom_etablissement, p.nom_promotion from eleves el join promotions p on el.id_promotion = p.id_promotion
             join etablissements et on et.id_etablissement = p.id_etablissement";
-dump($requete);
 $tblQuery = $sqlQuery->lister($requete);
-dump($tblQuery);
 
 if(!empty($_SESSION['etablissement']))
 {
@@ -22,7 +20,7 @@ if(!empty($_SESSION['etablissement']))
                   <th class="nomTable" colspan="6">Liste des eleves</th>
                 </tr>
                 <tr>
-                  <th colspan="5">
+                  <th colspan="6">
                     <div class="search">
                       <div class="search-box">
                          <input type="text" class="search-input" placeholder="Recherche..">
@@ -63,7 +61,7 @@ if(!empty($_SESSION['etablissement']))
             </tbody>
             <tfoot>
               <tr >
-                <td  colspan="5">
+                <td  colspan="6">
                   <div class="footTable">
                     <div
                     data-pagination=""

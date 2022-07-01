@@ -79,10 +79,14 @@ $tblQuery = $sqlQuery->lister("select * from promotions");
                 <td colspan="6">
                     <div class="footTable">
                         <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize" data-boundary-links="true"> </div>
-                        <button class="buttonTable" onclick="location.href='index.php?page=ajouterEleve'" type="button"> Ajouter un eleve </button>
+                            <input type="reset" value="Effacer" />
+                            <input type="submit" value="Ajouter un élève" />
                     </div>
                 </td>
             </tr>
         </tfoot>
     </table>
+    <input type="hidden" name="frmAjouterEleve" />
 </form>
+
+

@@ -1,17 +1,12 @@
 <?php
 
-//var_dump(isset($_POST['frmUpdate']));
-
 if (isset($_POST['frmAjouterSalle'])) {
-   // $message = "Je viens du formulaire";
 
     $nom = htmlentities(trim($_POST['nom']));
     $caracteristique = htmlentities(trim($_POST['caracteristique']));
     
     $id_etablissement = strstr(htmlentities(trim($_POST['id_etablissement'])), '-', TRUE);
 
-   //var_dump($_POST['nom']);
-   //var_dump($id_etablissement);
 
     $erreurs = array();
 
@@ -35,10 +30,8 @@ if (isset($_POST['frmAjouterSalle'])) {
     } else {
     
         $requete = "INSERT INTO salles (id_salle,id_etablissement,nom_salle,caracteristique) VALUES(NULL,'$id_etablissement','$nom','$caracteristique');";
-    //var_dump($requete);
-         $sqlInserer = new Sql();
-         $sqlInserer->inserer($requete);  
-         redirection("index.php?page=listeSalle");
+        $sqlInserer->inserer($requete);  
+        redirection("index.php?page=listeSalle");
     }
 
 
@@ -48,8 +41,7 @@ if (isset($_POST['frmAjouterSalle'])) {
 
     
      include './includes/frmAjouterSalle.php';
-    //echo $message;
+
 }
 
-//   displayMessage("!");
 ?>
