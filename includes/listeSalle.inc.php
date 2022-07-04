@@ -1,7 +1,7 @@
 <?php
 $sqlQuery = new Sql();
 $tblQuery = array();
-$requete = "select s.id_salle,s.nom_salle,s.caracteristique,e.nom_etablissement,e.ville from salles s join etablissements e on s.id_etablissement = e.id_etablissement";
+$requete = "select s.id_salle,s.nom_salle,s.caracteristique,e.nom_etablissement,e.ville from salles s join etablissements e on s.id_etablissement = e.id_etablissement;";
 
 if(!empty($_SESSION['etablissement']))
 {
@@ -18,22 +18,24 @@ $tblQuery = $sqlQuery->lister($requete);
 <table>
   <thead>
     <tr>
-      <th id="nomTable" colspan="5">Liste des salles</th>
+      <th class="nomTable" colspan="5">Liste des salles</th>
     </tr>
     <tr>
       <th colspan="5">
         <div class="search">
-          <form action="herf=" method="POST">
+          <form action="index.php?page=cherche" method="POST">
           <div class="search-box">
-            <input type="text" class="search-input" placeholder="Recherche..">
+            <input type="text" name="sallename" id="sallename" class="search-input" placeholder="Recherche..">
             <i class="fas fa-search search-button"></i>
+            <!-- <input type="search" name="sallename1" id="sallename1" class="search-input" placeholder="fk"> -->
           </div>
-          </form>
+        <input type="hidden" name="frmcheche" />
+        </form>
       </th>
     </tr>
 
     </div>
-    <tr id="titreTable">
+    <tr class="titreTable">
       <th>Salles</th>
       <th>Caracteristique</th>
       <th>Voir planning</th>
@@ -55,8 +57,8 @@ $tblQuery = $sqlQuery->lister($requete);
       </td>
       <td><?=$tblQuery[$i]['ville'] ?></td>
       <td>
-        <a href="index.php?page=editSalle&id=<?= $tblQuery[$i]['id_salle'] ?>" ><i class="fa-solid fa-pen"></i></a>
-        <a href="index.php?page=supp&pg=salle&id=<?= $tblQuery[$i]['id_salle'] ?>"  onclick="return confirm('Etes vous certain de supprimer  cette salle ?')"><i class="fa-solid fa-trash"></i></a>
+        <a href="index.php?page=updateSalle&idSalle=<?= $tblQuery[$i]['id_salle'] ?>" ><i class="fa-solid fa-pen"></i></a>
+        <a href="index.php?page=supprimer&table=salles&id=<?= $tblQuery[$i]['id_salle'] ?>"  onclick="return confirm('Etes vous certain de supprimer  cette salle ?')"><i class="fa-solid fa-trash"></i></a>
       </td>
       </tr>
     <?php } ?>
@@ -65,9 +67,9 @@ $tblQuery = $sqlQuery->lister($requete);
   <tfoot>
     <tr>
       <td colspan="5">
-        <div id="footTable">
+        <div class="footTable">
           <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize" data-boundary-links="true"> </div>
-          <button id="buttonTable" type="button" onclick="location.href='index.php?page=ajouterSalle'"> Ajouter une salle </button>
+          <button class="buttonTable" type="button" onclick="location.href='index.php?page=ajouterSalle'"> Ajouter une salle </button>
         </div>
       </td>
     </tr>

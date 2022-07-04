@@ -1,5 +1,4 @@
 <?php 
-echo "4;";
 if(isset($_POST["frmAjouterEtablissement"]))
 {
     $nom = htmlentities(trim($_POST['nom']));
@@ -29,9 +28,11 @@ if(isset($_POST["frmAjouterEtablissement"]))
         echo $messageErreur;
         include './includes/frmAjouterEtablissement.php';
     }
-    else{
-        $admin = new Admin();
-        $admin-> ajouterEtablissement($nom,$ville);
+    else
+    {
+            $admin = new Admin();
+            $admin-> ajouterEtablissement($nom,$ville);
+            redirection('index.php?page=choixEtablissement');
     }
 
 }
