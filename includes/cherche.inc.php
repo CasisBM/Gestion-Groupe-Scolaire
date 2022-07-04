@@ -31,7 +31,7 @@ if (!isset($_POST['frmcheche']))
         echo $messageErreur;
         include './includes/listeSalle.inc.php';
     } else {
-    
+      require './includes/header.php';
         $requete = "select * from salles ";
         $requete = "select s.id_salle,s.nom_salle,s.caracteristique,e.nom_etablissement,e.ville from salles s join etablissements e on s.id_etablissement = e.id_etablissement where s.nom_salle like '$keyword';" ;
     //var_dump($requete);
@@ -40,7 +40,7 @@ if (!isset($_POST['frmcheche']))
          $tblQuery=$sqlQuery->lister($requete);  
          
          ?>
-         <?php require './includes/header.php'; ?>
+         
 
 <!--/Table Liste Salle-->
 <table>

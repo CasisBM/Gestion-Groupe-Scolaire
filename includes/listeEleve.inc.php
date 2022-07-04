@@ -1,15 +1,21 @@
 <?php
 
 $sqlQuery = new Sql();
-$requete = "select el.id_eleve, el.prenom, el.nom, et.nom_etablissement, p.nom_promotion from eleves el join promotions p on el.id_promotion = p.id_promotion
-            join etablissements et on et.id_etablissement = p.id_etablissement";
-$tblQuery = $sqlQuery->lister($requete);
+$requete = "SELECT el.id_eleve, el.prenom, el.nom, et.nom_etablissement, p.nom_promotion FROM eleves el JOIN promotions p 
+            ON el.id_promotion = p.id_promotion 
+            JOIN etablissements et ON et.id_etablissement = p.id_etablissement";
 
 if(!empty($_SESSION['etablissement']))
 {
   $requete .= " where p.id_etablissement = ".$_SESSION['etablissement'];
 }
-
+$tblQuery = $sqlQuery->lister($requete);
+$requete = "SELECT id_eleve,prenom,nom FROM eleves WHERE id_promotion is null";
+$tab2 = $sqlQuery->lister($requete);
+//dump($tab2);
+//array_merge($tblQuery,$tab2git p);
+//dump($tblQuery);
+//dump($tblQuery);
 
 ?>
 <?php require './includes/header.php'; ?>
@@ -53,7 +59,8 @@ if(!empty($_SESSION['etablissement']))
                 <td><?=$tblQuery[$i]['nom_etablissement'] ?></td>
                 <td>
                   <a href="index.php?page=updateEleve&idEleve=<?= $tblQuery[$i]['id_eleve'] ?>"><i class="fa-solid fa-pen"></i></a>
-                  <a href="index.php?page=supprimer&table=eleves&id=<?= $tblQuery[$i]['id_eleve'] ?>" onclick="return confirm('Etes vous certain de supprimer cette salle ?')"><i class="fa-solid fa-trash"></i></a>
+                  <a href="index.php?page=supprimer&table=eleves&id=<?= $tblQuery[$i]['id_eleve'] ?>" 
+                  onclick="return confirm('Etes vous certain de supprimer cette salle ?')"><i class="fa-solid fa-trash"></i></a>
                 </td>
               </tr>
               <?php } ?>
