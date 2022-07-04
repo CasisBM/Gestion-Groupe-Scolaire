@@ -46,7 +46,7 @@
 
 # CMake
 cmake-build-*/
-
+errorSql.txt
 # Mongo Explorer plugin
 .idea/**/mongoSettings.xml
 
