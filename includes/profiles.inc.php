@@ -48,23 +48,31 @@
         }
 
         else {
+            $result = $sql->query("SELECT * FROM enseignants");
+            $enseignants = $result->fetch_assoc(); 
+            echo "<pre>"; print_r($enseignants); echo "</pre>";
             
-   
-            $requeteprofil = "SELECT * FROM enseignants ";
-          
-             $sqlProfil = new Sql();
-            $resultatProfil = $sqlProfil->lister($requeteprofil);
-            //header('Location:./index.php?page=profil');
-            
-            
-            }
-            
- }
         
+          } 
+              
+         
+          
+           
+           
+            $sqlProfil = new Sql();
+            $resultatProfil = $sqlProfil->lister($requeteprofil);
+            header('Location:./index.php?page=profil');
+            
+            
+            } 
+        
+            
+ 
+
     
     
     else {
      
         $nom = $prenom = $mail = "";
-        include './includes/frmprofil.php';
+        include '../includes/frmprofil.php';
     }
