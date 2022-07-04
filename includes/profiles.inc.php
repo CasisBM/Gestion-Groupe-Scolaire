@@ -1,78 +1,38 @@
+
 <?php
-    if (isset($_POST['frmprofil'])) {
-        $nom = htmlentities(trim($_POST['nom']));
-        $prenom = htmlentities(trim($_POST['prenom']));
-        $date = htmlentities(trim($_POST['date']));
-        $mail = htmlentities(trim($_POST['mail']));
-        $identifiant = htmlentities(trim($_POST['identifiant']));
-        $password1 = htmlentities(trim($_POST['password']));
+
+if (!isset($_GET['id'])) {
+    include 'listeprofesseur.inc.php';
+    // header('Location:./index.php');
+}
+
+?>
+<body>
+<form action="../index.php?page=profiles" method="POST">
+    <div>
+        <?php 
+        $query = new Sql();
+        $requete = 'SELECT * FROM enseignants where id_enseignant = ' . $_GET['id'];
         
+        $querySelect = new Sql();
+        $professeur = $querySelect->lister($requete);
+        ?>
+      <label>Prenom</label>
+      <input type="text" placeholder="<?=$professeur[0]['prenom'] ?>" name="prenom"  >
+      <label>Nom</label>
+      <input type="text" placeholder="<?=$professeur[0]['nom'] ?>" name="nom"  >
+      <label>Date de naissance</label>
+      <input type="text" placeholder="<?=$prfesseeur[0]['date_naissance']?>" name="date"  >
+      <label>Email</label>
+      <input type="text" placeholder="<?=$professeur[0]['email'] ?>" name="email"  >
+      <label>identifiant</label>
+      <input type="text" placeholder="<?=$professeur[0] ['identifiant']?>" name="identifiant"  >
+      <label>Mot de passe</label>
+      <input type="text" placeholder="Entrer Mot de passe" name="password"  >
+      <input type="submit" id='submit' value='envoyer'>
+    </div>
+    <input type="hidden" id="frmprofil" name="frmprofil">
+  </form>
+</div>
 
-        $erreurs = array();
-
-        if (mb_strlen($nom) === 0)
-            array_push($erreurs, "Il manque votre nom");
-
-        if (mb_strlen($prenom) === 0)
-            array_push($erreurs, "Il manque votre prénom");
-            if (mb_strlen($date) === 0)
-            array_push($erreurs, "Il manque votre date naissance");
-
-        if (mb_strlen($mail) === 0)
-            array_push($erreurs, "Il manque votre e-mail");
-            if (mb_strlen($identifiant) === 0)
-            array_push($erreurs, "Il manque votre identifinat");
-            if (mb_strlen($password) === 0)
-            array_push($erreurs, "Il manque votre mot de passe");
-
-
-        elseif (!filter_var($mail, FILTER_VALIDATE_EMAIL))
-            array_push($erreurs, "Votre adresse mail n'est pas conforme");
-
-        if (mb_strlen($password) === 0 )
-            array_push($erreurs, "Veuillez saisir votre mot de passe et sa confirmation");
-        
-        if (count($erreurs)) {
-            $messageErreur = "<ul>";
-
-            for($i = 0 ; $i < count($erreurs) ; $i++)
-             {
-                $messageErreur .= "<li>";
-                $messageErreur .= $erreurs[$i];
-                $messageErreur .= "</li>";
-            }
-    
-          echo $messageErreur;
-
-            include './includes/frmprofil.php';
-        }
-
-        else {
-            $result = $sql->query("SELECT * FROM enseignants");
-            $enseignants = $result->fetch_assoc(); 
-            echo "<pre>"; print_r($enseignants); echo "</pre>";
-            
-        
-          } 
-              
-         
-          
-           
-           
-            $sqlProfil = new Sql();
-            $resultatProfil = $sqlProfil->lister($requeteprofil);
-            header('Location:./index.php?page=profil');
-            
-            
-            } 
-        
-            
- 
-
-    
-    
-    else {
-     
-        $nom = $prenom = $mail = "";
-        include '../includes/frmprofil.php';
-    }
+</body>
