@@ -1,20 +1,19 @@
 <?php
-
+require './includes/header.php';
 $sqlQuery = new Sql();
-$requete = "select id_enseignant,prenom,nom from enseignants ";
+$requete = "SELECT DISTINCT en.id_enseignant, en.prenom, en.nom  FROM enseignants en ";
 
 if(!empty($_SESSION['etablissement']))
 {
-  $requete .= " where en.id_etablissement = ".$_SESSION['etablissement'];
+  $requete .= "JOIN ETABLISSEMENTS_has_UTILISATEUR ehu ON en.id_enseignant = ehu.id_enseignant 
+              where ehu.id_etablissement = ".$_SESSION['etablissement'];
 }
 
 $tblQuery = $sqlQuery->lister($requete);
-
 //$tblQuery = $sqlQuery->lister("select * from enseignants");
 
 
 ?>
-<?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>

@@ -9,6 +9,8 @@ $requete = 'SELECT * FROM eleves where id_eleve = ' . $_GET['idEleve'];
 $querySelect = new Sql();
 $tblQuery = $querySelect->lister($requete);
 
+$tblQueryPromo = $querySelect->lister("select * from promotions");
+
 ?>
 <?php require './includes/header.php'; ?>
 
@@ -34,7 +36,7 @@ $tblQuery = $querySelect->lister($requete);
             <th>nom</th>
             <th>prénom</th>
             <th>email</th>
-            <th>telephone</th>
+            <th>promotion</th>
         </tr>
     </thead>
     <tbody>
@@ -45,7 +47,18 @@ $tblQuery = $querySelect->lister($requete);
             <td><input type="text" id="nom" name="nom" value="<?= $tblQuery[0]['nom'] ?>" /></td>
             <td><input type="text" id="prenom" name="prenom" value="<?= $tblQuery[0]['prenom'] ?>" /></td>
             <td><input type="text" id="email" name="email" value="<?= $tblQuery[0]['email'] ?>" /></td>
-            <td><input type="text" id="telephone" name="telephone" value="<?= $tblQuery[0]['telephone'] ?>" /></td>
+            <td><div>
+                        <select name="id_promotion" id="id_promotion">
+                        <option value=null></option>
+                            <?php 
+                            
+                            
+                            for ($i = 0; $i < count($tblQueryPromo); $i++) {
+                            ?>
+                                <option value="<?= $tblQueryPromo[$i]['id_promotion'] ?>"><?= $tblQueryPromo[$i]['nom_promotion'] ?></option>
+                            <?php  } ?>
+                        </select>
+                    </div></td>
 
     </tbody>
     <tfoot>

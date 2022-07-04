@@ -1,12 +1,11 @@
 <?php
-
+require './includes/header.php';
 $sqlQuery = new Sql();
 $tblQuery = $sqlQuery->lister("select p.id_promotion, p.nom_promotion,et.nom_etablissement  from promotions p 
                               join etablissements et on p.id_etablissement = et.id_etablissement");
 
 ?>
 
-<?php require './includes/header.php'; ?>
 <!--/Table Liste Professeur-->
 <table>
   <thead>

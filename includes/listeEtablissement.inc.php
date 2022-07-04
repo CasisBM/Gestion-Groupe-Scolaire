@@ -1,5 +1,7 @@
 <!--/Table Liste Etablissements Prof-->
-<?php require './includes/header.php';
+<?php 
+
+require './includes/header.php';
 
 if (isset($_GET['idProf']) && !empty($_GET['idProf'])) {
 

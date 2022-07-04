@@ -1,5 +1,6 @@
 <?php
 
+require './includes/header.php';
 $sqlQuery = new Sql();
 $requete = "SELECT el.id_eleve, el.prenom, el.nom, et.nom_etablissement, p.nom_promotion FROM eleves el JOIN promotions p 
             ON el.id_promotion = p.id_promotion 
@@ -8,17 +9,18 @@ $requete = "SELECT el.id_eleve, el.prenom, el.nom, et.nom_etablissement, p.nom_p
 if(!empty($_SESSION['etablissement']))
 {
   $requete .= " where p.id_etablissement = ".$_SESSION['etablissement'];
+  $tblQuery = $sqlQuery->lister($requete);
 }
-$tblQuery = $sqlQuery->lister($requete);
-$requete = "SELECT id_eleve,prenom,nom FROM eleves WHERE id_promotion is null";
-$tab2 = $sqlQuery->lister($requete);
-//dump($tab2);
-//array_merge($tblQuery,$tab2git p);
-//dump($tblQuery);
-//dump($tblQuery);
+else
+{
+  $tblQuery = $sqlQuery->lister($requete);
+  $requete = "SELECT id_eleve,prenom,nom FROM eleves WHERE id_promotion is null";
+  $tblQuery2 = $sqlQuery->lister($requete);
+  $tblQuery = array_merge($tblQuery,$tblQuery2);
+}
+
 
 ?>
-<?php require './includes/header.php'; ?>
             <!--/Table Liste Eleves-->
             <table>
               <thead>
@@ -49,14 +51,14 @@ $tab2 = $sqlQuery->lister($requete);
             <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
                 <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
-                <td><?=$tblQuery[$i]['nom_promotion']?></td>
+                <td><?= isset($tblQuery[$i]['nom_promotion'])? $tblQuery[$i]['nom_promotion'] : "" ?></td>
                 <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
                   <a href="planningprof.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
-                <td><?=$tblQuery[$i]['nom_etablissement'] ?></td>
+                <td><?= isset($tblQuery[$i]['nom_etablissement'])? $tblQuery[$i]['nom_etablissement'] : ""   ?></td>
                 <td>
                   <a href="index.php?page=updateEleve&idEleve=<?= $tblQuery[$i]['id_eleve'] ?>"><i class="fa-solid fa-pen"></i></a>
                   <a href="index.php?page=supprimer&table=eleves&id=<?= $tblQuery[$i]['id_eleve'] ?>" 
