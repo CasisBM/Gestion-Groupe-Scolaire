@@ -1,7 +1,7 @@
 <?php
 $sqlQuery = new Sql();
 $tblQuery = array();
-$requete = "select s.id_salle,s.nom_salle,s.caracteristique,e.nom_etablissement,e.ville from salles s join etablissements e on s.id_etablissement = e.id_etablissement;";
+$requete = "select s.id_salle,s.nom_salle,s.caracteristique,e.nom_etablissement from salles s join etablissements e on s.id_etablissement = e.id_etablissement;";
 
 if(!empty($_SESSION['etablissement']))
 {
@@ -55,7 +55,7 @@ $tblQuery = $sqlQuery->lister($requete);
           </form>
         </a>
       </td>
-      <td><?=$tblQuery[$i]['ville'] ?></td>
+      <td><?=$tblQuery[$i]['etablissement'] ?></td>
       <td>
         <a href="index.php?page=updateSalle&idSalle=<?= $tblQuery[$i]['id_salle'] ?>" ><i class="fa-solid fa-pen"></i></a>
         <a href="index.php?page=supprimer&table=salles&id=<?= $tblQuery[$i]['id_salle'] ?>"  onclick="return confirm('Etes vous certain de supprimer  cette salle ?')"><i class="fa-solid fa-trash"></i></a>
