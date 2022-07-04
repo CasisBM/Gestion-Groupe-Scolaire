@@ -1,10 +1,26 @@
-<?php require './includes/admin/header.php'; ?>
+<?php 
+
+require './includes/header.php'; 
+
+$sqlQuery = new Sql();
+$tblQuery = array();
+$requete = "select m.nom_matiere, c.date, c.heure_debut,c.heure_fin,s.nom_salle,en.nom,p.nom_promotion 
+            from cours c join salles s on c.id_salle = s.id_salle
+            join matieres m on c.id_matiere = m.id_matiere
+            join enseignants en on c.id_enseignant = en.id_enseignant
+            join promotions p on c.id_promotion = p.id_promotion
+            where c.id_salle = ".$_GET['idSalle'];
+
+$tblQuery = $sqlQuery->lister($requete);
+dump($tblQuery);
+dump($requete);
+?>
     <input type="date" min="2022-01-01" max="2025-01-01">
             <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th class="nomTable" colspan="7">Planning (Nom Salles)</th>
+                  <th class="nomTable" colspan="6">Planning (Nom Salles)</th>
                 </tr>
                 <tr>
                 </tr>
@@ -16,53 +32,28 @@
                 <th>Horaires</th>
                 <th>Professeurs</th>
                 <th>Promotions</th>
-                <th>Ecoles</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
+            <?php 
+              for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
-                <td>Maths</td>
-                <td>11/05/2022</td>
-                <td>17:30 - 19:00</td>
-                <td>Cedric DURON</td>
-                <td>CDI</td>
-                <td>Ecole 00</td>
+                <td><?= $tblQuery[$i]['nom_matiere'] ?></td>
+                <td><?= $tblQuery[$i]['date'] ?></td>
+                <td><?= $tblQuery[$i]['heure_debut'] ?>" ~ "<?= $tblQuery[$i]['heure_fin'] ?></td>
+                <td><?= $tblQuery[$i]['nom'] ?></td>
+                <td><?= $tblQuery[$i]['nom_promotion'] ?></td>
                 <td>
                   <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
                 </td>
               </tr>
-      
-              <tr>
-                <td>Anglais</td>
-                <td>12/05/2022</td>
-                <td>16:30 - 17:30</td>
-                <td>Jean-louis DE LA ROCHE</td>
-                <td>Second</td>
-                <td>Ecole 2</td>
-                <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
-      
-              <tr>
-                <td>Histoire</td>
-                <td>13/05/2022</td>
-                <td>13:00 - 14:00</td>
-                <td>Emilie Bocase</td>
-                <td>Terminal</td>
-                <td>Ecole 3</td>
-                <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
+            <?php } ?>
             </tbody>
             <tfoot>
               <tr >
-                <td  colspan="7">
+                <td  colspan="6">
                   <div class="footTable">
                     <div
                     data-pagination=""

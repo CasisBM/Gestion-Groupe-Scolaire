@@ -50,7 +50,7 @@ $tblQuery = $sqlQuery->lister($requete);
       <td><?= $tblQuery[$i]['caracteristique'] ?></td>
       <td>
         <form action="" method="$_POST">
-          <a href="index.php?page=planningesalle">
+          <a href="index.php?page=planningSalle&idSalle=<?= $tblQuery[$i]['id_salle'] ?>">
             <i name="submit" id="submit" class="fa-solid fa-calendar-days fa-2x"></i>
         </form>
         </a>
