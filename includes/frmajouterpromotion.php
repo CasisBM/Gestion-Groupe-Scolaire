@@ -4,7 +4,7 @@ $tblQuery = array();
 
 $tblQuery = $sqlQuery->lister("select * from etablissements");
  ?>
- <form action="../index.php?page=ajouterpromotion" method="post">
+ <form action="index.php?page=ajouterPromotion" method="post">
    
     <div>
         <label for="nom_promotion">nom promotion:</label>

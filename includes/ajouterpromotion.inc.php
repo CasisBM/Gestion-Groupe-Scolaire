@@ -1,7 +1,6 @@
 <h1>ajouter promotion</h1>
 
 <?php
-   
 if (isset($_POST['frmAjouterPromotion'])){
 
   
@@ -35,10 +34,13 @@ for($i=0;$i<count($erreurs) ;$i++) {
   }
 
   else { 
-        $requete ="INSERT INTO promotions (id_promotion ,nom_promotion,id_etablissement,annee) values (null, '$nom_promotion','$id_etablissement', '$annee_promotion');";
-        // var_dump($requete);
+
+        $requete ="INSERT INTO promotions (nom_promotion,id_etablissement,annee) values ('$nom_promotion','$id_etablissement','$annee_promotion');";
+        dump($requete);
         $queryInsert = new Sql();
         $queryInsert->inserer($requete);
+        $url = "index.php?page=listePromotion";
+        echo redirection($url);
      
   }
   }
@@ -47,6 +49,5 @@ for($i=0;$i<count($erreurs) ;$i++) {
   
   else {
       $nom = $id_promotion = $nom_promotion = $id_etablissemnt= $annee_promotion="";
-      include './frmajouterpromotion.php';
-      //include './includes/frmajouterpromotion.php';
+      include './includes/frmAjouterPromotion.php';
   }

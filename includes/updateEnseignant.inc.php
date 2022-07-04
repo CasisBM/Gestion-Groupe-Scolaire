@@ -3,15 +3,14 @@
 
 //var_dump(isset($_POST['frmUpdate']));
 
-if (isset($_POST['frmUpdate'])) {
+if (isset($_POST['frmUpdateEnseignant'])) {
    // $message = "Je viens du formulaire";
 
     $identifiant = htmlentities(trim($_POST['identifiant']));
     $nom = htmlentities(trim($_POST['nom']));
     $prenom = htmlentities(trim($_POST['prenom']));
     $email = htmlentities(trim($_POST['email']));
-    $id_comptes = strstr(htmlentities(trim($_POST['id_comptes'])), '-', TRUE);
-    $id = htmlentities(trim($_POST['id']));
+    $id = htmlentities(trim($_POST['idEnseignant']));
 
 //   var_dump($_POST['nom']);
 //   var_dump($_POST['id']);
@@ -38,27 +37,22 @@ if (isset($_POST['frmUpdate'])) {
         }
         $messageErreur .= "</ul>";
         echo $messageErreur;
-        include '.editProf.inc.php';
+        include './includes/frmUpdateEnseignant.php';
     } else {
 
-        $requete = "UPDATE enseignant set identifiant = '$identifiant',nom='$nom', prenom ='$prenom', id_comptes='$id_comptes'
+        $requete = "UPDATE enseignantS set identifiant = '$identifiant',nom='$nom', prenom ='$prenom'
             where id_enseignant = '$id';";
            
         
         $sqlUpdate = new Sql();
         $sqlUpdate->lister($requete); 
-        include 'listeProfesseur.inc.php';
+        $url = "index.php?page=listeEnseignant";
+        echo redirection($url);
     }
 
 
 } else {
-
-    //var_dump(($_POST['frmUpdate']));
-
-    // $nom = $prenom = $mail = "";
-     include 'listeProfesseur.inc.php';
-    //echo $message;
+     include './includes/frmUpdateEnseignant.php';
 }
 
-//   displayMessage("!");
 ?>

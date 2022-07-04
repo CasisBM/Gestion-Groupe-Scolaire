@@ -1,16 +1,14 @@
 <?php
-if (!isset($_GET['id'])) {
+if (!isset($_GET['idPromotion'])) {
     include 'listePromotion.inc.php';
 }
 
-$requete = 'SELECT * FROM promotions where id_promotion = ' . $_GET['id'];
+$requete = "SELECT p.annee,p.id_etablissement,p.id_promotion,p.nom_promotion,et.nom_etablissement 
+            FROM promotions p join etablissements et on et.id_etablissement =  p.id_etablissement 
+            where p.id_promotion = '". $_GET['idPromotion']."'";
 
 $querySelect = new Sql();
-$promo = $querySelect->lister($requete);
-
-$tblQuery = array();
-
-$tblQuery = $querySelect->lister("select * from etablissements");
+$tblQuery = $querySelect->lister($requete);
 
 
 ?>
@@ -40,10 +38,11 @@ $tblQuery = $querySelect->lister("select * from etablissements");
     </thead>
     <tbody>
 
-        <form action="index.php?page=updatePromo" method="post"">
-            <td><input type=" text" id="nom" name="nom" value="<?= $promo[0]['nom_promotion'] ?>" />
+        <form action="index.php?page=updatePromotion" method="post"">
+            <td>
+                <input type=" text" id="nom" name="nom" value="<?= $tblQuery[0]['nom_promotion'] ?>" />
         </td>
-        <td><input type="text" id="annee" name="annee" value="<?= $promo[0]['année'] ?>" /></td>
+        <td><input type="text" id="annee" name="annee" value="<?= $tblQuery[0]['annee'] ?>" /></td>
         <td>
             <a href="index.php?page=planningesalle">
                 <i class="fa-solid fa-calendar-days fa-2x"></i>
@@ -72,8 +71,8 @@ $tblQuery = $querySelect->lister("select * from etablissements");
                         <input type="submit" value="Update" />
                     </div>
         </tr>
-        <input type="hidden" name="id" id="id" value=<?= $promo[0]['id_promotion'] ?>>
-        <input type="hidden" name="frmUpdate" />
+        <input type="hidden" name="id" id="id" value=<?= $tblQuery[0]['id_promotion'] ?>>
+        <input type="hidden" name="frmUpdatePromotion" />
         </form>
         <!-- <button id="buttonTable" type="button" onclick="location.href='index.php?page=ajouteSalle'"> Ajouter une salle </button> -->
         </div>

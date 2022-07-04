@@ -3,12 +3,11 @@
 
 //var_dump(isset($_POST['frmUpdate']));
 
-if (isset($_POST['frmUpdate'])) {
+if (isset($_POST['frmUpdateSalle'])) {
    // $message = "Je viens du formulaire";
 
     $nom = htmlentities(trim($_POST['nom']));
     $caracteristique = htmlentities(trim($_POST['caracteristique']));
-    $id_etablissement = strstr(htmlentities(trim($_POST['id_etablissement'])), '-', TRUE);
     $id = htmlentities(trim($_POST['id']));
 
 //   var_dump($_POST['nom']);
@@ -32,16 +31,17 @@ if (isset($_POST['frmUpdate'])) {
         }
         $messageErreur .= "</ul>";
         echo $messageErreur;
-        include '.listeSalle.inc.php';
+        include './includes/frmUpdateSalle.php';
     } else {
 
-        $requete = "UPDATE salles set nom_salle='$nom', caracteristique ='$caracteristique', id_etablissement='$id_etablissement'
+        $requete = "UPDATE salles set nom_salle='$nom', caracteristique ='$caracteristique'
             where id_salle = '$id';";
            
         
         $sqlUpdate = new Sql();
         $sqlUpdate->lister($requete); 
-        include 'listeSalle.inc.php';
+        $url = "index.php?page=listeSalle";
+        echo redirection($url);
     }
 
 
@@ -50,7 +50,7 @@ if (isset($_POST['frmUpdate'])) {
     //var_dump(($_POST['frmUpdate']));
 
     // $nom = $prenom = $mail = "";
-     include 'listeSalle.inc.php';
+     include './includes/frmUpdateSalle.php';
     //echo $message;
 }
 

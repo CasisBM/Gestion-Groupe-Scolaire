@@ -1,16 +1,19 @@
 <?php
+
 $sqlQuery = new Sql();
-$tblQuery = array();
+$requete = "select el.id_eleve, el.prenom, el.nom, et.nom_etablissement, p.nom_promotion from eleves el join promotions p on el.id_promotion = p.id_promotion
+            join etablissements et on et.id_etablissement = p.id_etablissement";
+$tblQuery = $sqlQuery->lister($requete);
 
-
-$tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_promotion=promotions.id_promotion");
+if(!empty($_SESSION['etablissement']))
+{
+  $requete .= " where p.id_etablissement = ".$_SESSION['etablissement'];
+}
 
 
 ?>
-            
-
-            <?php require './includes/header.php'; ?>
-            <!--/Table Liste Professeur-->
+<?php require './includes/header.php'; ?>
+            <!--/Table Liste Eleves-->
             <table>
               <thead>
                 <tr>
@@ -21,14 +24,14 @@ $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_p
                     <div class="search">
                       <div class="search-box">
                          <input type="text" class="search-input" placeholder="Recherche..">
-                           <i class="fas fa-search search-button"></i>
+                         <i class="fas fa-search search-button"></i>
                       </div>
                   </th>
                 </tr>
                 
                </div>
               <tr class="titreTable">
-                <th>Eleves</th>
+                <th>Prenom NOM</th>
                 <th>Promotions</th>
                 <th>Voir profil</th>
                 <th>Voir planning</th>
@@ -39,20 +42,22 @@ $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_p
             <tbody>
             <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
-                <td><?=$tblQuery[$i]['nom'] ?></td>
-                <td>Second</td>
+                <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
+                <td><?=$tblQuery[$i]['nom_promotion']?></td>
                 <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
-                  <a href="planningeleve.html">
+                  <a href="planningprof.html">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
-                <td>Ecole 1</td>
+                <td><?=$tblQuery[$i]['nom_etablissement'] ?></td>
                 <td>
-                  <i class="fa-solid fa-trash"></i>
+                  <a href="index.php?page=updateEleve&idEleve=<?= $tblQuery[$i]['id_eleve'] ?>"><i class="fa-solid fa-pen"></i></a>
+                  <a href="index.php?page=supprimer&table=eleves&id=<?= $tblQuery[$i]['id_eleve'] ?>" onclick="return confirm('Etes vous certain de supprimer cette salle ?')"><i class="fa-solid fa-trash"></i></a>
                 </td>
               </tr>
-              <?php } ?>             
+              <?php } ?>
+             
             </tbody>
             <tfoot>
               <tr >
@@ -65,7 +70,7 @@ $tblQuery = $sqlQuery->lister("select * from eleves,promotions where eleves.id_p
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button class="buttonTable" type="button"> Ajouter un eleve </button></div>
+                  <button class="buttonTable" onclick="location.href='index.php?page=ajouterEleve'" type="button"> Ajouter un eleve </button></div>
                 </td>
               </tr>
             </tfoot>
