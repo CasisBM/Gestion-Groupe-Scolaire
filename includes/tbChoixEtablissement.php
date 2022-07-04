@@ -45,39 +45,7 @@
                     </td>
                 </tr>
               <?php } ?>
-              <!-- <td>Ecole 1</td>
-                <td>ROUEN</td>
-                <td>
-                  <i class="fa-solid fa-square-plus fa-2x" ></i>
-                </td>
-                <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
-      
-              <tr>
-                <td>Ecole 2</td>
-                <td>ISNEAUVILLE</td>
-                <td>
-                  <i class="fa-solid fa-square-plus fa-2x" ></i>
-                </td>
-                <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
-                </td>
-              </tr>
-      
-              <tr>
-                <td>Ecole 3</td>
-                <td>BOIS-GUILLAUME</td>
-                <td>
-                  <i class="fa-solid fa-square-plus fa-2x" ></i>
-                </td>
-                <td>
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-trash"></i>
-                </td> -->
+              
               </tr>
               </tbody>
               <tfoot>

@@ -1,6 +1,7 @@
 
 <?php 
-if(isset($_POST["frmAjouterProf"]))
+
+if(isset($_POST["frmAjouterEnseignant"]))
 {
     //echo "Je viens du formulaire";
     $identifiant = htmlentities(trim($_POST['identifiant']));
@@ -47,20 +48,19 @@ if(isset($_POST["frmAjouterProf"]))
         $messageErreur .= "</ul>";
 
         echo $messageErreur;
-        include './includes/frmAjouterProf.php';
+        include './includes/frmAjouterEnseignant.php';
     }
     else{
         $admin = new Admin();
-        $admin-> ajouterProf($identifiant,$password,$nom,$prenom,$mail);
+        $admin-> ajouterEnseignant($identifiant,$password,$nom,$prenom,$mail);
 
-        $url = "index.php?page=listeProfesseur";
+        $url = "index.php?page=listeEnseignant";
         echo redirection($url);
     }
 
 }
 else{
-    //echo "Je ne viens pas du formulaire";
     $identifiant = $nom = $prenom = $mail = "";
-    include './includes/frmAjouterProf.php';
+    include './includes/frmAjouterEnseignant.php';
 }
 ?>
