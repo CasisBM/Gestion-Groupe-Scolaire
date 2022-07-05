@@ -1,5 +1,7 @@
 <?php
 
+ require './includes/header.php'; 
+
 $sqlQuery = new Sql();
 $requete = "select id_enseignant,prenom,nom from enseignants ";
 
@@ -14,7 +16,6 @@ $tblQuery = $sqlQuery->lister($requete);
 
 
 ?>
-<?php require './includes/header.php'; ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
@@ -24,10 +25,13 @@ $tblQuery = $sqlQuery->lister($requete);
                 <tr>
                   <th colspan="5">
                     <div class="search">
+                    <form action="index.php?page=chercheEnseignant" method="POST">
                       <div class="search-box">
-                         <input type="text" class="search-input" placeholder="Recherche..">
+                         <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
                          <i class="fas fa-search search-button"></i>
                       </div>
+                      <input type="hidden" name="frmcheche" />
+          </form>
                   </th>
                 </tr>
                 
