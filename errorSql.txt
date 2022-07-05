@@ -522,3 +522,93 @@ Stack trace:
 #3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
 #4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.nom_matiere, c.heure_debut,c.heure_fin,s.nom_salle,en.nom,p.nom_promotion 
+...' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select DATE_FOR...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\planningSalle.inc.php(14): Sql->lister('select DATE_FOR...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.nom_matiere, c.heure_debut,c.heure_fin,s.nom_salle,en.nom,p.nom_promotion 
+...' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select DATE_FOR...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\planningSalle.inc.php(14): Sql->lister('select DATE_FOR...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 2 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('SELECT nom_mati...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeMatiere.inc.php(6): Sql->lister('SELECT nom_mati...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 2 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('SELECT nom_mati...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeMatiere.inc.php(6): Sql->lister('SELECT nom_mati...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 2 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('SELECT nom_mati...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeMatiere.inc.php(6): Sql->lister('SELECT nom_mati...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 2 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('SELECT nom_mati...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeMatiere.inc.php(6): Sql->lister('SELECT nom_mati...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 2 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('SELECT nom_mati...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeMatiere.inc.php(6): Sql->lister('SELECT nom_mati...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 2 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('SELECT nom_mati...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeMatiere.inc.php(6): Sql->lister('SELECT nom_mati...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 2 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('SELECT nom_mati...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\listeMatiere.inc.php(6): Sql->lister('SELECT nom_mati...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1-8' for key 'PRIMARY' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:24
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(24): PDO->exec('INSERT INTO ENS...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterMatiere.inc.php(24): Sql->inserer('INSERT INTO ENS...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dbetablissement`.`salles`, CONSTRAINT `fk_SALLES_ETABLISSEMENTS1` FOREIGN KEY (`id_etablissement`) REFERENCES `etablissements` (`id_etablissement`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:24
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(24): PDO->exec('INSERT INTO sal...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterSalle.inc.php(34): Sql->inserer('INSERT INTO sal...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}

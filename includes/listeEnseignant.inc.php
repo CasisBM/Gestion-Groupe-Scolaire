@@ -18,10 +18,10 @@ $tblQuery = $sqlQuery->lister($requete);
             <table>
               <thead>
                 <tr>
-                  <th class="nomTable" colspan="5">Liste des enseignants</th>
+                  <th class="nomTable" colspan="6">Liste des enseignants</th>
                 </tr>
                 <tr>
-                  <th colspan="5">
+                  <th colspan="6">
                     <div class="search">
                       <div class="search-box">
                          <input type="text" class="search-input" placeholder="Recherche..">
@@ -35,6 +35,7 @@ $tblQuery = $sqlQuery->lister($requete);
                 <th>Prenom NOM</th>
                 <th>Voir profil</th>                
                 <th>Voir planning</th>
+                <th>Voir matiere enseigné</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
               </tr>
@@ -50,7 +51,12 @@ $tblQuery = $sqlQuery->lister($requete);
                   </a>
                 </td>
                 <td>
-                <a href="index.php?page=listeEtablissement&idProf=<?=$tblQuery[$i]['id_enseignant'] ?>">
+                <a href="index.php?page=listeMatiere&idEnseignant=<?=$tblQuery[$i]['id_enseignant'] ?>">
+                    <i class="fa-solid fa-shapes fa-2x"></i>
+                  </a>
+                </td>
+                <td>
+                <a href="index.php?page=listeEtablissement&idEnseignant=<?=$tblQuery[$i]['id_enseignant'] ?>">
                     <i class="fa-solid fa-school-flag fa-2x"></i>
                   </a></td>
                 <td>

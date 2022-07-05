@@ -3,7 +3,6 @@
 require './includes/header.php'; 
 
 $sqlQuery = new Sql();
-$tblQuery = array();
 $requete = "select DATE_FORMAT(c.date, '%d/%m/%Y'), m.nom_matiere, c.heure_debut,c.heure_fin,s.nom_salle,en.nom,p.nom_promotion 
             from cours c join salles s on c.id_salle = s.id_salle
             join matieres m on c.id_matiere = m.id_matiere
@@ -61,7 +60,7 @@ $tblQuery = $sqlQuery->lister($requete);
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button class="buttonTable" type="button"> Ajouter un cours </button></div>
+                  <button class="buttonTable" type="button" onclick="location.href='index.php?page=ajouterCours&idSalle=<?= $_GET['idSalle'] ?>'" > Ajouter un cours </button></div>
                 </td>
               </tr>
             </tfoot>
