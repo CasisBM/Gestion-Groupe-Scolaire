@@ -4,7 +4,7 @@ require './includes/header.php';
 
 $sqlQuery = new Sql();
 $tblQuery = array();
-$requete = "select m.nom_matiere, c.date, c.heure_debut,c.heure_fin,s.nom_salle,en.nom,p.nom_promotion 
+$requete = "select DATE_FORMAT(c.date, '%d/%m/%Y'), m.nom_matiere, c.heure_debut,c.heure_fin,s.nom_salle,en.nom,p.nom_promotion 
             from cours c join salles s on c.id_salle = s.id_salle
             join matieres m on c.id_matiere = m.id_matiere
             join enseignants en on c.id_enseignant = en.id_enseignant
@@ -12,10 +12,9 @@ $requete = "select m.nom_matiere, c.date, c.heure_debut,c.heure_fin,s.nom_salle,
             where c.id_salle = ".$_GET['idSalle'];
 
 $tblQuery = $sqlQuery->lister($requete);
-dump($tblQuery);
-dump($requete);
 ?>
-    <input type="date" min="2022-01-01" max="2025-01-01">
+    <input type="date" min="2022-01-01" max="2025-01-01"/>
+
             <!--/Table Liste Professeur-->
             <table>
               <thead>
@@ -40,8 +39,8 @@ dump($requete);
               for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
                 <td><?= $tblQuery[$i]['nom_matiere'] ?></td>
-                <td><?= $tblQuery[$i]['date'] ?></td>
-                <td><?= $tblQuery[$i]['heure_debut'] ?>" ~ "<?= $tblQuery[$i]['heure_fin'] ?></td>
+                <td><?= $tblQuery[$i][0] ?></td>
+                <td><?= $tblQuery[$i]['heure_debut'] ?> ~ <?= $tblQuery[$i]['heure_fin'] ?></td>
                 <td><?= $tblQuery[$i]['nom'] ?></td>
                 <td><?= $tblQuery[$i]['nom_promotion'] ?></td>
                 <td>
