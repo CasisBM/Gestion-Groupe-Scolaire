@@ -1,7 +1,7 @@
 
 
 <?php require './includes/header.php'; ?>
-<!--/Table Liste Professeur-->
+<!--/Table Liste Promotion-->
 <table>
   <thead>
     <tr>
@@ -10,10 +10,13 @@
     <tr>
       <th colspan="4">
         <div class="container">
+        <form action="index.php?page=cherchePromo" method="POST">
           <div class="search-box">
-            <input type="text" class="search-input" placeholder="Recherche..">
+            <input type="text" id="nom_promotion" name="nom_promotion" class="search-input" placeholder="Recherche..">
             <i class="fas fa-search search-button"></i>
           </div>
+          <input type="hidden" name="frmcheche" />
+          </form>
       </th>
     </tr>
 

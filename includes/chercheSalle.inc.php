@@ -51,7 +51,7 @@ if (!isset($_POST['frmcheche']))
     <tr>
       <th colspan="5">
         <div class="search">
-          <form action="index.php?page=cherche" method="POST">
+          <form action="index.php?page=chercheSalle" method="POST">
           <div class="search-box">
             <?php  if (count($tblQuery)) { ?> 
                     

@@ -11,11 +11,10 @@
     <tr>
       <th colspan="5">
         <div class="search">
-          <form action="index.php?page=cherche" method="POST">
+          <form action="index.php?page=chercheSalle" method="POST">
             <div class="search-box">
               <input type="text" name="sallename" id="sallename" class="search-input" placeholder="Recherche..">
               <i class="fas fa-search search-button"></i>
-              <!-- <input type="search" name="sallename1" id="sallename1" class="search-input" placeholder="fk"> -->
             </div>
             <input type="hidden" name="frmcheche" />
           </form>
@@ -42,8 +41,6 @@
     }
     
     $tblQuery = $sqlQuery->lister($requete.";");
-    //var_dump($tblQuery[0][3]);
-    //dump($_SESSION['etablissement']);
     for ($i = 0; $i < count($tblQuery); $i++) { ?>
 
       <td><?= $tblQuery[$i][1] ?></td>

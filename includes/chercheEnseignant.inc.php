@@ -1,18 +1,43 @@
 <?php
 
- require './includes/header.php'; 
+
+ if (!isset($_POST['frmcheche'])) 
+     {  
+         include './includes/listeEnseignant.inc.php';
+        //echo $message;
+    } else {
+   
+
+    $nom = htmlentities(trim($_POST['nom']));
+    $keyword = '%'.$nom.'%';
+   
+    $erreurs = array();
+
+    if (mb_strlen($nom) === 0) {
+        array_push($erreurs, "Il manque le nom de le professeur!");
+    };
+    
+    
+    if (count($erreurs)) {
+
+        $messageErreur = "<ul>";
+        for ($i = 0; $i < count($erreurs); $i++) {
+            $messageErreur .= "<li>";
+            $messageErreur .= $erreurs[$i];
+            $messageErreur .= "</li>";
+        }
+        $messageErreur .= "</ul>";
+        echo $messageErreur;
+        include './includes/listeEnseignant.inc.php';
+    } else {
+
+      require './includes/header.php';  
+     
 
 $sqlQuery = new Sql();
-$requete = "select id_enseignant,prenom,nom from enseignants ";
-
-if(!empty($_SESSION['etablissement']))
-{
-  $requete .= " where en.id_etablissement = ".$_SESSION['etablissement'];
-}
+$requete = "select id_enseignant,prenom,nom from enseignants where prenom like '$keyword' or nom like '$keyword'";
 
 $tblQuery = $sqlQuery->lister($requete);
-
-//$tblQuery = $sqlQuery->lister("select * from enseignants");
 
 
 ?>
@@ -27,9 +52,14 @@ $tblQuery = $sqlQuery->lister($requete);
                     <div class="search">
                     <form action="index.php?page=chercheEnseignant" method="POST">
                       <div class="search-box">
+                      <?php  if (count($tblQuery)) { ?> 
                          <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
                          <i class="fas fa-search search-button"></i>
-                      </div>
+                         <?php   } else { ?>
+                          <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
+                         <i class="fas fa-search search-button"></i>
+                         </div><i>il n'y pas de salle <?=$nom ?></i>
+                <?php   }     ?>
                       <input type="hidden" name="frmcheche" />
           </form>
                   </th>
@@ -82,3 +112,13 @@ $tblQuery = $sqlQuery->lister($requete);
               </tr>
             </tfoot>
             </table> 
+
+            <?php
+        // require "listeEnseignant.inc.php";
+    }
+
+} 
+
+
+//   displayMessage("!");
+?>

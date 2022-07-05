@@ -1,24 +1,53 @@
 <?php
-require './includes/header.php'; 
+
+//var_dump(isset($_POST['frmcheche']));
+
+if (!isset($_POST['frmcheche'])) 
+     {  
+         include './includes/listeEleve.inc.php';
+        //echo $message;
+    } else {
+   
+
+    $nom = htmlentities(trim($_POST['nom']));
+    $keyword = '%'.$nom.'%';
+   
+    $erreurs = array();
+
+    if (mb_strlen($nom) === 0) {
+        array_push($erreurs, "Il manque le nom de l'éleve");
+    };
+    
+    
+    if (count($erreurs)) {
+
+        $messageErreur = "<ul>";
+        for ($i = 0; $i < count($erreurs); $i++) {
+            $messageErreur .= "<li>";
+            $messageErreur .= $erreurs[$i];
+            $messageErreur .= "</li>";
+        }
+        $messageErreur .= "</ul>";
+        echo $messageErreur;
+        include './includes/listeEleve.inc.php';
+    } else {
+      require './includes/header.php';
+
+
 $sqlQuery = new Sql();
 $requete = "SELECT el.id_eleve, el.prenom, el.nom, et.nom_etablissement, p.nom_promotion FROM eleves el JOIN promotions p 
             ON el.id_promotion = p.id_promotion 
-            JOIN etablissements et ON et.id_etablissement = p.id_etablissement";
+            JOIN etablissements et ON et.id_etablissement = p.id_etablissement" ;
 
 if(!empty($_SESSION['etablissement']))
 {
   $requete .= " where p.id_etablissement = ".$_SESSION['etablissement'];
-}
-//var_dump($requete);
-$tblQuery = $sqlQuery->lister($requete.";");
-$requete = "SELECT id_eleve,prenom,nom FROM eleves WHERE id_promotion is null;";
-$tab2 = $sqlQuery->lister($requete);
-//dump($tab2);
-//array_merge($tblQuery,$tab2git p);
-//dump($tblQuery);
+  $requete .= " and (el.nom like '$keyword' or el.prenom like '$keyword');";
+}else $requete .= " where el.nom like '$keyword' or el.prenom like '$keyword';";
 
-
+$tblQuery = $sqlQuery->lister($requete);
 ?>
+
             <!--/Table Liste Eleves-->
             <table>
               <thead>
@@ -30,8 +59,14 @@ $tab2 = $sqlQuery->lister($requete);
                     <div class="search">
                     <form action="index.php?page=chercheEleve" method="POST">
                       <div class="search-box">
+                      <?php  if (count($tblQuery)) { ?> 
                          <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
                          <i class="fas fa-search search-button"></i>
+                         <?php   } else { ?>
+                            <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
+                         <i class="fas fa-search search-button"></i>
+                            </div><i>il n'y pas de éleve <?=$nom ?></i>
+                <?php   }     ?>
                       </div>
                       <input type="hidden" name="frmcheche" />
           </form>
@@ -85,3 +120,10 @@ $tab2 = $sqlQuery->lister($requete);
               </tr>
             </tfoot>
             </table> 
+            <?php
+        // require "listeEleve.php";
+    }
+
+} 
+
+?>
