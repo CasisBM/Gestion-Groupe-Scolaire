@@ -1,5 +1,5 @@
 <?php
-
+require './includes/header.php'; 
 $sqlQuery = new Sql();
 $requete = "SELECT el.id_eleve, el.prenom, el.nom, et.nom_etablissement, p.nom_promotion FROM eleves el JOIN promotions p 
             ON el.id_promotion = p.id_promotion 
@@ -9,16 +9,16 @@ if(!empty($_SESSION['etablissement']))
 {
   $requete .= " where p.id_etablissement = ".$_SESSION['etablissement'];
 }
-$tblQuery = $sqlQuery->lister($requete);
-$requete = "SELECT id_eleve,prenom,nom FROM eleves WHERE id_promotion is null";
+//var_dump($requete);
+$tblQuery = $sqlQuery->lister($requete.";");
+$requete = "SELECT id_eleve,prenom,nom FROM eleves WHERE id_promotion is null;";
 $tab2 = $sqlQuery->lister($requete);
 //dump($tab2);
 //array_merge($tblQuery,$tab2git p);
 //dump($tblQuery);
-//dump($tblQuery);
+
 
 ?>
-<?php require './includes/header.php'; ?>
             <!--/Table Liste Eleves-->
             <table>
               <thead>
@@ -28,10 +28,13 @@ $tab2 = $sqlQuery->lister($requete);
                 <tr>
                   <th colspan="6">
                     <div class="search">
+                    <form action="index.php?page=chercheEleve" method="POST">
                       <div class="search-box">
-                         <input type="text" class="search-input" placeholder="Recherche..">
+                         <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
                          <i class="fas fa-search search-button"></i>
                       </div>
+                      <input type="hidden" name="frmcheche" />
+          </form>
                   </th>
                 </tr>
                 
