@@ -39,7 +39,7 @@ if (isset($_POST['frmUpdateSalle'])) {
            
         
         $sqlUpdate = new Sql();
-        $sqlUpdate->lister($requete); 
+        $sqlUpdate->inserer($requete); 
         $url = "index.php?page=listeSalle";
         echo redirection($url);
     }

@@ -45,7 +45,7 @@ if (isset($_POST['frmUpdateEnseignant'])) {
            
         
         $sqlUpdate = new Sql();
-        $sqlUpdate->lister($requete); 
+        $sqlUpdate->inserer($requete); 
         $url = "index.php?page=listeEnseignant";
         echo redirection($url);
     }

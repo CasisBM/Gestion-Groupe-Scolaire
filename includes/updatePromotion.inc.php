@@ -40,7 +40,7 @@ if (isset($_POST['frmUpdatePromotion'])) {
            
         
         $sqlUpdate = new Sql();
-        $sqlUpdate->lister($requete); 
+        $sqlUpdate->inserer($requete); 
         $url = "index.php?page=listePromotion";
         echo redirection($url);
     }

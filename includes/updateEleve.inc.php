@@ -38,7 +38,7 @@ if (isset($_POST['frmUpdateEleve'])) {
            
         
         $sqlUpdate = new Sql();
-        $sqlUpdate->lister($requete); 
+        $sqlUpdate->inserer($requete); 
         $url = "index.php?page=listeEleve";
         echo redirection($url);
     }
