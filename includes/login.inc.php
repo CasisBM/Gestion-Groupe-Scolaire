@@ -2,10 +2,12 @@
 
 //header('Location: index.php?page=accueil');
 if(isset($_POST["frmLogin"]))
-{
+{     
     $password = htmlentities($_POST['password']);
 
     $erreurs = array();
+    
+   
 
     if(mb_strlen($password) === 0)
     array_push($erreurs, "Il manque votre mot de passe");

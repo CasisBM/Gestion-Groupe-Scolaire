@@ -1,4 +1,5 @@
 
+
 <?php
 
 if (!isset($_GET['id'])) {
@@ -8,29 +9,44 @@ if (!isset($_GET['id'])) {
 
 ?>
 <body>
-<form action="../index.php?page=profiles" method="POST">
+
+<h1>profiles</h1>
+<form action="index.php?page=modifprofiles" method="POST">
     <div>
         <?php 
-        $query = new Sql();
-        $requete = 'SELECT * FROM enseignants where id_enseignant = ' . $_GET['id'];
-        
+        $sqlQuery = new Sql();
+        // $query->prepare($requeteEnseignant);
+        $tblQuery = array();
+        $tblQuery = $sqlQuery->lister("select * from comptes");
         $querySelect = new Sql();
+        $requete = 'SELECT * FROM enseignants where id_enseignant = ' . $_GET['id'].";";
         $professeur = $querySelect->lister($requete);
+        //dump($professeur);
         ?>
       <label>Prenom</label>
-      <input type="text" placeholder="<?=$professeur[0]['prenom'] ?>" name="prenom"  >
+      <input type="text" name="prenom" id="prenom" value="<?= $professeur[0]['prenom'] ?>">   
       <label>Nom</label>
-      <input type="text" placeholder="<?=$professeur[0]['nom'] ?>" name="nom"  >
+      <input type="text" name="nom" id="nom" value="<?= $professeur[0]['nom'] ?>"> 
       <label>Date de naissance</label>
-      <input type="text" placeholder="<?=$prfesseeur[0]['date_naissance']?>" name="date"  >
+      <input type="date" name="d_naissance" id="d_naissance" value="<?= $professeur[0]['date_naissance'] ?>">  
       <label>Email</label>
-      <input type="text" placeholder="<?=$professeur[0]['email'] ?>" name="email"  >
+      <input type="text" name="email" id="email" value="<?= $professeur[0]['email'] ?>" > 
       <label>identifiant</label>
-      <input type="text" placeholder="<?=$professeur[0] ['identifiant']?>" name="identifiant"  >
+      <input type="text" name="identifiant" id="identifinat" value="<?= $professeur[0]['identifiant'] ?>">  
+      <label>id_comptes</label>
+      <select name="id_compte" id="id_compte" >
+        <?php for($i=0; $i <count($tblQuery) ; $i++) { 
+            ?>
+            <option><?=$tblQuery[$i]['id_compte'] ?>-<?=$tblQuery[$i]['email']?></option>
+       <?php  } ?>
+        </select>
+      <label>telephone</label>
+      <input type="telephone" name="telephone" id="telephone"value="<?= $professeur[0]['telephone'] ?>"> 
       <label>Mot de passe</label>
-      <input type="text" placeholder="Entrer Mot de passe" name="password"  >
+      <input type="password" name="password" value="password" >
       <input type="submit" id='submit' value='envoyer'>
     </div>
+    <input type="hidden" id="id_enseignant" name="id_enseignant" value="<?= $professeur[0]['id_enseignant'] ?>">
     <input type="hidden" id="frmprofil" name="frmprofil">
   </form>
 </div>
