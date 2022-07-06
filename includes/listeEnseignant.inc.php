@@ -7,10 +7,10 @@ $requete = "select id_enseignant,prenom,nom from enseignants ";
 
 if(!empty($_SESSION['etablissement']))
 {
-  $requete .= " where en.id_etablissement = ".$_SESSION['etablissement'];
+  $requete .= " where id_enseignant = ".$_SESSION['etablissement'];
 }
 
-$tblQuery = $sqlQuery->lister($requete);
+$tblQuery = $sqlQuery->lister($requete.";");
 
 //$tblQuery = $sqlQuery->lister("select * from enseignants");
 
