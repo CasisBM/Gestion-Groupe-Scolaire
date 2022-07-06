@@ -30,10 +30,13 @@ if (isset($_GET['idEnseignant']) && !empty($_GET['idEnseignant'])) {
         <tr>
             <th colspan="3">
                 <div class="search">
+                <form action="index.php?page=chercheEtablissement" method="POST">
                     <div class="search-box">
-                        <input type="text" class="search-input" placeholder="Recherche..">
+                        <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
                         <i class="fas fa-search search-button"></i>
                     </div>
+                    <input type="hidden" name="frmcheche" />
+          </form>
             </th>
         </tr>
 

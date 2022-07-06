@@ -12,7 +12,7 @@
 .idea/**/dictionaries
 .idea/**/shelf
 .errorSql.txt
-
+errorSql.txt
 # AWS User-specific
 .idea/**/aws.xml
 

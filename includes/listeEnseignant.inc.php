@@ -1,17 +1,18 @@
 <?php
+
 require './includes/header.php';
+
 $sqlQuery = new Sql();
 $requete = "SELECT DISTINCT en.id_enseignant, en.prenom, en.nom  FROM enseignants en ";
 
 if(!empty($_SESSION['etablissement']))
 {
+
   $requete .= "JOIN ETABLISSEMENTS_has_UTILISATEUR ehu ON en.id_enseignant = ehu.id_enseignant 
               where ehu.id_etablissement = ".$_SESSION['etablissement'];
 }
 
 $tblQuery = $sqlQuery->lister($requete);
-//$tblQuery = $sqlQuery->lister("select * from enseignants");
-
 
 ?>
             <!--/Table Liste Professeur-->
@@ -23,10 +24,13 @@ $tblQuery = $sqlQuery->lister($requete);
                 <tr>
                   <th colspan="6">
                     <div class="search">
+                    <form action="index.php?page=chercheEnseignant" method="POST">
                       <div class="search-box">
-                         <input type="text" class="search-input" placeholder="Recherche..">
+                         <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
                          <i class="fas fa-search search-button"></i>
                       </div>
+                      <input type="hidden" name="frmcheche" />
+          </form>
                   </th>
                 </tr>
                 

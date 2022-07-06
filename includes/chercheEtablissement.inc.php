@@ -1,5 +1,41 @@
-            <!--/Table Liste Cours-->
-            <?php require './includes/header.php'; ?>
+<?php
+
+//var_dump(isset($_POST['frmcheche']));
+
+if (!isset($_POST['frmcheche'])) {
+    include './includes/tbChoixEtablissement.php';
+    //echo $message;
+} else {
+
+
+    $nom = htmlentities(trim($_POST['nom']));
+    $keyword = '%' . $nom . '%';
+
+    $erreurs = array();
+
+    if (mb_strlen($nom) === 0) {
+        array_push($erreurs, "Il manque le nom de le établissement");
+    };
+
+
+    if (count($erreurs)) {
+
+        $messageErreur = "<ul>";
+        for ($i = 0; $i < count($erreurs); $i++) {
+            $messageErreur .= "<li>";
+            $messageErreur .= $erreurs[$i];
+            $messageErreur .= "</li>";
+        }
+        $messageErreur .= "</ul>";
+        echo $messageErreur;
+        include './includes/tbChoixEtablissement.php';
+    } else {
+
+        require './includes/header.php'; 
+        $sqlQuery = new Sql();
+        $tblQuery = $sqlQuery->lister("select * from etablissements where nom_etablissement like '$keyword';");
+        ?>
+        <!--/Table Liste établissements-->
             <table>
               <thead>
                 <tr>
@@ -10,9 +46,14 @@
                     <div class="search">
                     <form action="index.php?page=chercheEtablissement" method="POST">
                       <div class="search-box">
+                      <?php  if (count($tblQuery)) { ?> 
                          <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
                          <i class="fas fa-search search-button"></i>
-                      </div>
+                         <?php   } else { ?>
+                            <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
+                         <i class="fas fa-search search-button"></i>                      
+                      </div><i>il n'y pas de établissement <?=$nom ?></i>
+                <?php   }     ?>
                       <input type="hidden" name="frmcheche" />
           </form>
                   </th>
@@ -28,11 +69,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <?php
-                  $sqlQuery = new Sql();
-                  $tblQuery = $sqlQuery->lister("select * from etablissements");
-
-                  for ($i = 0; $i < count($tblQuery); $i++) { ?>
+                  <?php   for ($i = 0; $i < count($tblQuery); $i++) { ?>
                   
                     <td><?= $tblQuery[$i]['nom_etablissement'] ?></td>
                     <td><?= $tblQuery[$i]['ville'] ?></td>
@@ -63,3 +100,10 @@
                 </tr>
               </tfoot>
             </table>
+            <?php
+        // require "tbChoixEtablissement.php";
+    }
+
+} 
+
+?>

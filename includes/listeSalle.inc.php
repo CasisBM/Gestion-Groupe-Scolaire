@@ -1,3 +1,4 @@
+
 <?php
 
 require './includes/header.php';
@@ -5,13 +6,7 @@ $sqlQuery = new Sql();
 $tblQuery = array();
 $requete = "select s.id_salle,s.nom_salle,s.caracteristique,e.nom_etablissement from salles s join etablissements e on s.id_etablissement = e.id_etablissement;";
 
-if (!empty($_SESSION['etablissement'])) {
-  $requete .= " where s.id_etablissement = " . $_SESSION['etablissement'];
-}
 
-$tblQuery = $sqlQuery->lister($requete);
-
-?>
 
 
 <!--/Table Liste Salle-->
@@ -23,11 +18,10 @@ $tblQuery = $sqlQuery->lister($requete);
     <tr>
       <th colspan="5">
         <div class="search">
-          <form action="index.php?page=cherche" method="POST">
+          <form action="index.php?page=chercheSalle" method="POST">
             <div class="search-box">
               <input type="text" name="sallename" id="sallename" class="search-input" placeholder="Recherche..">
               <i class="fas fa-search search-button"></i>
-              <!-- <input type="search" name="sallename1" id="sallename1" class="search-input" placeholder="fk"> -->
             </div>
             <input type="hidden" name="frmcheche" />
           </form>
@@ -44,9 +38,19 @@ $tblQuery = $sqlQuery->lister($requete);
     </tr>
   </thead>
   <tbody>
-    <?php for ($i = 0; $i < count($tblQuery); $i++) { ?>
+    <?php 
+    $sqlQuery = new Sql();
+    $tblQuery = array();
+    $requete = "select s.id_salle,s.nom_salle,s.caracteristique,e.nom_etablissement from salles s join etablissements e on s.id_etablissement = e.id_etablissement";
+    
+    if (!empty($_SESSION['etablissement'])) {
+      $requete .= " where s.id_etablissement = " . $_SESSION['etablissement'];
+    }
+    
+    $tblQuery = $sqlQuery->lister($requete.";");
+    for ($i = 0; $i < count($tblQuery); $i++) { ?>
 
-      <td><?= $tblQuery[$i]['nom_salle'] ?></td>
+      <td><?= $tblQuery[$i][1] ?></td>
       <td><?= $tblQuery[$i]['caracteristique'] ?></td>
       <td>
         <form action="" method="$_POST">
