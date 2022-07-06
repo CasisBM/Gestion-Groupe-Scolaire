@@ -6,7 +6,12 @@ $sqlQuery = new Sql();
 $tblQuery = array();
 $requete = "select s.id_salle,s.nom_salle,s.caracteristique,e.nom_etablissement from salles s join etablissements e on s.id_etablissement = e.id_etablissement;";
 
+if (!empty($_SESSION['etablissement'])) {
+  $requete .= " where s.id_etablissement = " . $_SESSION['etablissement'];
+}
 
+$tblQuery = $sqlQuery->lister($requete);
+?>
 
 
 <!--/Table Liste Salle-->
