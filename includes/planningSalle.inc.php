@@ -60,7 +60,7 @@ $tblQuery = $sqlQuery->lister($requete);
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button class="buttonTable" type="button" onclick="location.href='index.php?page=ajouterCours&idSalle=<?= $_GET['idSalle'] ?>'" > Ajouter un cours </button></div>
+                  <button class="buttonTable" type="button" onclick="location.href='index.php?page=ajouterCoursSalle&idSalle=<?= $_GET['idSalle'] ?>'" > Ajouter un cours </button></div>
                 </td>
               </tr>
             </tfoot>

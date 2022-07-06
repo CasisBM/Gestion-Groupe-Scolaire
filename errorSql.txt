@@ -612,3 +612,210 @@ Stack trace:
 #3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
 #4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #5 {main}
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.etablissement' doesn't exist in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.etablissement' doesn't exist in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.etablissement' doesn't exist in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.etablissement' doesn't exist in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.etablissement' doesn't exist in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dbetablissement.etablissement' doesn't exist in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.id_matiere' in 'on clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(13): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.id_matiere' in 'on clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(13): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.id_matiere' in 'on clause' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(13): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.nom_matiere' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.nom_matiere' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.nom_matiere' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.nom_matiere' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.nom_matiere' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.nom_matiere' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.nom_matiere' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.nom_matiere' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.nom_matiere' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.nom_matiere' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.nom_matiere' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'm.nom_matiere' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select m.nom_ma...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(11): Sql->lister('select m.nom_ma...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_enseignant' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('SELECT en.id_en...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(72): Sql->lister('SELECT en.id_en...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'en.id_enseignant' in 'field list' in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('SELECT en.id_en...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\frmAjouterCoursSalle.php(72): Sql->lister('SELECT en.id_en...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(63): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#6 {main}
