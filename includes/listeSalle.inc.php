@@ -1,6 +1,18 @@
 
+<?php
 
-<?php require './includes/header.php'; ?>
+require './includes/header.php';
+$sqlQuery = new Sql();
+$tblQuery = array();
+$requete = "select s.id_salle,s.nom_salle,s.caracteristique,e.nom_etablissement from salles s join etablissements e on s.id_etablissement = e.id_etablissement;";
+
+if (!empty($_SESSION['etablissement'])) {
+  $requete .= " where s.id_etablissement = " . $_SESSION['etablissement'];
+}
+
+$tblQuery = $sqlQuery->lister($requete);
+?>
+
 
 <!--/Table Liste Salle-->
 <table>
@@ -47,7 +59,7 @@
       <td><?= $tblQuery[$i]['caracteristique'] ?></td>
       <td>
         <form action="" method="$_POST">
-          <a href="index.php?page=planningesalle">
+          <a href="index.php?page=planningSalle&idSalle=<?= $tblQuery[$i]['id_salle'] ?>">
             <i name="submit" id="submit" class="fa-solid fa-calendar-days fa-2x"></i>
         </form>
         </a>

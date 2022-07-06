@@ -8,6 +8,7 @@ if (isset($_POST['frmUpdateEleve'])) {
     $prenom = htmlentities(trim($_POST['prenom']));
     $email = htmlentities(trim($_POST['email']));
     $id = htmlentities(trim($_POST['idEleve']));
+    $id_promotion = htmlentities(trim($_POST['id_promotion']));
 
     $erreurs = array();
 
@@ -33,14 +34,14 @@ if (isset($_POST['frmUpdateEleve'])) {
         include './includes/frmUpdateEleve.php';
     } else {
 
-        $requete = "UPDATE eleves set identifiant = '$identifiant',nom='$nom', prenom ='$prenom'
+        $requete = "UPDATE eleves set identifiant = '$identifiant',nom='$nom', prenom ='$prenom', id_promotion = '$id_promotion'
             where id_eleve = '$id';";
            
         
         $sqlUpdate = new Sql();
         $sqlUpdate->inserer($requete); 
         $url = "index.php?page=listeEleve";
-        echo redirection($url);
+        //echo redirection($url);
     }
 
 

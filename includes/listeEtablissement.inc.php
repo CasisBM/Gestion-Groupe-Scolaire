@@ -1,22 +1,24 @@
 <!--/Table Liste Etablissements Prof-->
-<?php require './includes/header.php';
+<?php 
 
-if (isset($_GET['idProf']) && !empty($_GET['idProf'])) {
+require './includes/header.php';
+
+if (isset($_GET['idEnseignant']) && !empty($_GET['idEnseignant'])) {
 
     $sqlQuery = new Sql();
     $requete = "select et.nom_etablissement, et.ville from ETABLISSEMENTS_has_UTILISATEUR ehu 
             join etablissements et on ehu.id_etablissement = et.id_etablissement 
-            where  ehu.id_enseignant = '" . $_GET['idProf'] . "'";
+            where  ehu.id_enseignant = '" . $_GET['idEnseignant'] . "'";
 
     if (!empty($_SESSION['etablissement'])) {
         $requete .= " and en.id_etablissement = " . $_SESSION['etablissement'];
     }
 
     $tblQuery = $sqlQuery->lister($requete);
-    $requete = "select prenom,nom from enseignants where id_enseignant = '" . $_GET['idProf'] . "'";
+    $requete = "select prenom,nom from enseignants where id_enseignant = '" . $_GET['idEnseignant'] . "'";
     $tblQueryPrenomNom = $sqlQuery->lister($requete);
 } else {
-    redirection("index.php?listeProfesseur");
+    redirection("index.php?listeEnseignant");
 }
 ?>
 
@@ -68,7 +70,7 @@ if (isset($_GET['idProf']) && !empty($_GET['idProf'])) {
                 <div class="footTable">
                     <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize" data-boundary-links="true">
                     </div>
-                    <button class="buttonTable" type="button" onclick="location.href='index.php?page=ajouterEtablissementProf&idProf=<?= $_GET['idProf'] ?>'">
+                    <button class="buttonTable" type="button" onclick="location.href='index.php?page=ajouterEtabEnseignant&idEnseignant=<?= $_GET['idEnseignant'] ?>'">
                         Ajouter un établissement
                     </button>
                 </div>

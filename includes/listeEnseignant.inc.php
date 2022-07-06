@@ -1,29 +1,28 @@
 <?php
 
- require './includes/header.php'; 
+require './includes/header.php';
 
 $sqlQuery = new Sql();
-$requete = "select id_enseignant,prenom,nom from enseignants ";
+$requete = "SELECT DISTINCT en.id_enseignant, en.prenom, en.nom  FROM enseignants en ";
 
 if(!empty($_SESSION['etablissement']))
 {
-  $requete .= " where id_enseignant = ".$_SESSION['etablissement'];
+
+  $requete .= "JOIN ETABLISSEMENTS_has_UTILISATEUR ehu ON en.id_enseignant = ehu.id_enseignant 
+              where ehu.id_etablissement = ".$_SESSION['etablissement'];
 }
 
-$tblQuery = $sqlQuery->lister($requete.";");
-
-//$tblQuery = $sqlQuery->lister("select * from enseignants");
-
+$tblQuery = $sqlQuery->lister($requete);
 
 ?>
             <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th class="nomTable" colspan="5">Liste des enseignants</th>
+                  <th class="nomTable" colspan="6">Liste des enseignants</th>
                 </tr>
                 <tr>
-                  <th colspan="5">
+                  <th colspan="6">
                     <div class="search">
                     <form action="index.php?page=chercheEnseignant" method="POST">
                       <div class="search-box">
@@ -40,6 +39,7 @@ $tblQuery = $sqlQuery->lister($requete.";");
                 <th>Prenom NOM</th>
                 <th>Voir profil</th>                
                 <th>Voir planning</th>
+                <th>Voir matiere enseigné</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
               </tr>
@@ -55,7 +55,12 @@ $tblQuery = $sqlQuery->lister($requete.";");
                   </a>
                 </td>
                 <td>
-                <a href="index.php?page=listeEtablissement&idProf=<?=$tblQuery[$i]['id_enseignant'] ?>">
+                <a href="index.php?page=listeMatiere&idEnseignant=<?=$tblQuery[$i]['id_enseignant'] ?>">
+                    <i class="fa-solid fa-shapes fa-2x"></i>
+                  </a>
+                </td>
+                <td>
+                <a href="index.php?page=listeEtablissement&idEnseignant=<?=$tblQuery[$i]['id_enseignant'] ?>">
                     <i class="fa-solid fa-school-flag fa-2x"></i>
                   </a></td>
                 <td>
