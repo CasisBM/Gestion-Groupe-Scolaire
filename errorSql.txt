@@ -819,3 +819,28 @@ Stack trace:
 #4 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
 #5 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+PDOException: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:24
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(24): PDO->exec('INSERT INTO cou...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(19): Sql->inserer('INSERT INTO cou...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''date',heure_debut,heure_fin) 
+    values ('2','6','1','1','2022-07-07','09:...' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:24
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(24): PDO->exec('INSERT INTO cou...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(19): Sql->inserer('INSERT INTO cou...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:24
+Stack trace:
+#0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(24): PDO->exec('INSERT INTO cou...')
+#1 C:\xampp\htdocs\gestion-groupe-scolaire\includes\ajouterCoursSalle.inc.php(20): Sql->inserer('INSERT INTO cou...')
+#2 C:\xampp\htdocs\gestion-groupe-scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gestion-groupe-scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\gestion-groupe-scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}

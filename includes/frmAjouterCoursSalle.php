@@ -55,11 +55,11 @@
                      </div>
                  </td>
                  <td>
-                    <input type="date" name="date" id="date">
+                    <input type="date" name="date" id="date" required>
                  </td>
                  <td>
-                    <input type="time" id="heure_debut" name="heure_debut">
-                    <input type="time" id="heure_fin" name="heure_fin">
+                    <input type="time" id="heure_debut" name="heure_debut" required>
+                    <input type="time" id="heure_fin" name="heure_fin" required>
                  </td>
                  <td>
                     <div>
