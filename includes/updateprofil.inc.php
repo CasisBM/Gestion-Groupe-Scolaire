@@ -56,7 +56,7 @@
 
          header('Location:./index.php?page=profiles');
 
-         displayMessage("Requête OK");
+         //displayMessage("Requête OK");
             }
         }
     

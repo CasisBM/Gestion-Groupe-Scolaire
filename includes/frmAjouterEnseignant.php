@@ -1,5 +1,5 @@
-<h1>Inscription</h1>
-<form action="index.php?page=ajouterProf" method="post">
+<h1>Ajouter Enseignant</h1>
+<form action="index.php?page=ajouterEnseignant" method="post">
     <div>
         <label for="identifiant">Identifiant :</label>
         <input type="text" name="identifiant" id="identifiant" value="<?= $identifiant; ?>" />
@@ -24,5 +24,5 @@
         <input type="reset" value="Effacer" />
         <input type="submit" value="Envoyer" />
     </div>
-    <input type="hidden" name="frmAjouterProf" />
+    <input type="hidden" name="frmAjouterEnseignant" />
 </form>

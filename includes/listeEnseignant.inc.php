@@ -1,34 +1,30 @@
 <?php
 
 require './includes/header.php';
+
 $sqlQuery = new Sql();
-$requete = "SELECT el.id_eleve, el.prenom, el.nom, et.nom_etablissement, p.nom_promotion FROM eleves el JOIN promotions p 
-            ON el.id_promotion = p.id_promotion 
-            JOIN etablissements et ON et.id_etablissement = p.id_etablissement";
+$requete = "SELECT DISTINCT en.id_enseignant, en.prenom, en.nom  FROM enseignants en ";
 
 if(!empty($_SESSION['etablissement']))
 {
-  $requete .= " where p.id_etablissement = ".$_SESSION['etablissement'];
-  $tblQuery = $sqlQuery->lister($requete);
+
+  $requete .= "JOIN ETABLISSEMENTS_has_UTILISATEUR ehu ON en.id_enseignant = ehu.id_enseignant 
+              where ehu.id_etablissement = ".$_SESSION['etablissement'];
 }
-else
-{
-  $tblQuery = $sqlQuery->lister($requete);
-  $requete = "SELECT id_eleve,prenom,nom FROM eleves WHERE id_promotion is null";
-  $tblQuery2 = $sqlQuery->lister($requete);
-  $tblQuery = array_merge($tblQuery,$tblQuery2);
-}
+
+$tblQuery = $sqlQuery->lister($requete);
+
 ?>
-            <!--/Table Liste Eleves-->
+            <!--/Table Liste Professeur-->
             <table>
               <thead>
                 <tr>
-                  <th class="nomTable" colspan="6">Liste des eleves</th>
+                  <th class="nomTable" colspan="6">Liste des enseignants</th>
                 </tr>
                 <tr>
                   <th colspan="6">
                     <div class="search">
-                    <form action="index.php?page=chercheEleve" method="POST">
+                    <form action="index.php?page=chercheEnseignant" method="POST">
                       <div class="search-box">
                          <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
                          <i class="fas fa-search search-button"></i>
@@ -41,9 +37,9 @@ else
                </div>
               <tr class="titreTable">
                 <th>Prenom NOM</th>
-                <th>Promotions</th>
-                <th>Voir profil</th>
+                <th>Voir profil</th>                
                 <th>Voir planning</th>
+                <th>Voir matiere enseigné</th>
                 <th>Ecoles</th>
                 <th>Actions</th>
               </tr>
@@ -52,18 +48,24 @@ else
             <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
                 <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
-                <td><?= isset($tblQuery[$i]['nom_promotion'])? $tblQuery[$i]['nom_promotion'] : "" ?></td>
                 <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
                 <td>
-                  <a href="planningprof.html">
+                  <a href="">
                     <i class="fa-solid fa-calendar-days fa-2x"></i>
                   </a>
                 </td>
-                <td><?= isset($tblQuery[$i]['nom_etablissement'])? $tblQuery[$i]['nom_etablissement'] : ""   ?></td>
                 <td>
-                  <a href="index.php?page=updateEleve&idEleve=<?= $tblQuery[$i]['id_eleve'] ?>"><i class="fa-solid fa-pen"></i></a>
-                  <a href="index.php?page=supprimer&table=eleves&id=<?= $tblQuery[$i]['id_eleve'] ?>" 
-                  onclick="return confirm('Etes vous certain de supprimer cette salle ?')"><i class="fa-solid fa-trash"></i></a>
+                <a href="index.php?page=listeMatiere&idEnseignant=<?=$tblQuery[$i]['id_enseignant'] ?>">
+                    <i class="fa-solid fa-shapes fa-2x"></i>
+                  </a>
+                </td>
+                <td>
+                <a href="index.php?page=listeEtablissement&idEnseignant=<?=$tblQuery[$i]['id_enseignant'] ?>">
+                    <i class="fa-solid fa-school-flag fa-2x"></i>
+                  </a></td>
+                <td>
+                <a href="index.php?page=updateEnseignant&idEnseignant=<?= $tblQuery[$i]['id_enseignant'] ?>"><i class="fa-solid fa-pen"></i></a>
+                <a href="index.php?page=supprimer&table=enseignants&id=<?= $tblQuery[$i]['id_enseignant'] ?>" onclick="return confirm('Voulez vous vraiment supprimer ce prof?')"><i class="fa-solid fa-trash"></i></a> 
                 </td>
               </tr>
               <?php } ?>
@@ -80,7 +82,7 @@ else
                     data-max-size="maxSize"
                     data-boundary-links="true"
                   > </div>
-                  <button class="buttonTable" onclick="location.href='index.php?page=ajouterEleve'" type="button"> Ajouter un eleve </button></div>
+                  <button class="buttonTable" onclick="location.href='index.php?page=ajouterEnseignant'" type="button"> Ajouter un enseignant </button></div>
                 </td>
               </tr>
             </tfoot>

@@ -1,21 +1,23 @@
 <?php
-spl_autoload_register(function ($class) {
-    require '../classes/' . $class . '.php';
-});
+if (!isset($_GET['idPromotion'])) {
+    include 'listePromotion.inc.php';
+}
 
-$sqlQuery = new Sql();
-$tblQuery = array();
+$requete = "SELECT p.annee,p.id_etablissement,p.id_promotion,p.nom_promotion,et.nom_etablissement 
+            FROM promotions p join etablissements et on et.id_etablissement =  p.id_etablissement 
+            where p.id_promotion = '". $_GET['idPromotion']."'";
 
-$tblQuery = $sqlQuery->lister("select * from etablissements");
+$querySelect = new Sql();
+$tblQuery = $querySelect->lister($requete);
+
 
 ?>
-
 <?php require './includes/header.php'; ?>
 
 <table>
     <thead>
         <tr>
-            <th id="nomTable" colspan="5">Ajouter salle</th>
+            <th id="nomTable" colspan="5">Edit promotion</th>
         </tr>
         <tr>
             <th colspan="5">
@@ -29,17 +31,18 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
 
         </div>
         <tr id="titreTable">
-            <th>Salles</th>
-            <th>Caracteristique</th>
+            <th>nom de promotion</th>
+            <th>année</th>
             <th>id_etablissement</th>
         </tr>
     </thead>
     <tbody>
 
-        <form action="index.php?page=ajouterSalle" method="post">
-            <td><input type=" text" id="nom" name="nom" />
+        <form action="index.php?page=updatePromotion" method="post"">
+            <td>
+                <input type=" text" id="nom" name="nom" value="<?= $tblQuery[0]['nom_promotion'] ?>" />
         </td>
-        <td><input type="text" id="caracteristique" name="caracteristique" /></td>
+        <td><input type="text" id="annee" name="annee" value="<?= $tblQuery[0]['annee'] ?>" /></td>
         <td>
             <a href="index.php?page=planningesalle">
                 <i class="fa-solid fa-calendar-days fa-2x"></i>
@@ -68,8 +71,8 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
                         <input type="submit" value="Update" />
                     </div>
         </tr>
-
-        <input type="hidden" name="frmAjouterSalle" />
+        <input type="hidden" name="id" id="id" value=<?= $tblQuery[0]['id_promotion'] ?>>
+        <input type="hidden" name="frmUpdatePromotion" />
         </form>
         <!-- <button id="buttonTable" type="button" onclick="location.href='index.php?page=ajouteSalle'"> Ajouter une salle </button> -->
         </div>

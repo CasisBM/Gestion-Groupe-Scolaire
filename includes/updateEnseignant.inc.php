@@ -3,23 +3,29 @@
 
 //var_dump(isset($_POST['frmUpdate']));
 
-if (isset($_POST['frmUpdateSalle'])) {
+if (isset($_POST['frmUpdateEnseignant'])) {
    // $message = "Je viens du formulaire";
 
+    $identifiant = htmlentities(trim($_POST['identifiant']));
     $nom = htmlentities(trim($_POST['nom']));
-    $caracteristique = htmlentities(trim($_POST['caracteristique']));
-    $id = htmlentities(trim($_POST['id']));
+    $prenom = htmlentities(trim($_POST['prenom']));
+    $email = htmlentities(trim($_POST['email']));
+    $id = htmlentities(trim($_POST['idEnseignant']));
 
 //   var_dump($_POST['nom']);
 //   var_dump($_POST['id']);
 
     $erreurs = array();
 
+    if (mb_strlen($identifiant) === 0) {
+        array_push($erreurs, "Il manque vore identifiant");
+    };
     if (mb_strlen($nom) === 0) {
         array_push($erreurs, "Il manque vore nom");
     };
-    if (mb_strlen($caracteristique) === 0)
-        array_push($erreurs, "Il manque vore caracteristique");
+    if (mb_strlen($prenom) === 0)
+        array_push($erreurs, "Il manque vore prenom");
+    //ajoute verifier l'email
     
     if (count($erreurs)) {
 
@@ -31,28 +37,22 @@ if (isset($_POST['frmUpdateSalle'])) {
         }
         $messageErreur .= "</ul>";
         echo $messageErreur;
-        include './includes/frmUpdateSalle.php';
+        include './includes/frmUpdateEnseignant.php';
     } else {
 
-        $requete = "UPDATE salles set nom_salle='$nom', caracteristique ='$caracteristique'
-            where id_salle = '$id';";
+        $requete = "UPDATE enseignantS set identifiant = '$identifiant',nom='$nom', prenom ='$prenom'
+            where id_enseignant = '$id';";
            
         
         $sqlUpdate = new Sql();
         $sqlUpdate->inserer($requete); 
-        $url = "index.php?page=listeSalle";
+        $url = "index.php?page=listeEnseignant";
         echo redirection($url);
     }
 
 
 } else {
-
-    //var_dump(($_POST['frmUpdate']));
-
-    // $nom = $prenom = $mail = "";
-     include './includes/frmUpdateSalle.php';
-    //echo $message;
+     include './includes/frmUpdateEnseignant.php';
 }
 
-//   displayMessage("!");
 ?>

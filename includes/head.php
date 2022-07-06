@@ -13,6 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="./assets/js/giveSelection.js" defer></script>
     
 <?php
     loadCss();

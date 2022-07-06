@@ -3,11 +3,11 @@
 
 //var_dump(isset($_POST['frmUpdate']));
 
-if (isset($_POST['frmUpdate'])) {
+if (isset($_POST['frmUpdatePromotion'])) {
    // $message = "Je viens du formulaire";
 
     $nom = htmlentities(trim($_POST['nom']));
-    $caracteristique = htmlentities(trim($_POST['caracteristique']));
+    $annee = htmlentities(trim($_POST['annee']));
     $id_etablissement = strstr(htmlentities(trim($_POST['id_etablissement'])), '-', TRUE);
     $id = htmlentities(trim($_POST['id']));
 
@@ -19,8 +19,8 @@ if (isset($_POST['frmUpdate'])) {
     if (mb_strlen($nom) === 0) {
         array_push($erreurs, "Il manque vore nom");
     };
-    if (mb_strlen($caracteristique) === 0)
-        array_push($erreurs, "Il manque vore caracteristique");
+    if (mb_strlen($annee) === 0)
+        array_push($erreurs, "Il manque la année");
     
     if (count($erreurs)) {
 
@@ -32,16 +32,17 @@ if (isset($_POST['frmUpdate'])) {
         }
         $messageErreur .= "</ul>";
         echo $messageErreur;
-        include '.listeSalle.inc.php';
+        include './includes/frmUpdatePromotion.php';
     } else {
 
-        $requete = "UPDATE salles set nom_salle='$nom', caracteristique ='$caracteristique', id_etablissement='$id_etablissement'
-            where id_salle = '$id';";
+        $requete = "UPDATE promotions set nom_promotion='$nom', annee ='$annee', id_etablissement='$id_etablissement'
+            where id_promotion = '$id';";
            
         
         $sqlUpdate = new Sql();
-        $sqlUpdate->lister($requete); 
-        include 'listeSalle.inc.php';
+        $sqlUpdate->inserer($requete); 
+        $url = "index.php?page=listePromotion";
+        echo redirection($url);
     }
 
 
@@ -50,7 +51,7 @@ if (isset($_POST['frmUpdate'])) {
     //var_dump(($_POST['frmUpdate']));
 
     // $nom = $prenom = $mail = "";
-     include 'listeSalle.inc.php';
+     include './includes/frmUpdatePromotion.php';
     //echo $message;
 }
 

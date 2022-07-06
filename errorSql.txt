@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= '1'' at line 1 in C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php:37
 Stack trace:
 #0 C:\xampp\htdocs\gestion-groupe-scolaire\classes\Sql.php(37): PDO->query('select * from s...')
@@ -2458,6 +2459,40 @@ Stack trace:
 #3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
 #4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
 #5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('SELECT * FROM e...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profiles.inc.php(23): Sql->lister('SELECT * FROM e...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('SELECT * FROM e...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profiles.inc.php(23): Sql->lister('SELECT * FROM e...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('SELECT * FROM e...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profiles.inc.php(23): Sql->lister('SELECT * FROM e...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
+Stack trace:
+#0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('SELECT * FROM e...')
+#1 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\profiles.inc.php(23): Sql->lister('SELECT * FROM e...')
+#2 C:\xampp\htdocs\Gestion-Groupe-Scolaire\functions\inclusionIncFile.php(11): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\Gestion-Groupe-Scolaire\includes\main.php(8): inclusionIncFile('login')
+#4 C:\xampp\htdocs\Gestion-Groupe-Scolaire\index.php(11): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+=======
+>>>>>>> upstream/develop
 PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php:37
 Stack trace:
 #0 C:\xampp\htdocs\Gestion-Groupe-Scolaire\classes\Sql.php(37): PDO->query('SELECT * FROM e...')

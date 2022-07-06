@@ -10,7 +10,7 @@ if (!isset($_GET['id'])) {
 ?>
 <body>
 
-<h1>profiles</h1>
+<h1>profil</h1>
 <form action="index.php?page=modifprofiles" method="POST">
     <div>
         <?php 
