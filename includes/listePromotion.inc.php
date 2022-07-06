@@ -1,4 +1,3 @@
-
 <?php
 require './includes/header.php';
 $sqlQuery = new Sql();
@@ -16,12 +15,12 @@ $tblQuery = $sqlQuery->lister("select p.id_promotion, p.nom_promotion,et.nom_eta
     <tr>
       <th colspan="4">
         <div class="container">
-        <form action="index.php?page=cherchePromo" method="POST">
-          <div class="search-box">
-            <input type="text" id="nom_promotion" name="nom_promotion" class="search-input" placeholder="Recherche..">
-            <i class="fas fa-search search-button"></i>
-          </div>
-          <input type="hidden" name="frmcheche" />
+          <form action="index.php?page=cherchePromo" method="POST">
+            <div class="search-box">
+              <input type="text" id="nom_promotion" name="nom_promotion" class="search-input" placeholder="Recherche..">
+              <i class="fas fa-search search-button"></i>
+            </div>
+            <input type="hidden" name="frmcheche" />
           </form>
       </th>
     </tr>
@@ -35,7 +34,7 @@ $tblQuery = $sqlQuery->lister("select p.id_promotion, p.nom_promotion,et.nom_eta
     </tr>
   </thead>
   <tbody>
-    <?php 
+    <?php
     $sqlQuery = new Sql();
     $tblQuery = $sqlQuery->lister("select p.id_promotion, p.nom_promotion,et.nom_etablissement  from promotions p 
                                   join etablissements et on p.id_etablissement = et.id_etablissement");
@@ -43,8 +42,8 @@ $tblQuery = $sqlQuery->lister("select p.id_promotion, p.nom_promotion,et.nom_eta
       <tr>
         <td><?= $tblQuery[$i]['nom_promotion'] ?></td>
         <td>
-          <a href="planningpromotion.php">
-            <i class="fa-solid fa-calendar-days fa-2x"></i>
+          <a href="index.php?page=planningPromotion&idPromotion=<?= $tblQuery[$i]['id_promotion'] ?>">
+            <i name="submit" id="submit" class="fa-solid fa-calendar-days fa-2x"></i>
           </a>
         </td>
         <td><?= $tblQuery[$i]['nom_etablissement'] ?></td>
