@@ -3,6 +3,7 @@
     $requete = "select id_etablissement from salles where id_salle = ". $_GET['idSalle'];
     $tblQuery = $sqlQuery->lister($requete);
     $id_etablissement = $tblQuery[0]['id_etablissement'];
+    
     $requete = "select p.nom_promotion, p.id_promotion
             from salles s join etablissements et on et.id_etablissement = s.id_etablissement 
             join promotions p on p.id_etablissement = et.id_etablissement
