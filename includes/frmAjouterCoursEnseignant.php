@@ -1,16 +1,17 @@
  <?php
     $sqlQuery = new Sql();
-    $requete = "select id_etablissement from promotions where id_promotion = " . $_GET['idPromotion'];
-    $tblQuery = $sqlQuery->lister($requete);
-    $id_etablissement = $tblQuery[0]['id_etablissement'];
-
-    $requete = "select nom_salle, id_salle
-            from salles where id_etablissement = " . $id_etablissement;
+    //$requete = ;
+    //$tblQuery = $sqlQuery->lister($requete);
+    //$id_etablissement = $tblQuery[0]['id_etablissement'];
+    $requete = "select m.nom_matiere, m.id_matiere
+            from ENSEIGNANTS_has_MATIERES ehm
+            join matieres m on m.id_matiere = ehm.id_matiere
+            where ehm.id_enseignant = " . $_GET['idEnseignant'];
 
     $tblQuery = $sqlQuery->lister($requete);
 
     ?>
- <form action="index.php?page=ajouterCoursPromotion&idPromotion=<?= $_GET['idPromotion'] ?>" method="post">
+ <form action="index.php?page=ajouterCoursEnseignant&idEnseignant=<?= $_GET['idEnseignant'] ?>" method="post">
      <table>
          <thead>
              <tr>
@@ -28,28 +29,28 @@
 
              </div>
              <tr class="titreTable">
-                 <th>Enseignant</th>
+                 <th>Salles</th>
                  <th>Date</th>
                  <th>Horaires</th>
-                 <th>Matieres</th>
-                 <th>Salles</th>
+                 <th>Promotion</th>
+                 <th>Matiere</th>
              </tr>
          </thead>
          <tbody>
              <tr>
                  <td>
                      <div>
-                         <select class="select1" name="id_enseignant" id="id_enseignant" onchange="giveSelection(this.value)">
+                         <select class="select1" name="id_salle" id="id_salle" onchange="giveSelection(this.children[this.selectedIndex].innerText)">
                              <option label="" value=""></option>
                              <?php
-                                $requete = "SELECT en.id_enseignant, en.nom from enseignants en
-                              join ETABLISSEMENTS_has_UTILISATEUR ehu on en.id_enseignant = ehu.id_enseignant 
-                              where ehu.id_etablissement = $id_etablissement";
-                                $tblEnseignant = $sqlQuery->lister($requete);
+                                $requete = "SELECT DISTINCT s.id_salle, s.nom_salle, s.id_etablissement from salles s
+                              join ETABLISSEMENTS_has_UTILISATEUR ehu on s.id_etablissement = s.id_etablissement 
+                              where ehu.id_enseignant = " . $_GET['idEnseignant'];
+                                $tblSalle = $sqlQuery->lister($requete);
 
-                                for ($i = 0; $i < count($tblEnseignant); $i++) {
+                                for ($i = 0; $i < count($tblSalle); $i++) {
                                 ?>
-                                 <option value="<?= $tblEnseignant[$i]['id_enseignant'] ?>"><?= $tblEnseignant[$i]['nom'] ?></option>
+                                 <option label="<?= $tblSalle[$i]['nom_salle'] ?>" value="<?= $tblSalle[$i]['id_salle'] ?>"><?= $tblSalle[$i]['id_etablissement'] ?></option>
                              <?php  } ?>
                          </select>
                      </div>
@@ -63,26 +64,25 @@
                  </td>
                  <td>
                      <div>
-                         <select class="select2" name="id_matiere" id="id_matiere">
+                         <select class=select2 name="id_promotion" id="id_promotion">
                              <?php
-                                $requete = "SELECT ehm.id_enseignant,m.id_matiere,m.nom_matiere from ENSEIGNANTS_has_MATIERES ehm
-                                 join ETABLISSEMENTS_has_UTILISATEUR ehu on ehm.id_enseignant = ehu.id_enseignant
-                                 join matieres m on m.id_matiere = ehm.id_matiere
-                                 where ehu.id_etablissement = $id_etablissement";
-                                $tblMatiere = $sqlQuery->lister($requete);
+                                $requete = "SELECT p.id_promotion,p.nom_promotion,p.id_etablissement from ETABLISSEMENTS_has_UTILISATEUR ehu 
+                                 join promotions p on p.id_etablissement = ehu.id_etablissement
+                                 where ehu.id_enseignant =" . $_GET['idEnseignant'];
+                                $tblPromotion = $sqlQuery->lister($requete);
 
-                                for ($i = 0; $i < count($tblMatiere); $i++) {
+                                for ($i = 0; $i < count($tblPromotion); $i++) {
                                 ?>
-                                 <option value="<?= $tblMatiere[$i]['id_matiere'] ?>" data-option="<?= $tblMatiere[$i]['id_enseignant'] ?>"><?= $tblMatiere[$i]['nom_matiere'] ?></option>
+                                 <option value="<?= $tblPromotion[$i]['id_promotion'] ?>" data-option="<?= $tblPromotion[$i]['id_etablissement'] ?>"><?= $tblPromotion[$i]['nom_promotion'] ?></option>
                              <?php  } ?>
                          </select>
                      </div>
                  </td>
                  <td>
-                     <select name="id_salle" id="id_salle">
+                     <select name="id_matiere" id="id_matiere">
                          <?php for ($i = 0; $i < count($tblQuery); $i++) {
                             ?>
-                             <option value="<?= $tblQuery[$i]['id_salle'] ?>"><?= $tblQuery[$i]['nom_salle'] ?></option>
+                             <option value="<?= $tblQuery[$i]['id_matiere'] ?>"><?= $tblQuery[$i]['nom_matiere'] ?></option>
                          <?php  } ?>
                      </select>
                      </div>
@@ -97,7 +97,7 @@
                      <div class="footTable">
                          <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize" data-boundary-links="true"> </div>
                          <input type="submit" value="valider" />
-                         <input type="hidden" name="frmAjouterCoursPromotion" />
+                         <input type="hidden" name="frmAjouterCoursEnseignant" />
                      </div>
                  </td>
              </tr>
