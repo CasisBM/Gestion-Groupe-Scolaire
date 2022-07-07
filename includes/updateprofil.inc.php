@@ -41,7 +41,7 @@
             $messageErreur .= "</ul>";
     
             echo $messageErreur;
-            echo "test";
+            
            // include './includes/frmprofil.php';
         }
 
@@ -53,8 +53,7 @@
         
             $queryInsert = new Sql();
             $queryInsert->inserer($requete);
-
-         header('Location:./index.php?page=profiles');
+         header('Location:index.php?page=profil');
 
          //displayMessage("Requête OK");
             }

@@ -1,17 +1,19 @@
-
+<head>
+  <link rel="stylesheet" href="./assets/css/profil.css">
+</head>
 
 <?php
 
 if (!isset($_GET['id'])) {
-    include 'listeprofesseur.inc.php';
-    // header('Location:./index.php');
+    include 'listeenseignant.inc.php';
+     //header('Location:./index.php');
 }
 
 ?>
 <body>
 
 <h1>profil</h1>
-<form action="index.php?page=modifprofiles" method="POST">
+<form action="index.php?page=updateprofil" method="POST">
     <div>
         <?php 
         $sqlQuery = new Sql();

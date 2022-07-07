@@ -9,7 +9,7 @@ $tblQuery = array();
 $tblQuery = $sqlQuery->lister("select * from comptes");
 ?>
 <div id="profiles">
-  <form action="../index.php?page=modifprofiles" method="POST" required>
+  <form action="../index.php?page=updateprofil" method="POST" required>
     <label>Prenom</label>
     <input type="text" placeholder="Entrer Prenom" name="prenom">
     <label>Nom</label>

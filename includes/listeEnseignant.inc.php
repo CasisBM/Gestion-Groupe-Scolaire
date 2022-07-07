@@ -48,16 +48,10 @@ $tblQuery = $sqlQuery->lister($requete);
             <?php for ($i=0; $i <count($tblQuery) ; $i++) { ?>
               <tr>
                 <td><?=$tblQuery[$i]['prenom']?><?=' '?><?=$tblQuery[$i]['nom']?></td>
-                <td><i class="fa-solid fa-circle-user fa-2x"></i></td>
+                <td><a href="index.php?page=profil&id=<?= $tblQuery[$i]['id_enseignant'] ?>"><i class="fa-solid fa-circle-user fa-2x"></i></a></td>
+                <td><a href="index.php?page=planningprofesseurs&id=<?= $tblQuery[$i]['id_enseignant'] ?>"><i class="fa-solid fa-calendar-days fa-2x"></i></a></td>
                 <td>
-                  <a href="">
-                    <i class="fa-solid fa-calendar-days fa-2x"></i>
-                  </a>
-                </td>
-                <td>
-                <a href="index.php?page=listeMatiere&idEnseignant=<?=$tblQuery[$i]['id_enseignant'] ?>">
-                    <i class="fa-solid fa-shapes fa-2x"></i>
-                  </a>
+                <a href="index.php?page=listeMatiere&idEnseignant=<?=$tblQuery[$i]['id_enseignant'] ?>"><i class="fa-solid fa-shapes fa-2x"></i</a>
                 </td>
                 <td>
                 <a href="index.php?page=listeEtablissement&idEnseignant=<?=$tblQuery[$i]['id_enseignant'] ?>">

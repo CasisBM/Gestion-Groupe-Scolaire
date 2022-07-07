@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto/Roboto-Medium.ttf");
 }
@@ -18,7 +18,7 @@ table {
   -webkit-box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.15);
   box-shadow: 3px 4px 5px -1px rgba(0, 0, 0, 0.15);
 }
-td,
+td,z
 th {
   text-align: center;
   padding: 8px;
@@ -44,7 +44,7 @@ button {
 
 .search-box {
   width: 100%;
-  position: relative;
+  position: relative;/*  */
   display: flex;
   align-items: center;
 }
@@ -99,4 +99,4 @@ button {
 
 input::placeholder {
   font-size: small;
-}
+} 
