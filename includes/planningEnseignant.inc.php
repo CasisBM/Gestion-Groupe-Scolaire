@@ -11,11 +11,12 @@ $nom = $tblQuery[0]['nom'];
 $prenom = $tblQuery[0]['prenom'];
 $id_enseignant = $_GET['idEnseignant'];
 
-$requete = "select DATE_FORMAT(c.date, '%d/%m/%Y'), m.nom_matiere, c.heure_debut,
-            c.heure_fin,s.nom_salle,s.nom_salle,p.nom_promotion 
+$requete = "select DATE_FORMAT(c.date, '%d/%m/%Y'), m.nom_matiere, c.heure_debut,c.heure_fin, 
+            s.nom_salle, s.nom_salle, p.nom_promotion, et.nom_etablissement
             from cours c join salles s on c.id_salle = s.id_salle
             join matieres m on c.id_matiere = m.id_matiere
             join promotions p on c.id_promotion = p.id_promotion
+            join etablissements et on et.id_etablissement = p.id_etablissement
             where c.id_enseignant = $id_enseignant;";
 
 $tblQuery = $sqlQuery->lister($requete);
@@ -39,6 +40,7 @@ $tblQuery = $sqlQuery->lister($requete);
                 <th>Horaires</th>
                 <th>Promotion</th>
                 <th>Salles</th>
+                <th>Etablissement</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -51,6 +53,7 @@ $tblQuery = $sqlQuery->lister($requete);
                 <td><?= $tblQuery[$i]['heure_debut'] ?> ~ <?= $tblQuery[$i]['heure_fin'] ?></td>
                 <td><?= $tblQuery[$i]['nom_promotion'] ?></td>
                 <td><?= $tblQuery[$i]['nom_salle'] ?></td>
+                <td><?= $tblQuery[$i]['nom_etablissement'] ?></td>
                 <td>
                   <i class="fa-solid fa-pen"></i>
                   <i class="fa-solid fa-trash"></i>
