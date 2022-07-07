@@ -1,14 +1,14 @@
  <?php
     $sqlQuery = new Sql();
-    $requete = "select id_etablissement from salles where id_salle = ". $_GET['idSalle'];
+    $requete = "select id_etablissement from salles where id_salle = " . $_GET['idSalle'];
     $tblQuery = $sqlQuery->lister($requete);
     $id_etablissement = $tblQuery[0]['id_etablissement'];
-    
+
     $requete = "select p.nom_promotion, p.id_promotion
             from salles s join etablissements et on et.id_etablissement = s.id_etablissement 
             join promotions p on p.id_etablissement = et.id_etablissement
-            where s.id_etablissement = ".$id_etablissement;
-    
+            where s.id_etablissement = " . $id_etablissement;
+
     $tblQuery = $sqlQuery->lister($requete);;
 
     ?>
@@ -41,14 +41,15 @@
              <tr>
                  <td>
                      <div>
-                         <select name="id_enseignant" id="id_enseignant" onchange="giveSelection(this.value)">
-                             <?php 
-                             $requete = "SELECT en.id_enseignant, en.nom from enseignants en
+                         <select class="select1" name="id_enseignant" id="id_enseignant" onchange="giveSelection(this.value)">
+                             <option label="" value=""></option>
+                             <?php
+                                $requete = "SELECT en.id_enseignant, en.nom from enseignants en
                               join ETABLISSEMENTS_has_UTILISATEUR ehu on en.id_enseignant = ehu.id_enseignant 
-                              where ehu.id_etablissement = $id_etablissement" ;
-                             $tblEnseignant = $sqlQuery->lister($requete);
+                              where ehu.id_etablissement = $id_etablissement";
+                                $tblEnseignant = $sqlQuery->lister($requete);
 
-                             for ($i = 0; $i < count($tblEnseignant); $i++) {
+                                for ($i = 0; $i < count($tblEnseignant); $i++) {
                                 ?>
                                  <option value="<?= $tblEnseignant[$i]['id_enseignant'] ?>"><?= $tblEnseignant[$i]['nom'] ?></option>
                              <?php  } ?>
@@ -56,37 +57,37 @@
                      </div>
                  </td>
                  <td>
-                    <input type="date" name="date" id="date" required>
+                     <input type="date" name="date" id="date" required>
                  </td>
                  <td>
-                    <input type="time" id="heure_debut" name="heure_debut" required>
-                    <input type="time" id="heure_fin" name="heure_fin" required>
+                     <input type="time" id="heure_debut" name="heure_debut" required>
+                     <input type="time" id="heure_fin" name="heure_fin" required>
                  </td>
                  <td>
-                    <div>
-                            <select name="id_matiere" id="id_matiere">
-                                <?php 
-                                 $requete = "SELECT ehm.id_enseignant,m.id_matiere,m.nom_matiere from ENSEIGNANTS_has_MATIERES ehm
+                     <div>
+                         <select class="select2" name="id_matiere" id="id_matiere">
+                             <?php
+                                $requete = "SELECT ehm.id_enseignant,m.id_matiere,m.nom_matiere from ENSEIGNANTS_has_MATIERES ehm
                                  join ETABLISSEMENTS_has_UTILISATEUR ehu on ehm.id_enseignant = ehu.id_enseignant
                                  join matieres m on m.id_matiere = ehm.id_matiere
-                                 where ehu.id_etablissement = $id_etablissement" ;
+                                 where ehu.id_etablissement = $id_etablissement";
                                 $tblMatiere = $sqlQuery->lister($requete);
 
                                 for ($i = 0; $i < count($tblMatiere); $i++) {
-                                    ?>
-                                    <option value="<?= $tblMatiere[$i]['id_matiere'] ?>" data-option="<?=$tblMatiere[$i]['id_enseignant']?>"  ><?= $tblMatiere[$i]['nom_matiere'] ?></option>
-                                <?php  } ?>
-                            </select>
-                        </div>
+                                ?>
+                                 <option value="<?= $tblMatiere[$i]['id_matiere'] ?>" data-option="<?= $tblMatiere[$i]['id_enseignant'] ?>"><?= $tblMatiere[$i]['nom_matiere'] ?></option>
+                             <?php  } ?>
+                         </select>
+                     </div>
                  </td>
                  <td>
-                 <select name="id_promotion" id="id_promotion">
-                                <?php for ($i = 0; $i < count($tblQuery); $i++) {
-                                    ?>
-                                    <option value="<?= $tblQuery[$i]['id_promotion'] ?>"><?= $tblQuery[$i]['nom_promotion'] ?></option>
-                                <?php  } ?>
-                            </select>
-                        </div>
+                     <select name="id_promotion" id="id_promotion">
+                         <?php for ($i = 0; $i < count($tblQuery); $i++) {
+                            ?>
+                             <option value="<?= $tblQuery[$i]['id_promotion'] ?>"><?= $tblQuery[$i]['nom_promotion'] ?></option>
+                         <?php  } ?>
+                     </select>
+                     </div>
                  </td>
 
              </tr>
