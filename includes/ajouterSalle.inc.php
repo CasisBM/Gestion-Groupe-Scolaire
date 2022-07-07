@@ -5,7 +5,7 @@ if (isset($_POST['frmAjouterSalle'])) {
     $nom = htmlentities(trim($_POST['nom']));
     $caracteristique = htmlentities(trim($_POST['caracteristique']));
     
-    $id_etablissement = strstr(htmlentities(trim($_POST['id_etablissement'])), '-', TRUE);
+    $id_etablissement = htmlentities(trim($_POST['id_etablissement']));
 
 
     $erreurs = array();

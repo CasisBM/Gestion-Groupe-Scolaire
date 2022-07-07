@@ -10,9 +10,9 @@ if (isset($_GET['idEnseignant']) && !empty($_GET['idEnseignant'])) {
             join etablissements et on ehu.id_etablissement = et.id_etablissement 
             where  ehu.id_enseignant = '" . $_GET['idEnseignant'] . "'";
 
-    if (!empty($_SESSION['etablissement'])) {
-        $requete .= " and en.id_etablissement = " . $_SESSION['etablissement'];
-    }
+    /* if (!empty($_SESSION['etablissement'])) {
+        $requete .= " and ehu.id_etablissement = " . $_SESSION['etablissement'];
+    } */
 
     $tblQuery = $sqlQuery->lister($requete);
     $requete = "select prenom,nom from enseignants where id_enseignant = '" . $_GET['idEnseignant'] . "'";
@@ -56,7 +56,6 @@ if (isset($_GET['idEnseignant']) && !empty($_GET['idEnseignant'])) {
                 <td><?= $tblQuery[$i]['nom_etablissement'] ?></td>
                 <td><?= $tblQuery[$i]['ville'] ?></td>
                 <td>
-                    <i class="fa-solid fa-pen"></i>
                     <i class="fa-solid fa-trash"></i>
                 </td>
         </tr>

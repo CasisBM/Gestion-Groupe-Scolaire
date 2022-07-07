@@ -27,7 +27,7 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
         <tr id="titreTable">
             <th>Salles</th>
             <th>Caracteristique</th>
-            <th>id_etablissement</th>
+            <th>Nom de l'etablissement</th>
         </tr>
     </thead>
     <tbody>
@@ -37,17 +37,11 @@ $tblQuery = $sqlQuery->lister("select * from etablissements");
         </td>
         <td><input type="text" id="caracteristique" name="caracteristique" /></td>
         <td>
-            <a href="index.php?page=planningesalle">
-                <i class="fa-solid fa-calendar-days fa-2x"></i>
-            </a>
-        </td>
-        <td>
             <div>
-                <label for="id_etablissement">id_etablissement :</label>
                 <select name="id_etablissement" id="id_etablissement">
                     <?php for ($i = 0; $i < count($tblQuery); $i++) {
                     ?>
-                        <option><?= $tblQuery[$i]['id_etablissement'] ?>-<?= $tblQuery[$i]['nom_etablissement'] ?></option>
+                        <option value="<?= $tblQuery[$i]['id_etablissement'] ?>"><?= $tblQuery[$i]['nom_etablissement'] ?></option>
                     <?php  } ?>
                 </select>
             </div>

@@ -64,12 +64,12 @@ $tblQuery = $sqlQuery->lister($requete);
       </td>
       <td><?= $tblQuery[$i]['nom_etablissement'] ?></td>
       <td>
-        <a href="index.php?page=updateSalle&idSalle=<?= $tblQuery[$i]['id_salle'] ?>">
-          <i class="fa-solid fa-pen"></i>
+        <a href="index.php?page=updateSalle&idSalle=<?=$tblQuery[$i]['id_salle']?>">
+        <i class="fa-solid fa-pen"></i>
         </a>
         <a href="index.php?page=supprimer&table=salles&id=<?= $tblQuery[$i]['id_salle'] ?>" onclick="return confirm('Etes vous certain de supprimer  cette salle ?')">
-          <i class="fa-solid fa-trash"></i>
-        </a>
+        <i class="fa-solid fa-trash"></i>
+      </a>
       </td>
       </tr>
     <?php } ?>

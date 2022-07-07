@@ -1,11 +1,10 @@
-<h1>ajouter promotion</h1>
 
 <?php
 if (isset($_POST['frmAjouterPromotion'])){
 
   
 $nom_promotion =htmlentities(trim($_POST['nom_promotion']));
-$id_etablissement =strstr(htmlentities(trim($_POST['id_etablissement'])),'-',true);
+$id_etablissement =htmlentities(trim($_POST['id_etablissement']));
 $annee_promotion = htmlentities(trim($_POST['annee_promotion']));
 
 $erreurs = array();

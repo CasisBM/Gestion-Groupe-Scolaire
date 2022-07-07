@@ -1,4 +1,6 @@
 <?php
+require './includes/header.php';
+
 if (!isset($_GET['idEleve'])) {
     include 'listeSalle.inc.php';
     // header('Location:./index.php');
@@ -8,16 +10,14 @@ $requete = 'SELECT * FROM eleves where id_eleve = ' . $_GET['idEleve'];
 
 $querySelect = new Sql();
 $tblQuery = $querySelect->lister($requete);
-
 $tblQueryPromo = $querySelect->lister("select * from promotions");
 
 ?>
-<?php require './includes/header.php'; ?>
 
 <table>
     <thead>
         <tr>
-            <th id="nomTable" colspan="5">Edit Eleve</th>
+            <th class="nomTable" colspan="5">Edit Eleve</th>
         </tr>
         <tr>
             <th colspan="5">
@@ -30,7 +30,7 @@ $tblQueryPromo = $querySelect->lister("select * from promotions");
         </tr>
 
         </div>
-        <tr id="titreTable">
+        <tr class="titreTable">
 
             <th>Identifiant</th>
             <th>nom</th>
@@ -52,7 +52,6 @@ $tblQueryPromo = $querySelect->lister("select * from promotions");
                         <option value=null></option>
                             <?php 
                             
-                            
                             for ($i = 0; $i < count($tblQueryPromo); $i++) {
                             ?>
                                 <option value="<?= $tblQueryPromo[$i]['id_promotion'] ?>"><?= $tblQueryPromo[$i]['nom_promotion'] ?></option>
@@ -64,14 +63,13 @@ $tblQueryPromo = $querySelect->lister("select * from promotions");
     <tfoot>
         <tr>
             <td colspan="5">
-                <div id="footTable">
+                <div class="footTable">
                     <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize" data-boundary-links="true"> </div>
                     <div>
-                        <input type="reset" value="Effacer" />
-                        <input type="submit" value="Changer l'eleve" />
+                        <input class="buttonTable" type="reset" value="Effacer" />
+                        <input class="buttonTable" type="submit" value="Changer l'eleve" />
                     </div>
         </tr>
-        <input type="hidden" name="idEleve" id="idEleve" value=<?= $tblQuery[0]['id_eleve'] ?>>
         <input type="hidden" name="frmUpdateEleve" />
         </form>
         <!-- <button id="buttonTable" type="button" onclick="location.href='index.php?page=ajouteSalle'"> Ajouter une salle </button> -->
