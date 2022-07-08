@@ -28,7 +28,7 @@ $tblQuery = $sqlQuery->lister($requete);
             <table>
               <thead>
                 <tr>
-                  <th class="nomTable" colspan="6">Planning <?=$prenom." ".$nom?></th>
+                  <th class="nomTable" colspan="7">Planning <?=$prenom." ".$nom?></th>
                 </tr>
                 <tr>
                 </tr>
@@ -63,7 +63,7 @@ $tblQuery = $sqlQuery->lister($requete);
             </tbody>
             <tfoot>
               <tr >
-                <td  colspan="6">
+                <td  colspan="7">
                   <div class="footTable">
                     <div
                     data-pagination=""

@@ -33,7 +33,7 @@ $tblQuery = $querySelect->lister($requete);
         <tr id="titreTable">
             <th>nom de promotion</th>
             <th>année</th>
-            <th>id_etablissement</th>
+            <th>Nom etablissement</th>
         </tr>
     </thead>
     <tbody>
@@ -44,17 +44,12 @@ $tblQuery = $querySelect->lister($requete);
         </td>
         <td><input type="text" id="annee" name="annee" value="<?= $tblQuery[0]['annee'] ?>" /></td>
         <td>
-            <a href="index.php?page=planningesalle">
-                <i class="fa-solid fa-calendar-days fa-2x"></i>
-            </a>
-        </td>
-        <td>
             <div>
-                <label for="id_etablissement">id_etablissement :</label>
                 <select name="id_etablissement" id="id_etablissement">
+                <option value=""></option>
                     <?php for ($i = 0; $i < count($tblQuery); $i++) {
                     ?>
-                        <option><?= $tblQuery[$i]['id_etablissement'] ?>-<?= $tblQuery[$i]['nom_etablissement'] ?></option>
+                        <option value="<?= $tblQuery[$i]['id_etablissement'] ?>"><?= $tblQuery[$i]['nom_etablissement'] ?></option>
                     <?php  } ?>
                 </select>
             </div>

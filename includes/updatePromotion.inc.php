@@ -8,7 +8,7 @@ if (isset($_POST['frmUpdatePromotion'])) {
 
     $nom = htmlentities(trim($_POST['nom']));
     $annee = htmlentities(trim($_POST['annee']));
-    $id_etablissement = strstr(htmlentities(trim($_POST['id_etablissement'])), '-', TRUE);
+    $id_etablissement = htmlentities(trim($_POST['id_etablissement']));
     $id = htmlentities(trim($_POST['id']));
 
 //   var_dump($_POST['nom']);
