@@ -8,10 +8,10 @@ if(isset($_POST["frmAjouterEtablissement"]))
     $erreurs = array();
 
     if(mb_strlen($nom) === 0)
-    array_push($erreurs, "Il manque la ville de l'etablissement");
+    array_push($erreurs, "Il manque la nom de l'etablissement");
 
     if(mb_strlen($ville) === 0)
-    array_push($erreurs, "Il manque le nom de l'etablissement");
+    array_push($erreurs, "Il manque le ville de l'etablissement");
 
     
     if(count($erreurs))

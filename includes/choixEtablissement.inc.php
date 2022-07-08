@@ -8,5 +8,5 @@ else if(isset($_GET['etablissement']))
   unset($_SESSION['etablissement']);
 }
 
-include './includes/tbChoixEtablissement.php';
+include './includes/frmChoixEtablissement.php';
 ?>

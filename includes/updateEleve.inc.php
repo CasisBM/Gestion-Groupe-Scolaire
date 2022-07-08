@@ -7,7 +7,7 @@ if (isset($_POST['frmUpdateEleve'])) {
     $nom = htmlentities(trim($_POST['nom']));
     $prenom = htmlentities(trim($_POST['prenom']));
     $email = htmlentities(trim($_POST['email']));
-    $id = htmlentities(trim($_POST['idEleve']));
+    $id = htmlentities(trim($_POST['id_eleve']));
     $id_promotion = htmlentities(trim($_POST['id_promotion']));
 
     $erreurs = array();
@@ -41,7 +41,7 @@ if (isset($_POST['frmUpdateEleve'])) {
         $sqlUpdate = new Sql();
         $sqlUpdate->inserer($requete); 
         $url = "index.php?page=listeEleve";
-        //echo redirection($url);
+        echo redirection($url);
     }
 
 

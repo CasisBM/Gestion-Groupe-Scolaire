@@ -8,13 +8,13 @@
                 <tr>
                   <th colspan="4">
                     <div class="search">
-                    <form action="index.php?page=chercheEtablissement" method="POST">
-                      <div class="search-box">
-                         <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
-                         <i class="fas fa-search search-button"></i>
-                      </div>
-                      <input type="hidden" name="frmcheche" />
-          </form>
+                      <form action="index.php?page=chercheEtablissement" method="POST">
+                        <div class="search-box">
+                          <input type="text" id="nom" name="nom" class="search-input" placeholder="Recherche..">
+                          <i class="fas fa-search search-button"></i>
+                        </div>
+                        <input type="hidden" name="frmcheche" />
+                      </form>
                   </th>
                 </tr>
 
@@ -33,7 +33,7 @@
                   $tblQuery = $sqlQuery->lister("select * from etablissements");
 
                   for ($i = 0; $i < count($tblQuery); $i++) { ?>
-                  
+
                     <td><?= $tblQuery[$i]['nom_etablissement'] ?></td>
                     <td><?= $tblQuery[$i]['ville'] ?></td>
                     <td>
@@ -43,12 +43,13 @@
                       </a>
                     </td>
                     <td>
-                      <i class="fa-solid fa-pen"></i>
-                      <i class="fa-solid fa-trash"></i>
+                      <a href="index.php?page=updateEtablissement&idEtablissement=<?= $tblQuery[$i]['id_etablissement'] ?>"><i class="fa-solid fa-pen"></i></a>
+                      <a href="index.php?page=supprimer&table=etablissement&id=<?= $tblQuery[$i]['id_etablissement'] ?>" onclick="return confirm('Voulez vous vraiment supprimer cette etablissement ?')"><i class="fa-solid fa-trash"></i></a>
+
                     </td>
                 </tr>
               <?php } ?>
-              
+
               </tr>
               </tbody>
               <tfoot>

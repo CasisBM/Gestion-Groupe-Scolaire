@@ -70,6 +70,7 @@ $tblQueryPromo = $querySelect->lister("select * from promotions");
                         <input class="buttonTable" type="submit" value="Changer l'eleve" />
                     </div>
         </tr>
+        <input type="hidden" name="id_eleve" id="id_eleve" value=<?= $_GET['idEleve'] ?>>
         <input type="hidden" name="frmUpdateEleve" />
         </form>
         <!-- <button id="buttonTable" type="button" onclick="location.href='index.php?page=ajouteSalle'"> Ajouter une salle </button> -->

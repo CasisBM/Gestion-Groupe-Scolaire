@@ -17,6 +17,7 @@ $requete = "select DATE_FORMAT(c.date, '%d/%m/%Y'), m.nom_matiere, c.heure_debut
             where c.id_promotion = $id_promotion or c.id_eleve = ".$_GET['idEleve'];
 
 $tblQuery = $sqlQuery->lister($requete);
+dump($tblQuery);
 
 ?>
     <input type="date" min="2022-01-01" max="2025-01-01"/>
