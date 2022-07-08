@@ -2,7 +2,7 @@
 <?php
 require './includes/header.php';
 $sqlQuery = new Sql();
-$tblQuery = $sqlQuery->lister("SELECT nom_matiere FROM matieres m JOIN enseignants_has_matieres ehm
+$tblQuery = $sqlQuery->lister("SELECT m.nom_matiere,m.id_matiere FROM matieres m JOIN enseignants_has_matieres ehm
                                 ON m.id_matiere = ehm.id_matiere WHERE ehm.id_enseignant = ".$_GET['idEnseignant'])
 
 ?>
@@ -35,7 +35,7 @@ $tblQuery = $sqlQuery->lister("SELECT nom_matiere FROM matieres m JOIN enseignan
         <td><?= $tblQuery[$i]['nom_matiere'] ?></td>
         <td>
           <a href=""><i class="fa-solid fa-pen"></i></a>
-          <a href="" onclick="return confirm('Voulez vous vraiment supprimer cette matiere ?')">
+          <a href="index.php?page=supprimer&table=matiere&id=<?=$_GET['idEnseignant'] ?>&idMatiere=<?=$tblQuery[$i]['id_matiere'] ?>" onclick="return confirm('Voulez vous vraiment supprimer cette matiere ?')">
           <i class="fa-solid fa-trash"></i>
         </a>
         </td>
