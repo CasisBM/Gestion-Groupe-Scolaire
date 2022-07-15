@@ -14,6 +14,11 @@ if (isset($_POST['frmAjouterMatiere']))
         echo redirection($url);
          
     }
+    else
+    {
+        echo "Cette matiere existe deja";
+        include './includes/frmAjouterMatiere.php';
+    }
 }
 else if(isset($_POST['frmAjouterMatiereEnseignant']))
 {

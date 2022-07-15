@@ -56,9 +56,7 @@ switch ($page) {
    case 'matiere':
       $requete = "DELETE FROM enseignants_has_matieres WHERE id_enseignant = '$idUser' AND id_matiere = ".$_GET['idMatiere'];
       $queryDelete->inserer($requete);
-      $requete = "DELETE FROM eleves WHERE id_eleve = '$idUser' ";
-      $queryDelete->inserer($requete);
-      $url = "index.php?page=listeMatiere&idEnseignant= '$idUser' ";
+      $url = "index.php?page=listeMatiere&idEnseignant= $idUser ";
       echo redirection($url);
       break;
 

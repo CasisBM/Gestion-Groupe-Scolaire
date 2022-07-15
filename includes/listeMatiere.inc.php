@@ -1,6 +1,7 @@
 
 <?php
 require './includes/header.php';
+
 $sqlQuery = new Sql();
 $tblQuery = $sqlQuery->lister("SELECT m.nom_matiere,m.id_matiere FROM matieres m JOIN enseignants_has_matieres ehm
                                 ON m.id_matiere = ehm.id_matiere WHERE ehm.id_enseignant = ".$_GET['idEnseignant'])
