@@ -33,7 +33,16 @@
 
     public function lister($requete)
     {
-        return $this->connexion->query($requete)->fetchAll();
+        try {
+            return $this->connexion->query($requete)->fetchAll();
+         }
+         catch(Exception $e) {
+             $myfile = fopen("errorSql.txt", "a") or die("Unable to open file!");
+             $txt = $e."\n";
+             fwrite($myfile, $txt);
+             fclose($myfile);
+         }    
+        
     }
 
     public function __destruct()

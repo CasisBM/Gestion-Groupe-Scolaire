@@ -75,7 +75,7 @@ display: none;
   cursor: pointer;
 }
 #btn_admin{
-  margin-left: -20px;
+  margin-left: -20;     /* -20 */
   /* border: 0.15rem solid grey;  */
   
 }
