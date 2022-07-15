@@ -109,14 +109,22 @@ class Admin
 
     }
 
-    public function ajouterEleve(string $identifiant, string $password, string $nom , string $prenom,string $mail, string $id_promotion)
+    public function ajouterEleve(string $identifiant, string $password, string $nom , 
+    string $prenom,string $mail, string $id_promotion):string
     {
         // Generation unique token et date
         $date = date("Y-m-d H:i:s");
         $token = bin2hex(random_bytes(50)); 
 
         // Creation d'une ligne compte pour gerer token et validation email
-        $requete = "INSERT INTO comptes(creation_compte,envoi_email,token,email_verification,email) VALUES ('$date','$date','$token','0','$mail');";
+        $requete = "SELECT email FROM comptes";
+        $resultQuery = $this->db->lister($requete);
+        dump($resultQuery);
+
+        if($resultQuery[0]['email'] === $mail){ return "Cette email est deja existant";}
+
+        $requete = "INSERT INTO comptes(creation_compte,envoi_email,token,email_verification,email) 
+        VALUES ('$date','$date','$token','0','$mail');";
         $this->db->inserer($requete);
 
         // Creation d'une ligne eleves
@@ -126,7 +134,7 @@ class Admin
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
         $requete = "INSERT INTO eleves (identifiant,password,nom,prenom,email,id_promotion,id_compte) VALUES ('$identifiant','$passwordHash','$nom','$prenom','$mail','$id_promotion','$idCompte');";
         $this->db->inserer($requete);
-
+        
         //Envoi email contenant le token + email pour la verification
         $url = $_SERVER['HTTP_ORIGIN'] . dirname($_SERVER['REQUEST_URI']) . "/index.php?email=$mail&token=$token";
         $toEmail = $mail;
@@ -138,6 +146,7 @@ class Admin
         $headers .= "Content-type: text/html; charset=iso-8859-1\n"; 
 
         sendMail($toEmail,$fromEmail,$sujetEmail,$messageEmail,$headers);
+        return "Le compte a bien été crée, valider votre email";
 
     }
 

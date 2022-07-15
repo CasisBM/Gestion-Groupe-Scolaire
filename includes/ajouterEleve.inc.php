@@ -53,9 +53,9 @@ if(isset($_POST["frmAjouterEleve"]))
     }
     else{
         $admin = new Admin();
-        $admin-> ajouterEleve($identifiant,$password,$nom,$prenom,$mail,$id_promotion);
+        echo $admin-> ajouterEleve($identifiant,$password,$nom,$prenom,$mail,$id_promotion);
         $url = "index.php?page=listeEleve";
-        echo redirection($url);
+        //echo redirection($url);
     }
 
 }
