@@ -31,8 +31,8 @@ if(isset($_POST["frmAjouterEtablissement"]))
     else
     {
             $admin = new Admin();
-            $admin-> ajouterEtablissement($nom,$ville);
-            redirection('index.php?page=choixEtablissement');
+            echo $admin-> ajouterEtablissement($nom,$ville);
+            //redirection('index.php?page=choixEtablissement');
     }
 
 }

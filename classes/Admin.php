@@ -60,12 +60,21 @@ class Admin
         
     }
     
-    public function ajouterEtablissement(string $nom, string $ville, string $idProf=null)
+    public function ajouterEtablissement(string $nom, string $ville, string $idProf=null):string
     {
 
         // Creation d'une ligne etablissements
+            $requete = "SELECT nom_etablissement,ville FROM etablissements;";
+            $resultQuery = $this->db->lister($requete);
+
+            if($resultQuery[0]['nom_etablissement'] === $nom && $resultQuery[0]['ville'] === $ville)
+            {
+                return "Cette etablissement est deja existant";
+            }
+
             $requete = "INSERT INTO etablissements (nom_etablissement,ville) VALUES ('$nom','$ville');";
             $this->db->inserer($requete);
+            return "Cette etablissement a bien été ajouter";
     }
 
     public function ajouterEnseignant(string $identifiant, string $password, string $nom , string $prenom,string $mail)
