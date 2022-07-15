@@ -7,7 +7,7 @@ $requete = "SELECT DISTINCT en.id_enseignant, en.prenom, en.nom  FROM enseignant
 
 if (!empty($_SESSION['etablissement'])) {
 
-  $requete .= "JOIN ETABLISSEMENTS_has_UTILISATEUR ehu ON en.id_enseignant = ehu.id_enseignant 
+  $requete .= "JOIN ETABLISSEMENTS_has_ENSEIGNANTS ehu ON en.id_enseignant = ehu.id_enseignant 
               where ehu.id_etablissement = " . $_SESSION['etablissement'];
 }
 

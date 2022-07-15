@@ -44,7 +44,7 @@
                              <option label="" value=""></option>
                              <?php
                                 $requete = "SELECT DISTINCT s.id_salle, s.nom_salle, s.id_etablissement from salles s
-                              join ETABLISSEMENTS_has_UTILISATEUR ehu on s.id_etablissement = s.id_etablissement 
+                              join ETABLISSEMENTS_has_ENSEIGNANTS ehu on s.id_etablissement = s.id_etablissement 
                               where ehu.id_enseignant = " . $_GET['idEnseignant'];
                                 $tblSalle = $sqlQuery->lister($requete);
 
@@ -66,7 +66,7 @@
                      <div>
                          <select class=select2 name="id_promotion" id="id_promotion">
                              <?php
-                                $requete = "SELECT p.id_promotion,p.nom_promotion,p.id_etablissement from ETABLISSEMENTS_has_UTILISATEUR ehu 
+                                $requete = "SELECT p.id_promotion,p.nom_promotion,p.id_etablissement from ETABLISSEMENTS_has_ENSEIGNANTS ehu 
                                  join promotions p on p.id_etablissement = ehu.id_etablissement
                                  where ehu.id_enseignant =" . $_GET['idEnseignant'];
                                 $tblPromotion = $sqlQuery->lister($requete);

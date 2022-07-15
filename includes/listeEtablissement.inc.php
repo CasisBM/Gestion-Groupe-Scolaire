@@ -6,7 +6,7 @@ require './includes/header.php';
 if (isset($_GET['idEnseignant']) && !empty($_GET['idEnseignant'])) {
 
     $sqlQuery = new Sql();
-    $requete = "select et.nom_etablissement, et.ville from ETABLISSEMENTS_has_UTILISATEUR ehu 
+    $requete = "select et.nom_etablissement, et.ville from ETABLISSEMENTS_has_ENSEIGNANTS ehu 
             join etablissements et on ehu.id_etablissement = et.id_etablissement 
             where  ehu.id_enseignant = '" . $_GET['idEnseignant'] . "'";
 

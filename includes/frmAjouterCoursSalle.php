@@ -45,7 +45,7 @@
                              <option label="" value=""></option>
                              <?php
                                 $requete = "SELECT en.id_enseignant, en.nom from enseignants en
-                              join ETABLISSEMENTS_has_UTILISATEUR ehu on en.id_enseignant = ehu.id_enseignant 
+                              join ETABLISSEMENTS_has_ENSEIGNANTS ehu on en.id_enseignant = ehu.id_enseignant 
                               where ehu.id_etablissement = $id_etablissement";
                                 $tblEnseignant = $sqlQuery->lister($requete);
 
@@ -68,7 +68,7 @@
                          <select class="select2" name="id_matiere" id="id_matiere">
                              <?php
                                 $requete = "SELECT ehm.id_enseignant,m.id_matiere,m.nom_matiere from ENSEIGNANTS_has_MATIERES ehm
-                                 join ETABLISSEMENTS_has_UTILISATEUR ehu on ehm.id_enseignant = ehu.id_enseignant
+                                 join ETABLISSEMENTS_has_ENSEIGNANTS ehu on ehm.id_enseignant = ehu.id_enseignant
                                  join matieres m on m.id_matiere = ehm.id_matiere
                                  where ehu.id_etablissement = $id_etablissement";
                                 $tblMatiere = $sqlQuery->lister($requete);

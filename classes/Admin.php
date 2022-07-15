@@ -47,12 +47,12 @@ class Admin
     }
     public function ajouterEtablissementHasEnseignant(string $idEtablissement, string $idProf):bool
     {
-        $requete = "SELECT id_etablissement,id_enseignant FROM ETABLISSEMENTS_has_UTILISATEUR WHERE id_etablissement = '$idEtablissement' AND id_enseignant = '$idProf';";
+        $requete = "SELECT id_etablissement,id_enseignant FROM ETABLISSEMENTS_has_ENSEIGNANTS WHERE id_etablissement = '$idEtablissement' AND id_enseignant = '$idProf';";
         $condition = $this->db->lister($requete);
 
         if(empty($condition))
         {
-            $requete = "INSERT INTO ETABLISSEMENTS_has_UTILISATEUR(id_etablissement,id_enseignant) VALUES ('$idEtablissement','$idProf');";
+            $requete = "INSERT INTO ETABLISSEMENTS_has_ENSEIGNANTS(id_etablissement,id_enseignant) VALUES ('$idEtablissement','$idProf');";
             $this->db->inserer($requete);
             return true;
         }

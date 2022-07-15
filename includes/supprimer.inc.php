@@ -56,13 +56,13 @@ switch ($page) {
                   el.id_promotion = p.id_promotion WHERE p.id_etablissement = '$idUser') ";
       $queryDelete->inserer($requete);
 
-      $requete = "DELETE FROM cours WHERE id_planning in (SELECT c.id_planning FROM cours c join salles s 
+      $requete = "DELETE FROM cours WHERE  in (SELECT c. FROM cours c join salles s 
                   on c.id_salle = s.id_salle 
                   join promotions p on c.id_promotion = p.id_promotion
                   where s.id_etablissement = '$idUser' or p.id_etablissement = '$idUser')";
       $queryDelete->inserer($requete);
 
-      $requete = "UPDATE ETABLISSEMENTS_has_UTILISATEUR SET id_enseignant = null WHERE id_etablissement = $idUser ";
+      $requete = "UPDATE ETABLISSEMENTS_has_ENSEIGNANTS SET id_enseignant = null WHERE id_etablissement = $idUser ";
       $queryDelete->inserer($requete);
 
       $requete = "DELETE FROM salles WHERE id_etablissement = $idUser ";
@@ -71,7 +71,7 @@ switch ($page) {
       $requete = "DELETE FROM promotions WHERE id_etablissement = $idUser ";
       $queryDelete->inserer($requete);
 
-      $requete = "DELETE FROM ETABLISSEMENTS_has_UTILISATEUR  WHERE id_etablissement = $idUser ";
+      $requete = "DELETE FROM ETABLISSEMENTS_has_ENSEIGNANTS  WHERE id_etablissement = $idUser ";
       $queryDelete->inserer($requete);
 
       $requete = "DELETE FROM etablissements WHERE id_etablissement = '$idUser' ";
