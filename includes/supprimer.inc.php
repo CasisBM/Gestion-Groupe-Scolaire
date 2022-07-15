@@ -27,15 +27,28 @@ switch ($page) {
       break;
 
    case 'enseignants':
+      $requete = "SELECT email FROM enseignants WHERE id_enseignant = '$idUser' ";
+      $email = $queryDelete->lister($requete)[0]['email'];
+
       $requete = "DELETE FROM enseignants WHERE id_enseignant = '$idUser' ";
       $queryDelete->inserer($requete);
-      $url = "index.php?page=listeProfesseur";
+
+      $requete = "DELETE FROM comptes WHERE email = '$email' ";
+      $queryDelete->inserer($requete);
+      $url = "index.php?page=listeEnseignant";
       echo redirection($url);
       break;
 
    case 'eleves':
+      $requete = "SELECT email FROM eleves WHERE id_eleve = '$idUser' ";
+      $email = $queryDelete->lister($requete)[0]['email'];
+
       $requete = "DELETE FROM eleves WHERE id_eleve = '$idUser' ";
       $queryDelete->inserer($requete);
+
+      $requete = "DELETE FROM comptes WHERE email = '$email' ";
+      $queryDelete->inserer($requete);
+
       $url = "index.php?page=listeEleve";
       echo redirection($url);
       break;

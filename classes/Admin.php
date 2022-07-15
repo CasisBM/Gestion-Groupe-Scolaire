@@ -77,13 +77,18 @@ class Admin
             return "Cette etablissement a bien été ajouter";
     }
 
-    public function ajouterEnseignant(string $identifiant, string $password, string $nom , string $prenom,string $mail)
+    public function ajouterEnseignant(string $identifiant, string $password, string $nom , string $prenom,string $mail):string
     {
         // Generation unique token et date
         $date = date("Y-m-d H:i:s");
         $token = bin2hex(random_bytes(50)); 
 
         // Creation d'une ligne compte pour gerer token et validation email
+        $requete = "SELECT email FROM comptes";
+        $resultQuery = $this->db->lister($requete);
+
+        if($resultQuery[0]['email'] === $mail){ return "Cette email est deja existant";}
+        
         $requete = "INSERT INTO comptes(creation_compte,envoi_email,token,email_verification,email) VALUES ('$date','$date','$token','0','$mail');";
         $this->db->inserer($requete);
 
@@ -106,7 +111,7 @@ class Admin
         $headers .= "Content-type: text/html; charset=iso-8859-1\n"; 
 
         sendMail($toEmail,$fromEmail,$sujetEmail,$messageEmail,$headers);
-
+        return "Le compte a bien été crée, valider votre email";
     }
 
     public function ajouterEleve(string $identifiant, string $password, string $nom , 
@@ -119,7 +124,6 @@ class Admin
         // Creation d'une ligne compte pour gerer token et validation email
         $requete = "SELECT email FROM comptes";
         $resultQuery = $this->db->lister($requete);
-        dump($resultQuery);
 
         if($resultQuery[0]['email'] === $mail){ return "Cette email est deja existant";}
 
