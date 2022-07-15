@@ -28,19 +28,27 @@ if (isset($_POST['frmAjouterSalle'])) {
         echo $messageErreur;
         include './includes/frmAjouterSalle.php';
     } else {
-    
-        $requete = "INSERT INTO salles (id_salle,id_etablissement,nom_salle,caracteristique) VALUES(NULL,'$id_etablissement','$nom','$caracteristique');";
         $queryInsert = new Sql();
-        $queryInsert->inserer($requete);  
-        redirection("index.php?page=listeSalle");
+        $requete = "SELECT nom_salle FROM salles WHERE id_etablissement = $id_etablissement;";
+        $resultQuery = $queryInsert->lister($requete); 
+
+        if(isset($nomSalle) || $resultQuery[0]['nom_salle'] !== $nom )
+        {
+            
+            $requete = "INSERT INTO salles (id_salle,id_etablissement,nom_salle,caracteristique) 
+            VALUES(NULL,'$id_etablissement','$nom','$caracteristique');";  
+            $queryInsert->inserer($requete);  
+            redirection("index.php?page=listeSalle");
+        }
+        else
+        {
+            echo 'Cette salle existe deja';
+            include './includes/frmAjouterSalle.php';
+        }
     }
 
-
 } else {
-
-    
-
-    
+  
      include './includes/frmAjouterSalle.php';
 
 }
